@@ -1,18 +1,12 @@
-%project-name iOS
+WBooks - Training Gastón Máspero
 ----------------
-
-%project-ci-badge
-%project-codestats-badge
-
-%project-description
 
 # Project info & resources
 
-* **Project Manager**: %pm-full-name - %pm-email-address
-* **Technical Leader**: %tl-full-name - %tl-email-address
+* **Technical Leader**: Carolina Arcos, Ariel Cid y Diego Quiros.
 
-  * [Trello board](%project-trello-url): Project issues and current status.
-  * [Google Drive](%project-google-drive-url): Design resources and assets.
+  * [Trello board](https://trello.com/c/w4mTljg0/7-n-2-kickoff)
+  * [Google Drive](https://drive.google.com/drive/u/0/folders/0B0bbTjmKxmYsS3pzbDVXRV9ZUGs): Design resources and assets.
 
 
 # Setup
