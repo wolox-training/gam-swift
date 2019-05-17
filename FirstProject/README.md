@@ -27,10 +27,10 @@ This project uses [CarthageCache](https://github.com/guidomb/carthage_cache) to 
 After setting up the required accounts from all third party service, run the following commands:
 
 ```
-git clone %project-git-ssh-url
-cd %project-root-directory-name
-script/bootstrap
-open %project-xcodeproj-file
+git clone https://github.com/wolox-training/gam-swift
+cd FirstProject
+./script/bootstrap
+open WBooks.xcodeproj
 ```
 
 If any of the previous commands fail please submit an [issue](%project-github-url/issues/new) specifying the command output, OS X version and XCode version.
