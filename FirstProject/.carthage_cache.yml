@@ -1,0 +1,9 @@
+---
+:bucket_name: carthage-cache
+:archive_base_path: 
+:prune_on_publish: false
+:aws_s3_client_options:
+  :region: us-west-2
+  :access_key_id: AKIAJELSVC4QDSLNGZUA
+  :secret_access_key: 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
+  :session_token: 

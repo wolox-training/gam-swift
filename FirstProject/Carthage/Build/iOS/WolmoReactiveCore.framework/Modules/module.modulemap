@@ -1,0 +1,11 @@
+framework module WolmoReactiveCore {
+  umbrella header "WolmoReactiveCore.h"
+
+  export *
+  module * { export * }
+}
+
+module WolmoReactiveCore.Swift {
+    header "WolmoReactiveCore-Swift.h"
+    requires objc
+}
