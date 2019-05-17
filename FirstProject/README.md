@@ -1,4 +1,7 @@
 WBooks - Training Gastón Máspero
+
+Desarrollo de una app simple de libros para capacitación en swift.
+
 ----------------
 
 # Project info & resources
