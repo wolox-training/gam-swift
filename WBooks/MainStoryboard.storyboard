@@ -21,8 +21,22 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bc_inicio" translatesAutoresizingMaskIntoConstraints="NO" id="0Sp-t2-BPJ">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Designed, developed and used by woloxers " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mad-nF-EKh">
-                                <rect key="frame" x="56.666666666666657" y="814" width="301" height="18"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="googlelogin" translatesAutoresizingMaskIntoConstraints="NO" id="5RJ-MW-v6X">
+                                <rect key="frame" x="72" y="494.33333333333331" width="270" height="66.333333333333314"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="5RJ-MW-v6X" secondAttribute="height" multiplier="191:47" id="dwo-s4-kg4"/>
+                                    <constraint firstAttribute="width" constant="270" id="rQ0-GQ-ufL"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Group" translatesAutoresizingMaskIntoConstraints="NO" id="uIf-f4-gKE">
+                                <rect key="frame" x="117" y="317.66666666666669" width="180" height="136.66666666666669"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="180" id="JdY-57-scb"/>
+                                    <constraint firstAttribute="width" secondItem="uIf-f4-gKE" secondAttribute="height" multiplier="161:122" id="mNK-cP-gNL"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Designed, developed and used by woloxers " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mad-nF-EKh">
+                                <rect key="frame" x="56.666666666666657" y="832" width="301" height="18"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -33,8 +47,12 @@
                             <constraint firstAttribute="trailing" secondItem="0Sp-t2-BPJ" secondAttribute="trailing" id="244-Xc-38p"/>
                             <constraint firstItem="0Sp-t2-BPJ" firstAttribute="leading" secondItem="9gy-Br-zFY" secondAttribute="leading" id="JGl-MF-A1B"/>
                             <constraint firstItem="mad-nF-EKh" firstAttribute="centerX" secondItem="9gy-Br-zFY" secondAttribute="centerX" id="RqJ-Tc-coP"/>
-                            <constraint firstItem="aee-nd-tDp" firstAttribute="bottom" secondItem="mad-nF-EKh" secondAttribute="bottom" constant="30" id="cXy-dG-RPX"/>
+                            <constraint firstItem="uIf-f4-gKE" firstAttribute="centerX" secondItem="9gy-Br-zFY" secondAttribute="centerX" id="Y1d-JM-kw1"/>
+                            <constraint firstItem="uIf-f4-gKE" firstAttribute="centerY" secondItem="9gy-Br-zFY" secondAttribute="centerY" constant="-62" id="Yz8-Bi-3Wf"/>
+                            <constraint firstItem="5RJ-MW-v6X" firstAttribute="top" secondItem="uIf-f4-gKE" secondAttribute="bottom" constant="40" id="doG-UH-mwV"/>
                             <constraint firstItem="0Sp-t2-BPJ" firstAttribute="top" secondItem="9gy-Br-zFY" secondAttribute="top" id="iMx-Rb-vdn"/>
+                            <constraint firstItem="aee-nd-tDp" firstAttribute="bottom" secondItem="mad-nF-EKh" secondAttribute="bottom" constant="12" id="pVA-sg-Oar"/>
+                            <constraint firstItem="5RJ-MW-v6X" firstAttribute="centerX" secondItem="9gy-Br-zFY" secondAttribute="centerX" id="vWC-ew-R6T"/>
                             <constraint firstAttribute="bottom" secondItem="0Sp-t2-BPJ" secondAttribute="bottom" id="xHW-bH-ggp"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="aee-nd-tDp"/>
@@ -46,6 +64,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="bc_inicio" width="1125" height="2001"/>
+        <image name="Group" width="161" height="122"/>
+        <image name="bc_inicio" width="1113" height="1994"/>
+        <image name="googlelogin" width="382" height="92"/>
     </resources>
 </document>
