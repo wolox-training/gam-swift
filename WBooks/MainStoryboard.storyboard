@@ -13,7 +13,7 @@
         <!--View Controller-->
         <scene sceneID="Y3D-Gc-w3E">
             <objects>
-                <viewController id="Ss1-Z4-M18" sceneMemberID="viewController">
+                <viewController id="Ss1-Z4-M18" customClass="ViewController" customModule="WBooks" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9gy-Br-zFY">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -41,6 +41,10 @@
                                     <constraint firstAttribute="width" constant="270" id="hO3-CK-uWo"/>
                                 </constraints>
                                 <state key="normal" image="googlelogin"/>
+                                <connections>
+                                    <action selector="signInGoogle:" destination="Ss1-Z4-M18" eventType="touchUpInside" id="UlK-Ox-qYR"/>
+                                    <action selector="signInGoogle:" destination="F3x-19-t62" eventType="touchUpInside" id="w63-pg-zx7"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -60,6 +64,7 @@
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g8A-dc-OXq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="F3x-19-t62" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-60.869565217391312" y="-47.544642857142854"/>
         </scene>
