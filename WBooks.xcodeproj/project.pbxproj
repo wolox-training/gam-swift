@@ -11,9 +11,9 @@
 		0CCF002C219208110061050C /* Wormholy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CCF002B219208110061050C /* Wormholy.framework */; };
 		0CCF002E219208180061050C /* WolmoCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CCF002D219208180061050C /* WolmoCore.framework */; };
 		42505DC2228F603A0039682C /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42505DC1228F603A0039682C /* MainStoryboard.storyboard */; };
-		42C7D7F622933E360013CB08 /* MainMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C7D7F522933E360013CB08 /* MainMenu.swift */; };
-		42C7D7FA229340EA0013CB08 /* MyCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C7D7F9229340EA0013CB08 /* MyCustomCell.swift */; };
-		42C7D7FC229340FC0013CB08 /* MyCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42C7D7FB229340FC0013CB08 /* MyCustomCell.xib */; };
+		427BC0E62295873B0033845C /* MainMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427BC0E52295873B0033845C /* MainMenu.swift */; };
+		427BC0E8229587D20033845C /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427BC0E7229587D20033845C /* CustomCell.swift */; };
+		427BC0EC22958D750033845C /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427BC0EB22958D750033845C /* Book.swift */; };
 		9D1575051CB1B27500EA395E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1575041CB1B27500EA395E /* AppDelegate.swift */; };
 		9D1575071CB1B27500EA395E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1575061CB1B27500EA395E /* ViewController.swift */; };
 		9D15750C1CB1B27500EA395E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D15750B1CB1B27500EA395E /* Assets.xcassets */; };
@@ -77,9 +77,9 @@
 		0CCF002B219208110061050C /* Wormholy.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Wormholy.framework; path = Carthage/Build/iOS/Wormholy.framework; sourceTree = "<group>"; };
 		0CCF002D219208180061050C /* WolmoCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WolmoCore.framework; path = Carthage/Build/iOS/WolmoCore.framework; sourceTree = "<group>"; };
 		42505DC1228F603A0039682C /* MainStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
-		42C7D7F522933E360013CB08 /* MainMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenu.swift; sourceTree = "<group>"; };
-		42C7D7F9229340EA0013CB08 /* MyCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCustomCell.swift; sourceTree = "<group>"; };
-		42C7D7FB229340FC0013CB08 /* MyCustomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyCustomCell.xib; sourceTree = "<group>"; };
+		427BC0E52295873B0033845C /* MainMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenu.swift; sourceTree = "<group>"; };
+		427BC0E7229587D20033845C /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
+		427BC0EB22958D750033845C /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		9D1575011CB1B27500EA395E /* WBooks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WBooks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D1575041CB1B27500EA395E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9D1575061CB1B27500EA395E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -187,9 +187,9 @@
 				CEB934DE1D21A44700DF75C2 /* ConfigurationFiles */,
 				9D1575041CB1B27500EA395E /* AppDelegate.swift */,
 				42505DC1228F603A0039682C /* MainStoryboard.storyboard */,
-				42C7D7F522933E360013CB08 /* MainMenu.swift */,
-				42C7D7F9229340EA0013CB08 /* MyCustomCell.swift */,
-				42C7D7FB229340FC0013CB08 /* MyCustomCell.xib */,
+				427BC0E7229587D20033845C /* CustomCell.swift */,
+				427BC0E52295873B0033845C /* MainMenu.swift */,
+				427BC0EB22958D750033845C /* Book.swift */,
 				9D1575061CB1B27500EA395E /* ViewController.swift */,
 				9D15750B1CB1B27500EA395E /* Assets.xcassets */,
 				9D1575101CB1B27500EA395E /* Info.plist */,
@@ -374,7 +374,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				42505DC2228F603A0039682C /* MainStoryboard.storyboard in Resources */,
-				42C7D7FC229340FC0013CB08 /* MyCustomCell.xib in Resources */,
 				9D15750C1CB1B27500EA395E /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -446,11 +445,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				42C7D7FA229340EA0013CB08 /* MyCustomCell.swift in Sources */,
-				42C7D7F622933E360013CB08 /* MainMenu.swift in Sources */,
+				427BC0E62295873B0033845C /* MainMenu.swift in Sources */,
 				9D1575071CB1B27500EA395E /* ViewController.swift in Sources */,
+				427BC0EC22958D750033845C /* Book.swift in Sources */,
 				CEB934DD1D21992100DF75C2 /* Environment.swift in Sources */,
 				E1530D9C1ED37905002A9002 /* RollbarService.swift in Sources */,
+				427BC0E8229587D20033845C /* CustomCell.swift in Sources */,
 				9D1575051CB1B27500EA395E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -44,7 +44,7 @@
                                 <connections>
                                     <action selector="signInGoogle:" destination="Ss1-Z4-M18" eventType="touchUpInside" id="UlK-Ox-qYR"/>
                                     <action selector="signInGoogle:" destination="F3x-19-t62" eventType="touchUpInside" id="w63-pg-zx7"/>
-                                    <segue destination="qwW-DS-wch" kind="presentation" modalTransitionStyle="crossDissolve" id="x1S-WT-b1Q"/>
+                                    <segue destination="7Mb-NW-yp8" kind="presentation" id="Yu1-xJ-HsU"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -67,36 +67,62 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g8A-dc-OXq" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="F3x-19-t62" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-568" y="-40"/>
+            <point key="canvasLocation" x="-896" y="-54"/>
         </scene>
         <!--Main Menu-->
-        <scene sceneID="7fA-JW-6Rz">
+        <scene sceneID="BZ7-zb-Laz">
             <objects>
-                <viewController id="qwW-DS-wch" customClass="MainMenu" customModule="WBooks" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="RUS-rL-oe1">
+                <viewController id="7Mb-NW-yp8" customClass="MainMenu" customModule="WBooks" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jWb-jZ-TPt">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ejj-Lt-ZMT">
-                                <rect key="frame" x="172.5" y="422.5" width="69" height="51"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                <state key="normal" title="Back"/>
-                                <connections>
-                                    <segue destination="Ss1-Z4-M18" kind="presentation" modalTransitionStyle="crossDissolve" id="P7k-2C-4YV"/>
-                                </connections>
-                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="aAG-FI-Si1">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="myCustomCell" rowHeight="96" id="OIl-dK-Sh9" customClass="CustomCell" customModule="WBooks" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="96"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="OIl-dK-Sh9" id="kyS-He-QRD">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="95.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c4J-ey-seV">
+                                                    <rect key="frame" x="176.5" y="32" width="61.5" height="31.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="c4J-ey-seV" firstAttribute="centerX" secondItem="kyS-He-QRD" secondAttribute="centerX" id="HXV-wn-sxJ"/>
+                                                <constraint firstItem="c4J-ey-seV" firstAttribute="centerY" secondItem="kyS-He-QRD" secondAttribute="centerY" id="nZM-QQ-p73"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="cellLabel" destination="c4J-ey-seV" id="dgl-AX-UeA"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Ejj-Lt-ZMT" firstAttribute="centerX" secondItem="RUS-rL-oe1" secondAttribute="centerX" id="Lfp-Uz-2Z6"/>
-                            <constraint firstItem="Ejj-Lt-ZMT" firstAttribute="centerY" secondItem="RUS-rL-oe1" secondAttribute="centerY" id="tdF-ZR-HAE"/>
+                            <constraint firstItem="xTF-5F-7b3" firstAttribute="bottom" secondItem="aAG-FI-Si1" secondAttribute="bottom" id="2LU-1u-1K8"/>
+                            <constraint firstItem="aAG-FI-Si1" firstAttribute="top" secondItem="xTF-5F-7b3" secondAttribute="top" id="6KB-Pw-msp"/>
+                            <constraint firstItem="xTF-5F-7b3" firstAttribute="trailing" secondItem="aAG-FI-Si1" secondAttribute="trailing" id="eX8-7V-tKl"/>
+                            <constraint firstItem="aAG-FI-Si1" firstAttribute="leading" secondItem="xTF-5F-7b3" secondAttribute="leading" id="uyr-mG-rwQ"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="c4R-ys-PkT"/>
+                        <viewLayoutGuide key="safeArea" id="xTF-5F-7b3"/>
                     </view>
+                    <connections>
+                        <outlet property="myTableView" destination="aAG-FI-Si1" id="r5d-z7-crD"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="yVb-hX-sh8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="16r-ZP-bSQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="230" y="-40"/>
+            <point key="canvasLocation" x="-33.333333333333336" y="-54.241071428571423"/>
         </scene>
     </scenes>
     <resources>
