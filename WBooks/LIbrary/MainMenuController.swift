@@ -40,6 +40,10 @@ class MainMenuController: UIViewController, UITableViewDataSource, UITableViewDe
         _view.tableView.backgroundColor = UIColor.clear
     }
     
+    override open var shouldAutorotate: Bool {
+        return false
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let book = books[indexPath.section]
         let cell = _view.tableView.dequeue(cell: CustomCell.self)!
