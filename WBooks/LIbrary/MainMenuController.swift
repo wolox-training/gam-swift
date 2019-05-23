@@ -31,7 +31,7 @@ class MainMenuController: UIViewController, UITableViewDataSource, UITableViewDe
     
     private func addBarButtons() {
         var nav = self.navigationController?.navigationBar
-        self.title = "LIBRARY"
+        self.title = "NAVIGATION_BAR_TITLE".localized()
         nav?.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
         let notificationsButton = UIButton(type: .system)
         notificationsButton.setImage(#imageLiteral(resourceName: "ic_notifications").withRenderingMode(.alwaysOriginal), for: .normal)
