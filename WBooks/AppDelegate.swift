@@ -20,7 +20,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.rootViewController = StartingScreenZeroController() //Aca creas un viewController (Que sería el de la imagen) y lo seteas como root de la app
         window?.makeKeyAndVisible() //con esto le decis que te muestre la vista y la ponga encima de todo
 //        UINavigationBar.appearance().barTintColor = .red
-
+        let backgroundImage = #imageLiteral(resourceName: "bc_nav bar")
+        UINavigationBar.appearance().setBackgroundImage(backgroundImage, for: .default)
         return true
     }
 

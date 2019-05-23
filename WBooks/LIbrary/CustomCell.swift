@@ -15,7 +15,7 @@ class CustomCell: UITableViewCell, NibLoadable {
     @IBOutlet weak var author: UILabel!
     @IBOutlet weak var cover: UIImageView!
     
-    func setBook(book: Book){
+    func setBook(book: Book) {
         title.text = book.title
         author.text = book.author
         cover.image = book.cover

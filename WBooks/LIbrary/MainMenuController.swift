@@ -29,6 +29,22 @@ class MainMenuController: UIViewController, UITableViewDataSource, UITableViewDe
         view = _view
     }
     
+    private func addBarButtons() {
+        var nav = self.navigationController?.navigationBar
+        self.title = "LIBRARY"
+        nav?.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
+        let notificationsButton = UIButton(type: .system)
+        notificationsButton.setImage(#imageLiteral(resourceName: "ic_notifications").withRenderingMode(.alwaysOriginal), for: .normal)
+        notificationsButton.frame = CGRect(x: 0, y: 0, width: 34, height: 34)
+        navigationItem.leftBarButtonItem = UIBarButtonItem(customView: notificationsButton)
+        
+        let searchButton = UIButton(type: .system)
+        searchButton.setImage(#imageLiteral(resourceName: "ic_search.png").withRenderingMode(.alwaysOriginal), for: .normal)
+        searchButton.frame = CGRect(x: 0, y: 0, width: 34, height: 34)
+        navigationItem.rightBarButtonItem = UIBarButtonItem(customView: searchButton)
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         books = createArray()
@@ -38,6 +54,7 @@ class MainMenuController: UIViewController, UITableViewDataSource, UITableViewDe
         _view.tableView.rowHeight = UITableViewAutomaticDimension
         _view.tableView.estimatedRowHeight = 350
         _view.tableView.backgroundColor = UIColor.clear
+        addBarButtons()
     }
     
     override open var shouldAutorotate: Bool {
