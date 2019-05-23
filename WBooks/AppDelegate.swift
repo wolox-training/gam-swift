@@ -16,25 +16,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        /*if Environment.isTestTarget {
-            return true
-        }*/
-        
-        /*
-         * Uncomment this and remove this comment once Rollbar service is enabled
-         * and the keys are properly configured in the configuration files.
-         *
-        RollbarService().initialize()
-         *
-         */
-        /*
-        NetworkActivityLogger.shared.level = .debug
-        NetworkActivityLogger.shared.startLogging()
-        
-        window = UIWindow(frame: UIScreen.main.bounds)
-        window?.rootViewController = ViewController()
-        window?.makeKeyAndVisible()
-        */
+        window = UIWindow(frame: UIScreen.main.bounds)// esto te devuelve el window de la app que tenes.
+        window?.rootViewController = StartingScreenZeroController() //Aca creas un viewController (Que sería el de la imagen) y lo seteas como root de la app
+        window?.makeKeyAndVisible() //con esto le decis que te muestre la vista y la ponga encima de todo
+//        UINavigationBar.appearance().barTintColor = .red
+        let backgroundImage = #imageLiteral(resourceName: "bc_nav bar")
+        UINavigationBar.appearance().setBackgroundImage(backgroundImage, for: .default)
         return true
     }
 

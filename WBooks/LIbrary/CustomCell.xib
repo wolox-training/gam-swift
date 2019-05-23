@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="mtk-Y5-Qpt" customClass="CustomCell" customModule="WBooks" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YNY-ko-4FS">
+                    <rect key="frame" x="124" y="12" width="47.5" height="21.5"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zig-sM-cQ4">
+                    <rect key="frame" x="0.0" y="12.5" width="144" height="75"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="75" id="8XJ-jr-jbP"/>
+                        <constraint firstAttribute="width" secondItem="zig-sM-cQ4" secondAttribute="height" multiplier="48:25" id="iYG-MU-F2Y"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HCQ-ml-L9Q">
+                    <rect key="frame" x="124" y="41.5" width="37.5" height="18"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="YNY-ko-4FS" firstAttribute="top" secondItem="P5V-Co-KO0" secondAttribute="top" constant="12" id="6kD-Th-D2j"/>
+                <constraint firstItem="zig-sM-cQ4" firstAttribute="centerY" secondItem="mtk-Y5-Qpt" secondAttribute="centerY" id="77o-b0-jSq"/>
+                <constraint firstItem="YNY-ko-4FS" firstAttribute="width" relation="lessThanOrEqual" secondItem="mtk-Y5-Qpt" secondAttribute="width" multiplier="0.6" id="9cH-oL-Ux2"/>
+                <constraint firstItem="YNY-ko-4FS" firstAttribute="leading" secondItem="zig-sM-cQ4" secondAttribute="trailing" constant="-20" id="Eub-o6-WBO"/>
+                <constraint firstItem="zig-sM-cQ4" firstAttribute="leading" secondItem="mtk-Y5-Qpt" secondAttribute="leading" id="NZb-DM-Vj1"/>
+                <constraint firstItem="HCQ-ml-L9Q" firstAttribute="top" secondItem="YNY-ko-4FS" secondAttribute="bottom" constant="8" id="NnL-nC-roc"/>
+                <constraint firstItem="HCQ-ml-L9Q" firstAttribute="leading" secondItem="zig-sM-cQ4" secondAttribute="trailing" constant="-20" id="oTL-qg-3z8"/>
+                <constraint firstItem="HCQ-ml-L9Q" firstAttribute="width" relation="lessThanOrEqual" secondItem="mtk-Y5-Qpt" secondAttribute="width" multiplier="0.6" id="vw6-Yt-U6G"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="P5V-Co-KO0"/>
+            <connections>
+                <outlet property="author" destination="HCQ-ml-L9Q" id="tMZ-0F-tsb"/>
+                <outlet property="cover" destination="zig-sM-cQ4" id="tam-rl-TML"/>
+                <outlet property="title" destination="YNY-ko-4FS" id="c93-QY-bxC"/>
+            </connections>
+            <point key="canvasLocation" x="-12" y="-177"/>
+        </view>
+    </objects>
+</document>
