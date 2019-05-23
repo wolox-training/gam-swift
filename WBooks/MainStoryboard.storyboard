@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ss1-Z4-M18">
-    <device id="retina6_5" orientation="portrait">
+    <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -13,7 +13,7 @@
         <!--View Controller-->
         <scene sceneID="Y3D-Gc-w3E">
             <objects>
-                <viewController id="Ss1-Z4-M18" sceneMemberID="viewController">
+                <viewController id="Ss1-Z4-M18" customClass="ViewController" customModule="WBooks" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9gy-Br-zFY">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -21,31 +21,57 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bc_inicio" translatesAutoresizingMaskIntoConstraints="NO" id="0Sp-t2-BPJ">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Designed, developed and used by woloxers " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mad-nF-EKh">
-                                <rect key="frame" x="56.666666666666657" y="814" width="301" height="18"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Group" translatesAutoresizingMaskIntoConstraints="NO" id="uIf-f4-gKE">
+                                <rect key="frame" x="117" y="318" width="180" height="136"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="180" id="JdY-57-scb"/>
+                                    <constraint firstAttribute="width" secondItem="uIf-f4-gKE" secondAttribute="height" multiplier="161:122" id="mNK-cP-gNL"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Designed, developed and used by woloxers " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mad-nF-EKh">
+                                <rect key="frame" x="56.5" y="832" width="301" height="18"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FhW-j9-25d">
+                                <rect key="frame" x="72" y="494" width="270" height="65"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="FhW-j9-25d" secondAttribute="height" multiplier="191:46" id="Eu8-ng-Zrg"/>
+                                    <constraint firstAttribute="width" constant="270" id="hO3-CK-uWo"/>
+                                </constraints>
+                                <state key="normal" image="googlelogin"/>
+                                <connections>
+                                    <action selector="signInGoogle:" destination="Ss1-Z4-M18" eventType="touchUpInside" id="UlK-Ox-qYR"/>
+                                    <action selector="signInGoogle:" destination="F3x-19-t62" eventType="touchUpInside" id="w63-pg-zx7"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="0Sp-t2-BPJ" secondAttribute="trailing" id="244-Xc-38p"/>
                             <constraint firstItem="0Sp-t2-BPJ" firstAttribute="leading" secondItem="9gy-Br-zFY" secondAttribute="leading" id="JGl-MF-A1B"/>
                             <constraint firstItem="mad-nF-EKh" firstAttribute="centerX" secondItem="9gy-Br-zFY" secondAttribute="centerX" id="RqJ-Tc-coP"/>
-                            <constraint firstItem="aee-nd-tDp" firstAttribute="bottom" secondItem="mad-nF-EKh" secondAttribute="bottom" constant="30" id="cXy-dG-RPX"/>
+                            <constraint firstItem="uIf-f4-gKE" firstAttribute="centerX" secondItem="9gy-Br-zFY" secondAttribute="centerX" id="Y1d-JM-kw1"/>
+                            <constraint firstItem="uIf-f4-gKE" firstAttribute="centerY" secondItem="9gy-Br-zFY" secondAttribute="centerY" constant="-62" id="Yz8-Bi-3Wf"/>
                             <constraint firstItem="0Sp-t2-BPJ" firstAttribute="top" secondItem="9gy-Br-zFY" secondAttribute="top" id="iMx-Rb-vdn"/>
+                            <constraint firstItem="aee-nd-tDp" firstAttribute="bottom" secondItem="mad-nF-EKh" secondAttribute="bottom" constant="12" id="pVA-sg-Oar"/>
+                            <constraint firstItem="FhW-j9-25d" firstAttribute="centerX" secondItem="9gy-Br-zFY" secondAttribute="centerX" id="ply-tQ-bRk"/>
+                            <constraint firstItem="FhW-j9-25d" firstAttribute="top" secondItem="uIf-f4-gKE" secondAttribute="bottom" constant="40" id="s1Y-gw-0NM"/>
                             <constraint firstAttribute="bottom" secondItem="0Sp-t2-BPJ" secondAttribute="bottom" id="xHW-bH-ggp"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="aee-nd-tDp"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g8A-dc-OXq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="F3x-19-t62" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-60.869565217391312" y="-47.544642857142854"/>
         </scene>
     </scenes>
     <resources>
-        <image name="bc_inicio" width="1125" height="2001"/>
+        <image name="Group" width="161" height="122"/>
+        <image name="bc_inicio" width="744" height="1325"/>
+        <image name="googlelogin" width="382" height="92"/>
     </resources>
 </document>
