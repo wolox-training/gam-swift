@@ -19,6 +19,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)// esto te devuelve el window de la app que tenes.
         window?.rootViewController = StartingScreenZeroController() //Aca creas un viewController (Que sería el de la imagen) y lo seteas como root de la app
         window?.makeKeyAndVisible() //con esto le decis que te muestre la vista y la ponga encima de todo
+//        UINavigationBar.appearance().barTintColor = .red
+
         return true
     }
 

@@ -23,8 +23,8 @@ class StartingScreenZeroController: UIViewController {
     
     @objc func signIn(){
         print("Hello Wolox!")
-        let mainViewController = MainMenuController()
-        present(mainViewController, animated: true)
+        let controller = UINavigationController(rootViewController: MainMenuController())
+        present(controller, animated: true)
     }
     
     override func loadView() {
