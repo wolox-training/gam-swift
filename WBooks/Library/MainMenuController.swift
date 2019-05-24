@@ -36,8 +36,7 @@ class MainMenuController: UIViewController {
     
     private func addBarButtons() {
         let nav = self.navigationController?.navigationBar
-        //Title
-        self.title = "LIBRARY"
+        self.title = "NAVIGATION_BAR_TITLE".localized()
         nav?.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
         //Left notification button
         navigationItem.leftBarButtonItem = UIBarButtonItem.notificationButton()

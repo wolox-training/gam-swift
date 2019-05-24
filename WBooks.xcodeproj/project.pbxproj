@@ -19,7 +19,8 @@
 		427BC0F82295A18E0033845C /* StartingScreenZeroController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427BC0F72295A18E0033845C /* StartingScreenZeroController.swift */; };
 		427BC0FA2295A20F0033845C /* StartingScreenZeroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427BC0F92295A20F0033845C /* StartingScreenZeroView.swift */; };
 		427BC0FC2295A2270033845C /* StartingScreenZeroView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 427BC0FB2295A2270033845C /* StartingScreenZeroView.xib */; };
-		42F24F5B2298930D00E31EE3 /* NavBarButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F24F5A2298930D00E31EE3 /* NavBarButtons.swift */; };
+		427D7AC62297488000B5B29E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 427D7AC82297488000B5B29E /* Localizable.strings */; };
+		42F155E92298969500AB0AD6 /* NavBarButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F155E82298969500AB0AD6 /* NavBarButtons.swift */; };
 		9D1575051CB1B27500EA395E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1575041CB1B27500EA395E /* AppDelegate.swift */; };
 		9D15750C1CB1B27500EA395E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D15750B1CB1B27500EA395E /* Assets.xcassets */; };
 		9D15751A1CB1B27500EA395E /* WBooksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1575191CB1B27500EA395E /* WBooksTests.swift */; };
@@ -90,7 +91,10 @@
 		427BC0F72295A18E0033845C /* StartingScreenZeroController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartingScreenZeroController.swift; sourceTree = "<group>"; };
 		427BC0F92295A20F0033845C /* StartingScreenZeroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartingScreenZeroView.swift; sourceTree = "<group>"; };
 		427BC0FB2295A2270033845C /* StartingScreenZeroView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StartingScreenZeroView.xib; sourceTree = "<group>"; };
-		42F24F5A2298930D00E31EE3 /* NavBarButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavBarButtons.swift; sourceTree = "<group>"; };
+		427D7AC72297488000B5B29E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		427D7AC9229749EE00B5B29E /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		427D7ACA229749FD00B5B29E /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		42F155E82298969500AB0AD6 /* NavBarButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavBarButtons.swift; sourceTree = "<group>"; };
 		9D1575011CB1B27500EA395E /* WBooks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WBooks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D1575041CB1B27500EA395E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9D15750B1CB1B27500EA395E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -173,7 +177,7 @@
 			isa = PBXGroup;
 			children = (
 				427BC0E52295873B0033845C /* MainMenuController.swift */,
-				42F24F5A2298930D00E31EE3 /* NavBarButtons.swift */,
+				42F155E82298969500AB0AD6 /* NavBarButtons.swift */,
 				427BC0E7229587D20033845C /* BookCell.swift */,
 				427BC0F4229593EB0033845C /* BookCell.xib */,
 				427BC0F0229590840033845C /* MainMenuView.xib */,
@@ -203,6 +207,7 @@
 		9D1574F81CB1B27500EA395E = {
 			isa = PBXGroup;
 			children = (
+				427D7AC82297488000B5B29E /* Localizable.strings */,
 				9D6E405F1CB1BA21008CE558 /* Frameworks */,
 				9D1575031CB1B27500EA395E /* WBooks */,
 				9D1575181CB1B27500EA395E /* WBooksTests */,
@@ -394,6 +399,8 @@
 			knownRegions = (
 				en,
 				Base,
+				es,
+				fr,
 			);
 			mainGroup = 9D1574F81CB1B27500EA395E;
 			productRefGroup = 9D1575021CB1B27500EA395E /* Products */;
@@ -412,6 +419,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				427D7AC62297488000B5B29E /* Localizable.strings in Resources */,
 				427BC0F1229590840033845C /* MainMenuView.xib in Resources */,
 				427BC0FC2295A2270033845C /* StartingScreenZeroView.xib in Resources */,
 				427BC0F5229593EB0033845C /* BookCell.xib in Resources */,
@@ -493,7 +501,7 @@
 				CEB934DD1D21992100DF75C2 /* Environment.swift in Sources */,
 				E1530D9C1ED37905002A9002 /* RollbarService.swift in Sources */,
 				427BC0E8229587D20033845C /* BookCell.swift in Sources */,
-				42F24F5B2298930D00E31EE3 /* NavBarButtons.swift in Sources */,
+				42F155E92298969500AB0AD6 /* NavBarButtons.swift in Sources */,
 				427BC0FA2295A20F0033845C /* StartingScreenZeroView.swift in Sources */,
 				9D1575051CB1B27500EA395E /* AppDelegate.swift in Sources */,
 			);
@@ -530,12 +538,26 @@
 		};
 /* End PBXTargetDependency section */
 
+/* Begin PBXVariantGroup section */
+		427D7AC82297488000B5B29E /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				427D7AC72297488000B5B29E /* en */,
+				427D7AC9229749EE00B5B29E /* es */,
+				427D7ACA229749FD00B5B29E /* fr */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
 		CE39E8751D1DAED00004FE95 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E17065121F75B6A10042755C /* Debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -645,6 +667,7 @@
 			baseConfigurationReference = CEB934E11D21A49A00DF75C2 /* Alpha.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -753,6 +776,7 @@
 			baseConfigurationReference = E17065131F75B6A10042755C /* Release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -860,6 +884,7 @@
 			baseConfigurationReference = E12DE1621F772A370072C2FF /* Production.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
