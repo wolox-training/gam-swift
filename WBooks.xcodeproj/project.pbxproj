@@ -19,6 +19,7 @@
 		427BC0F82295A18E0033845C /* StartingScreenZeroController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427BC0F72295A18E0033845C /* StartingScreenZeroController.swift */; };
 		427BC0FA2295A20F0033845C /* StartingScreenZeroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427BC0F92295A20F0033845C /* StartingScreenZeroView.swift */; };
 		427BC0FC2295A2270033845C /* StartingScreenZeroView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 427BC0FB2295A2270033845C /* StartingScreenZeroView.xib */; };
+		42F24F5B2298930D00E31EE3 /* NavBarButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F24F5A2298930D00E31EE3 /* NavBarButtons.swift */; };
 		9D1575051CB1B27500EA395E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1575041CB1B27500EA395E /* AppDelegate.swift */; };
 		9D15750C1CB1B27500EA395E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D15750B1CB1B27500EA395E /* Assets.xcassets */; };
 		9D15751A1CB1B27500EA395E /* WBooksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1575191CB1B27500EA395E /* WBooksTests.swift */; };
@@ -89,6 +90,7 @@
 		427BC0F72295A18E0033845C /* StartingScreenZeroController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartingScreenZeroController.swift; sourceTree = "<group>"; };
 		427BC0F92295A20F0033845C /* StartingScreenZeroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartingScreenZeroView.swift; sourceTree = "<group>"; };
 		427BC0FB2295A2270033845C /* StartingScreenZeroView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StartingScreenZeroView.xib; sourceTree = "<group>"; };
+		42F24F5A2298930D00E31EE3 /* NavBarButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavBarButtons.swift; sourceTree = "<group>"; };
 		9D1575011CB1B27500EA395E /* WBooks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WBooks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D1575041CB1B27500EA395E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9D15750B1CB1B27500EA395E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -171,6 +173,7 @@
 			isa = PBXGroup;
 			children = (
 				427BC0E52295873B0033845C /* MainMenuController.swift */,
+				42F24F5A2298930D00E31EE3 /* NavBarButtons.swift */,
 				427BC0E7229587D20033845C /* BookCell.swift */,
 				427BC0F4229593EB0033845C /* BookCell.xib */,
 				427BC0F0229590840033845C /* MainMenuView.xib */,
@@ -490,6 +493,7 @@
 				CEB934DD1D21992100DF75C2 /* Environment.swift in Sources */,
 				E1530D9C1ED37905002A9002 /* RollbarService.swift in Sources */,
 				427BC0E8229587D20033845C /* BookCell.swift in Sources */,
+				42F24F5B2298930D00E31EE3 /* NavBarButtons.swift in Sources */,
 				427BC0FA2295A20F0033845C /* StartingScreenZeroView.swift in Sources */,
 				9D1575051CB1B27500EA395E /* AppDelegate.swift in Sources */,
 			);

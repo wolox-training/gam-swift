@@ -10,7 +10,5 @@ import UIKit
 import WolmoCore
 
 class StartingScreenZeroView: UIView, NibLoadable {
-    
     @IBOutlet weak var signInGoogleButton: UIButton!
-    
 }

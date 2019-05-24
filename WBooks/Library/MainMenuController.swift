@@ -34,6 +34,17 @@ class MainMenuController: UIViewController {
         return false
     }
     
+    private func addBarButtons() {
+        let nav = self.navigationController?.navigationBar
+        //Title
+        self.title = "LIBRARY"
+        nav?.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
+        //Left notification button
+        navigationItem.leftBarButtonItem = UIBarButtonItem.notificationButton()
+        //Right search button
+        navigationItem.rightBarButtonItem = UIBarButtonItem.searchButton()
+    }
+    
     private func configureTableView() {
         books = createArray()
         _view.tableView.delegate = self
@@ -41,6 +52,7 @@ class MainMenuController: UIViewController {
         _view.tableView.register(cell: BookCell.self)
         _view.tableView.rowHeight = UITableViewAutomaticDimension
         _view.tableView.backgroundColor = UIColor.clear
+        addBarButtons()
     }
     
     private func createArray() -> [Book] {
@@ -72,3 +84,4 @@ extension MainMenuController: UITableViewDataSource, UITableViewDelegate {
         return 100
     }
 }
+

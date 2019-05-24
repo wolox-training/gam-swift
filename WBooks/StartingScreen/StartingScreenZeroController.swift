@@ -30,13 +30,13 @@ class StartingScreenZeroController: UIViewController {
         super.viewDidLoad()
     }
     
-    @objc func signIn() {
-        print("Hello Wolox!")
-        let mainViewController = MainMenuController()
-        present(mainViewController, animated: true)
-    }
-    
     func setAction() {
         _view.signInGoogleButton.addTarget(self, action: #selector(signIn), for: .touchUpInside)
+    }
+    
+    @objc func signIn() {
+        print("Hello Wolox!")
+        let controller = UINavigationController(rootViewController: MainMenuController())
+        present(controller, animated: true)
     }
 }
