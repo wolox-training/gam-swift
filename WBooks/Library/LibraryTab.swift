@@ -43,7 +43,7 @@ class LibraryTab: UITabBarController {
         let settings = SettingsController()
         settings.tabBarItem = UITabBarItem()
         settings.tabBarItem.title = "Settings"
-        settings.tabBarItem.image = UIImage(named: "is_settings")
+        settings.tabBarItem.image = UIImage(named: "ic_settings")
         settings.tabBarItem.tag = 4
         
         viewControllers = [library, wishList, addNew, rentals, settings]

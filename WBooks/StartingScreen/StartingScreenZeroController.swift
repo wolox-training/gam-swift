@@ -36,7 +36,7 @@ class StartingScreenZeroController: UIViewController {
     
     @objc func signIn() {
         print("Hello Wolox!")
-        let controller = UINavigationController(rootViewController: MainMenuController())
+        let controller = UINavigationController(rootViewController: LibraryTab())
         present(controller, animated: true)
     }
 }

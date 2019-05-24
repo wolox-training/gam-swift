@@ -18,9 +18,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                      didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         let backgroundImage = #imageLiteral(resourceName: "bc_nav bar")
         UINavigationBar.appearance().setBackgroundImage(backgroundImage, for: .default)
+        
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = StartingScreenZeroController()
-        window?.makeKeyAndVisible() 
+        window?.makeKeyAndVisible()
 
         return true
     }

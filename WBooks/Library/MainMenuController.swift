@@ -10,6 +10,7 @@ import UIKit
 import WolmoCore
 
 class MainMenuController: UIViewController {
+    
     private lazy var _view: MainMenuView = MainMenuView.loadFromNib()!
     var books: [Book] = []
     
@@ -28,13 +29,14 @@ class MainMenuController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureTableView()
+        addNavBarButtons()
     }
     
     override open var shouldAutorotate: Bool {
         return false
     }
     
-    private func addBarButtons() {
+    private func addNavBarButtons() {
         let nav = self.navigationController?.navigationBar
         self.title = "NAVIGATION_BAR_TITLE".localized()
         nav?.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
@@ -56,7 +58,6 @@ class MainMenuController: UIViewController {
         _view.tableView.dataSource = self
         _view.tableView.register(cell: BookCell.self)
         _view.tableView.backgroundColor = UIColor.clear
-        addBarButtons()
     }
     
     private func createArray() -> [Book] {
