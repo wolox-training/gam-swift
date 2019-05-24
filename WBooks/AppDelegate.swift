@@ -16,8 +16,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-
-        
         let backgroundImage = #imageLiteral(resourceName: "bc_nav bar")
         UINavigationBar.appearance().setBackgroundImage(backgroundImage, for: .default)
         window = UIWindow(frame: UIScreen.main.bounds)

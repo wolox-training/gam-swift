@@ -25,22 +25,6 @@ class MainMenuController: UIViewController {
         view = _view
     }
     
-    private func addBarButtons() {
-        var nav = self.navigationController?.navigationBar
-        self.title = "LIBRARY"
-        nav?.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
-        let notificationsButton = UIButton(type: .system)
-        notificationsButton.setImage(#imageLiteral(resourceName: "ic_notifications").withRenderingMode(.alwaysOriginal), for: .normal)
-        notificationsButton.frame = CGRect(x: 0, y: 0, width: 34, height: 34)
-        navigationItem.leftBarButtonItem = UIBarButtonItem(customView: notificationsButton)
-        
-        let searchButton = UIButton(type: .system)
-        searchButton.setImage(#imageLiteral(resourceName: "ic_search.png").withRenderingMode(.alwaysOriginal), for: .normal)
-        searchButton.frame = CGRect(x: 0, y: 0, width: 34, height: 34)
-        navigationItem.rightBarButtonItem = UIBarButtonItem(customView: searchButton)
-        
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureTableView()
@@ -48,6 +32,23 @@ class MainMenuController: UIViewController {
     
     override open var shouldAutorotate: Bool {
         return false
+    }
+    
+    private func addBarButtons() {
+        let nav = self.navigationController?.navigationBar
+        //Title
+        self.title = "LIBRARY"
+        nav?.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
+        //Left notification button
+        let notificationsButton = UIButton(type: .system)
+        notificationsButton.setImage(#imageLiteral(resourceName: "ic_notifications").withRenderingMode(.alwaysOriginal), for: .normal)
+        notificationsButton.frame = CGRect(x: 0, y: 0, width: 34, height: 34)
+        navigationItem.leftBarButtonItem = UIBarButtonItem(customView: notificationsButton)
+        //Right search button
+        let searchButton = UIButton(type: .system)
+        searchButton.setImage(#imageLiteral(resourceName: "ic_search.png").withRenderingMode(.alwaysOriginal), for: .normal)
+        searchButton.frame = CGRect(x: 0, y: 0, width: 34, height: 34)
+        navigationItem.rightBarButtonItem = UIBarButtonItem(customView: searchButton)
     }
     
     private func configureTableView() {
