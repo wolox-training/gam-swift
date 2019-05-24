@@ -16,25 +16,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        /*if Environment.isTestTarget {
-            return true
-        }*/
-        
-        /*
-         * Uncomment this and remove this comment once Rollbar service is enabled
-         * and the keys are properly configured in the configuration files.
-         *
-        RollbarService().initialize()
-         *
-         */
-        /*
-        NetworkActivityLogger.shared.level = .debug
-        NetworkActivityLogger.shared.startLogging()
-        
         window = UIWindow(frame: UIScreen.main.bounds)
-        window?.rootViewController = ViewController()
-        window?.makeKeyAndVisible()
-        */
+        window?.rootViewController = StartingScreenZeroController()
+        window?.makeKeyAndVisible() 
         return true
     }
 
