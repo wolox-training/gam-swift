@@ -16,9 +16,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        window = UIWindow(frame: UIScreen.main.bounds)// esto te devuelve el window de la app que tenes.
-        window?.rootViewController = StartingScreenZeroController() //Aca creas un viewController (Que sería el de la imagen) y lo seteas como root de la app
-        window?.makeKeyAndVisible() //con esto le decis que te muestre la vista y la ponga encima de todo
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.rootViewController = StartingScreenZeroController()
+        window?.makeKeyAndVisible() 
         return true
     }
 

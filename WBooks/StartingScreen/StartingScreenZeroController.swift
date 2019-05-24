@@ -21,23 +21,22 @@ class StartingScreenZeroController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
-    @objc func signIn(){
-        print("Hello Wolox!")
-        let mainViewController = MainMenuController()
-        present(mainViewController, animated: true)
-    }
-    
     override func loadView() {
         view = _view
-    }
-    
-    func setAction(){
-        _view.signInGoogleButton.addTarget(self, action: #selector(signIn), for: .touchUpInside)
     }
     
     override func viewDidLoad() {
         setAction()
         super.viewDidLoad()
     }
-
+    
+    @objc func signIn() {
+        print("Hello Wolox!")
+        let mainViewController = MainMenuController()
+        present(mainViewController, animated: true)
+    }
+    
+    func setAction() {
+        _view.signInGoogleButton.addTarget(self, action: #selector(signIn), for: .touchUpInside)
+    }
 }

@@ -10,11 +10,11 @@ import Foundation
 import UIKit
 
 class Book {
-    var title: String
-    var author: String
-    var cover: UIImage
+    let title: String
+    let author: String
+    let cover: UIImage
     
-    init(title: String, author: String, cover: UIImage){
+    init(title: String, author: String, cover: UIImage) {
         self.title = title
         self.author = author
         self.cover = cover
