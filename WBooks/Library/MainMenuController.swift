@@ -55,7 +55,6 @@ class MainMenuController: UIViewController {
         _view.tableView.delegate = self
         _view.tableView.dataSource = self
         _view.tableView.register(cell: BookCell.self)
-        _view.tableView.rowHeight = UITableViewAutomaticDimension
         _view.tableView.backgroundColor = UIColor.clear
         addBarButtons()
     }
