@@ -30,31 +30,31 @@ class LibraryTab: UITabBarController {
         let library = MainMenuController()
         library.tabBarItem = UITabBarItem()
         library.tabBarItem.title = "Library"
-        library.tabBarItem.image = UIImage(named: "ic_library")
+        library.tabBarItem.image = UIImage.libraryImage
         library.tabBarItem.tag = 0
         
         let wishList = WishListController()
         wishList.tabBarItem = UITabBarItem()
         wishList.tabBarItem.title = "Wishlist"
-        wishList.tabBarItem.image = UIImage(named: "ic_wishlist")
+        wishList.tabBarItem.image = UIImage.wishListImage
         wishList.tabBarItem.tag = 1
         
         let addNew = AddNewController()
         addNew.tabBarItem = UITabBarItem()
         addNew.tabBarItem.title = "Add New"
-        addNew.tabBarItem.image = UIImage(named: "ic_add new")
+        addNew.tabBarItem.image = UIImage.addNewImage
         addNew.tabBarItem.tag = 2
         
         let rentals = RentalsController()
         rentals.tabBarItem = UITabBarItem()
         rentals.tabBarItem.title = "Rentals"
-        rentals.tabBarItem.image = UIImage(named: "ic_myrentals")
+        rentals.tabBarItem.image = UIImage.myRentalsImage
         rentals.tabBarItem.tag = 3
         
         let settings = SettingsController()
         settings.tabBarItem = UITabBarItem()
         settings.tabBarItem.title = "Settings"
-        settings.tabBarItem.image = UIImage(named: "ic_settings")
+        settings.tabBarItem.image = UIImage.settingsImage
         settings.tabBarItem.tag = 4
         
         viewControllers = [library, wishList, addNew, rentals, settings]
