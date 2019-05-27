@@ -10,6 +10,7 @@
 		0CCF002A219208080061050C /* WolmoReactiveCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CCF0029219208080061050C /* WolmoReactiveCore.framework */; };
 		0CCF002C219208110061050C /* Wormholy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CCF002B219208110061050C /* Wormholy.framework */; };
 		0CCF002E219208180061050C /* WolmoCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CCF002D219208180061050C /* WolmoCore.framework */; };
+		423A28FC229C4578008609EE /* NavBarButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423A28FB229C4578008609EE /* NavBarButtons.swift */; };
 		427BC0E62295873B0033845C /* MainMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427BC0E52295873B0033845C /* MainMenuController.swift */; };
 		427BC0E8229587D20033845C /* BookCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427BC0E7229587D20033845C /* BookCell.swift */; };
 		427BC0EC22958D750033845C /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427BC0EB22958D750033845C /* Book.swift */; };
@@ -86,6 +87,7 @@
 		0CCF0029219208080061050C /* WolmoReactiveCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WolmoReactiveCore.framework; path = Carthage/Build/iOS/WolmoReactiveCore.framework; sourceTree = "<group>"; };
 		0CCF002B219208110061050C /* Wormholy.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Wormholy.framework; path = Carthage/Build/iOS/Wormholy.framework; sourceTree = "<group>"; };
 		0CCF002D219208180061050C /* WolmoCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WolmoCore.framework; path = Carthage/Build/iOS/WolmoCore.framework; sourceTree = "<group>"; };
+		423A28FB229C4578008609EE /* NavBarButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavBarButtons.swift; sourceTree = "<group>"; };
 		427BC0E52295873B0033845C /* MainMenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuController.swift; sourceTree = "<group>"; };
 		427BC0E7229587D20033845C /* BookCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCell.swift; sourceTree = "<group>"; };
 		427BC0EB22958D750033845C /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
@@ -185,12 +187,12 @@
 			isa = PBXGroup;
 			children = (
 				427BC0E52295873B0033845C /* MainMenuController.swift */,
-				42F155E82298969500AB0AD6 /* NavBarButtons.swift */,
 				427BC0E7229587D20033845C /* BookCell.swift */,
 				42F782A122988180000F9907 /* LibraryTab.swift */,
 				427BC0F4229593EB0033845C /* BookCell.xib */,
 				427BC0F0229590840033845C /* MainMenuView.xib */,
 				427BC0F2229590C90033845C /* MainMenuView.swift */,
+				423A28FB229C4578008609EE /* NavBarButtons.swift */,
 			);
 			path = Library;
 			sourceTree = "<group>";
@@ -541,6 +543,7 @@
 			files = (
 				42F782AD22988423000F9907 /* AddNewController.swift in Sources */,
 				427BC0E62295873B0033845C /* MainMenuController.swift in Sources */,
+				423A28FC229C4578008609EE /* NavBarButtons.swift in Sources */,
 				42F782AF22988434000F9907 /* WishListController.swift in Sources */,
 				427BC0F82295A18E0033845C /* StartingScreenZeroController.swift in Sources */,
 				427BC0F3229590C90033845C /* MainMenuView.swift in Sources */,
@@ -550,7 +553,6 @@
 				E1530D9C1ED37905002A9002 /* RollbarService.swift in Sources */,
 				42F782AB22988414000F9907 /* RentalsController.swift in Sources */,
 				427BC0E8229587D20033845C /* BookCell.swift in Sources */,
-				42F155E92298969500AB0AD6 /* NavBarButtons.swift in Sources */,
 				427BC0FA2295A20F0033845C /* StartingScreenZeroView.swift in Sources */,
 				9D1575051CB1B27500EA395E /* AppDelegate.swift in Sources */,
 				42F782A222988180000F9907 /* LibraryTab.swift in Sources */,

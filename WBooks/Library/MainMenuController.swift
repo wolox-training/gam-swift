@@ -29,21 +29,10 @@ class MainMenuController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureTableView()
-        addNavBarButtons()
     }
     
     override open var shouldAutorotate: Bool {
         return false
-    }
-    
-    private func addNavBarButtons() {
-        let nav = self.navigationController?.navigationBar
-        self.title = "NAVIGATION_BAR_TITLE".localized()
-        nav?.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
-        //Left notification button
-        navigationItem.leftBarButtonItem = UIBarButtonItem.notificationButton()
-        //Right search button
-        navigationItem.rightBarButtonItem = UIBarButtonItem.searchButton()
     }
     
     private func configureTableView() {
@@ -83,4 +72,3 @@ extension MainMenuController: UITableViewDataSource, UITableViewDelegate {
         return 100
     }
 }
-
