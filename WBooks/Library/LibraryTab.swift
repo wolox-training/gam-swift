@@ -12,10 +12,21 @@ class LibraryTab: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // change tab bar color
+        configureTabBar()
+        addNavBarButtons()
+    }
+    
+    private func addNavBarButtons() {
+        self.title = "NAVIGATION_BAR_TITLE".localized()
+        self.setNavigationBarTitle("NAVIGATION_BAR_TITLE".localized(), font: UIFont.systemFont(ofSize: 20, weight: UIFont.Weight.medium), color: UIColor.white)
+        //Left notification button
+        navigationItem.leftBarButtonItem = UIBarButtonItem.notificationButton()
+        //Right search button
+        navigationItem.rightBarButtonItem = UIBarButtonItem.searchButton()
+    }
+    
+    private func configureTabBar() {
         tabBar.barTintColor = .white
-        
         let library = MainMenuController()
         library.tabBarItem = UITabBarItem()
         library.tabBarItem.title = "Library"
@@ -47,15 +58,5 @@ class LibraryTab: UITabBarController {
         settings.tabBarItem.tag = 4
         
         viewControllers = [library, wishList, addNew, rentals, settings]
-        addNavBarButtons()
-    }
-    
-    private func addNavBarButtons() {
-        self.title = "NAVIGATION_BAR_TITLE".localized()
-        self.setNavigationBarTitle("NAVIGATION_BAR_TITLE".localized(), font: UIFont.systemFont(ofSize: 20, weight: UIFont.Weight.medium), color: UIColor.white)
-        //Left notification button
-        navigationItem.leftBarButtonItem = UIBarButtonItem.notificationButton()
-        //Right search button
-        navigationItem.rightBarButtonItem = UIBarButtonItem.searchButton()
     }
 }
