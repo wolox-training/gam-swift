@@ -186,6 +186,7 @@
 		423A28FD229C56E6008609EE /* MainTabBar */ = {
 			isa = PBXGroup;
 			children = (
+				42F782A122988180000F9907 /* LibraryTab.swift */,
 			);
 			path = MainTabBar;
 			sourceTree = "<group>";
@@ -195,7 +196,6 @@
 			children = (
 				427BC0E52295873B0033845C /* MainMenuController.swift */,
 				427BC0E7229587D20033845C /* BookCell.swift */,
-				42F782A122988180000F9907 /* LibraryTab.swift */,
 				427BC0F4229593EB0033845C /* BookCell.xib */,
 				427BC0F0229590840033845C /* MainMenuView.xib */,
 				427BC0F2229590C90033845C /* MainMenuView.swift */,
