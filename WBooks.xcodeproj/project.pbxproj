@@ -11,6 +11,8 @@
 		0CCF002C219208110061050C /* Wormholy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CCF002B219208110061050C /* Wormholy.framework */; };
 		0CCF002E219208180061050C /* WolmoCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CCF002D219208180061050C /* WolmoCore.framework */; };
 		423A28FC229C4578008609EE /* NavBarButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423A28FB229C4578008609EE /* NavBarButtons.swift */; };
+		42689E45229DB7B200EA02A7 /* MainMenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42689E44229DB7B200EA02A7 /* MainMenuViewModel.swift */; };
+		42689E47229DBA4E00EA02A7 /* BookViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42689E46229DBA4E00EA02A7 /* BookViewModel.swift */; };
 		426D667A229C69DC004070A6 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426D6679229C69DC004070A6 /* Images.swift */; };
 		427BC0E62295873B0033845C /* MainMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427BC0E52295873B0033845C /* MainMenuController.swift */; };
 		427BC0E8229587D20033845C /* BookCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427BC0E7229587D20033845C /* BookCell.swift */; };
@@ -89,6 +91,8 @@
 		0CCF002B219208110061050C /* Wormholy.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Wormholy.framework; path = Carthage/Build/iOS/Wormholy.framework; sourceTree = "<group>"; };
 		0CCF002D219208180061050C /* WolmoCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WolmoCore.framework; path = Carthage/Build/iOS/WolmoCore.framework; sourceTree = "<group>"; };
 		423A28FB229C4578008609EE /* NavBarButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavBarButtons.swift; sourceTree = "<group>"; };
+		42689E44229DB7B200EA02A7 /* MainMenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuViewModel.swift; sourceTree = "<group>"; };
+		42689E46229DBA4E00EA02A7 /* BookViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookViewModel.swift; sourceTree = "<group>"; };
 		426D6679229C69DC004070A6 /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
 		427BC0E52295873B0033845C /* MainMenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuController.swift; sourceTree = "<group>"; };
 		427BC0E7229587D20033845C /* BookCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCell.swift; sourceTree = "<group>"; };
@@ -205,6 +209,7 @@
 			isa = PBXGroup;
 			children = (
 				427BC0E52295873B0033845C /* MainMenuController.swift */,
+				42689E44229DB7B200EA02A7 /* MainMenuViewModel.swift */,
 				427BC0E7229587D20033845C /* BookCell.swift */,
 				427BC0F4229593EB0033845C /* BookCell.xib */,
 				427BC0F0229590840033845C /* MainMenuView.xib */,
@@ -218,6 +223,7 @@
 			isa = PBXGroup;
 			children = (
 				427BC0EB22958D750033845C /* Book.swift */,
+				42689E46229DBA4E00EA02A7 /* BookViewModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -560,10 +566,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42689E45229DB7B200EA02A7 /* MainMenuViewModel.swift in Sources */,
 				42F782AD22988423000F9907 /* AddNewController.swift in Sources */,
 				427BC0E62295873B0033845C /* MainMenuController.swift in Sources */,
 				423A28FC229C4578008609EE /* NavBarButtons.swift in Sources */,
 				42F782AF22988434000F9907 /* WishListController.swift in Sources */,
+				42689E47229DBA4E00EA02A7 /* BookViewModel.swift in Sources */,
 				427BC0F82295A18E0033845C /* StartingScreenZeroController.swift in Sources */,
 				427BC0F3229590C90033845C /* MainMenuView.swift in Sources */,
 				427BC0EC22958D750033845C /* Book.swift in Sources */,

@@ -25,9 +25,9 @@ class BookCell: UITableViewCell, NibLoadable {
         backgroundColor = UIColor.clear
     }
     
-    func setBook(book: Book) {
-        title.text = book.title
-        author.text = book.author
-        cover.image = book.cover
+    func setBook(bookViewModel: BookViewModel) {
+        title.text = bookViewModel.title
+        author.text = bookViewModel.author
+        cover.image = bookViewModel.cover
     }
 }
