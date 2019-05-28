@@ -10,6 +10,8 @@
 		0CCF002A219208080061050C /* WolmoReactiveCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CCF0029219208080061050C /* WolmoReactiveCore.framework */; };
 		0CCF002C219208110061050C /* Wormholy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CCF002B219208110061050C /* Wormholy.framework */; };
 		0CCF002E219208180061050C /* WolmoCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CCF002D219208180061050C /* WolmoCore.framework */; };
+		423A28FC229C4578008609EE /* NavBarButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423A28FB229C4578008609EE /* NavBarButtons.swift */; };
+		426D667A229C69DC004070A6 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426D6679229C69DC004070A6 /* Images.swift */; };
 		427BC0E62295873B0033845C /* MainMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427BC0E52295873B0033845C /* MainMenuController.swift */; };
 		427BC0E8229587D20033845C /* BookCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427BC0E7229587D20033845C /* BookCell.swift */; };
 		427BC0EC22958D750033845C /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427BC0EB22958D750033845C /* Book.swift */; };
@@ -20,7 +22,11 @@
 		427BC0FA2295A20F0033845C /* StartingScreenZeroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427BC0F92295A20F0033845C /* StartingScreenZeroView.swift */; };
 		427BC0FC2295A2270033845C /* StartingScreenZeroView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 427BC0FB2295A2270033845C /* StartingScreenZeroView.xib */; };
 		427D7AC62297488000B5B29E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 427D7AC82297488000B5B29E /* Localizable.strings */; };
-		42F155E92298969500AB0AD6 /* NavBarButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F155E82298969500AB0AD6 /* NavBarButtons.swift */; };
+		42F782A222988180000F9907 /* LibraryTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F782A122988180000F9907 /* LibraryTab.swift */; };
+		42F782A922988405000F9907 /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F782A822988405000F9907 /* SettingsController.swift */; };
+		42F782AB22988414000F9907 /* RentalsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F782AA22988414000F9907 /* RentalsController.swift */; };
+		42F782AD22988423000F9907 /* AddNewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F782AC22988423000F9907 /* AddNewController.swift */; };
+		42F782AF22988434000F9907 /* WishListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F782AE22988434000F9907 /* WishListController.swift */; };
 		9D1575051CB1B27500EA395E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1575041CB1B27500EA395E /* AppDelegate.swift */; };
 		9D15750C1CB1B27500EA395E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D15750B1CB1B27500EA395E /* Assets.xcassets */; };
 		9D15751A1CB1B27500EA395E /* WBooksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1575191CB1B27500EA395E /* WBooksTests.swift */; };
@@ -82,6 +88,8 @@
 		0CCF0029219208080061050C /* WolmoReactiveCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WolmoReactiveCore.framework; path = Carthage/Build/iOS/WolmoReactiveCore.framework; sourceTree = "<group>"; };
 		0CCF002B219208110061050C /* Wormholy.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Wormholy.framework; path = Carthage/Build/iOS/Wormholy.framework; sourceTree = "<group>"; };
 		0CCF002D219208180061050C /* WolmoCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WolmoCore.framework; path = Carthage/Build/iOS/WolmoCore.framework; sourceTree = "<group>"; };
+		423A28FB229C4578008609EE /* NavBarButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavBarButtons.swift; sourceTree = "<group>"; };
+		426D6679229C69DC004070A6 /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
 		427BC0E52295873B0033845C /* MainMenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuController.swift; sourceTree = "<group>"; };
 		427BC0E7229587D20033845C /* BookCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCell.swift; sourceTree = "<group>"; };
 		427BC0EB22958D750033845C /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
@@ -94,7 +102,11 @@
 		427D7AC72297488000B5B29E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		427D7AC9229749EE00B5B29E /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		427D7ACA229749FD00B5B29E /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
-		42F155E82298969500AB0AD6 /* NavBarButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavBarButtons.swift; sourceTree = "<group>"; };
+		42F782A122988180000F9907 /* LibraryTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryTab.swift; sourceTree = "<group>"; };
+		42F782A822988405000F9907 /* SettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
+		42F782AA22988414000F9907 /* RentalsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RentalsController.swift; sourceTree = "<group>"; };
+		42F782AC22988423000F9907 /* AddNewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewController.swift; sourceTree = "<group>"; };
+		42F782AE22988434000F9907 /* WishListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishListController.swift; sourceTree = "<group>"; };
 		9D1575011CB1B27500EA395E /* WBooks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WBooks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D1575041CB1B27500EA395E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9D15750B1CB1B27500EA395E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -173,15 +185,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		423A28FD229C56E6008609EE /* MainTabBar */ = {
+			isa = PBXGroup;
+			children = (
+				42F782A122988180000F9907 /* LibraryTab.swift */,
+			);
+			path = MainTabBar;
+			sourceTree = "<group>";
+		};
+		426D667B229C6B70004070A6 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				426D6679229C69DC004070A6 /* Images.swift */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
 		427BC0EE22958FE20033845C /* Library */ = {
 			isa = PBXGroup;
 			children = (
 				427BC0E52295873B0033845C /* MainMenuController.swift */,
-				42F155E82298969500AB0AD6 /* NavBarButtons.swift */,
 				427BC0E7229587D20033845C /* BookCell.swift */,
 				427BC0F4229593EB0033845C /* BookCell.xib */,
 				427BC0F0229590840033845C /* MainMenuView.xib */,
 				427BC0F2229590C90033845C /* MainMenuView.swift */,
+				423A28FB229C4578008609EE /* NavBarButtons.swift */,
 			);
 			path = Library;
 			sourceTree = "<group>";
@@ -202,6 +230,38 @@
 				427BC0FB2295A2270033845C /* StartingScreenZeroView.xib */,
 			);
 			path = StartingScreen;
+			sourceTree = "<group>";
+		};
+		42F782A3229883A5000F9907 /* WishList */ = {
+			isa = PBXGroup;
+			children = (
+				42F782AE22988434000F9907 /* WishListController.swift */,
+			);
+			path = WishList;
+			sourceTree = "<group>";
+		};
+		42F782A4229883BC000F9907 /* AddNew */ = {
+			isa = PBXGroup;
+			children = (
+				42F782AC22988423000F9907 /* AddNewController.swift */,
+			);
+			path = AddNew;
+			sourceTree = "<group>";
+		};
+		42F782A6229883D1000F9907 /* Rentals */ = {
+			isa = PBXGroup;
+			children = (
+				42F782AA22988414000F9907 /* RentalsController.swift */,
+			);
+			path = Rentals;
+			sourceTree = "<group>";
+		};
+		42F782A7229883DA000F9907 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				42F782A822988405000F9907 /* SettingsController.swift */,
+			);
+			path = Settings;
 			sourceTree = "<group>";
 		};
 		9D1574F81CB1B27500EA395E = {
@@ -229,15 +289,21 @@
 		9D1575031CB1B27500EA395E /* WBooks */ = {
 			isa = PBXGroup;
 			children = (
-				427BC0F62295A14E0033845C /* StartingScreen */,
+				9D1575041CB1B27500EA395E /* AppDelegate.swift */,
+				CEB934DC1D21992100DF75C2 /* Environment.swift */,
+				9D1575101CB1B27500EA395E /* Info.plist */,
+				9D15750B1CB1B27500EA395E /* Assets.xcassets */,
 				427BC0EF2295902A0033845C /* Models */,
+				427BC0F62295A14E0033845C /* StartingScreen */,
+				423A28FD229C56E6008609EE /* MainTabBar */,
 				427BC0EE22958FE20033845C /* Library */,
+				42F782A3229883A5000F9907 /* WishList */,
+				42F782A4229883BC000F9907 /* AddNew */,
+				42F782A6229883D1000F9907 /* Rentals */,
+				42F782A7229883DA000F9907 /* Settings */,
+				426D667B229C6B70004070A6 /* Images */,
 				E1530D9A1ED378F9002A9002 /* Services */,
 				CEB934DE1D21A44700DF75C2 /* ConfigurationFiles */,
-				9D1575041CB1B27500EA395E /* AppDelegate.swift */,
-				9D15750B1CB1B27500EA395E /* Assets.xcassets */,
-				9D1575101CB1B27500EA395E /* Info.plist */,
-				CEB934DC1D21992100DF75C2 /* Environment.swift */,
 			);
 			path = WBooks;
 			sourceTree = "<group>";
@@ -494,16 +560,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42F782AD22988423000F9907 /* AddNewController.swift in Sources */,
 				427BC0E62295873B0033845C /* MainMenuController.swift in Sources */,
+				423A28FC229C4578008609EE /* NavBarButtons.swift in Sources */,
+				42F782AF22988434000F9907 /* WishListController.swift in Sources */,
 				427BC0F82295A18E0033845C /* StartingScreenZeroController.swift in Sources */,
 				427BC0F3229590C90033845C /* MainMenuView.swift in Sources */,
 				427BC0EC22958D750033845C /* Book.swift in Sources */,
 				CEB934DD1D21992100DF75C2 /* Environment.swift in Sources */,
+				42F782A922988405000F9907 /* SettingsController.swift in Sources */,
 				E1530D9C1ED37905002A9002 /* RollbarService.swift in Sources */,
+				42F782AB22988414000F9907 /* RentalsController.swift in Sources */,
 				427BC0E8229587D20033845C /* BookCell.swift in Sources */,
-				42F155E92298969500AB0AD6 /* NavBarButtons.swift in Sources */,
 				427BC0FA2295A20F0033845C /* StartingScreenZeroView.swift in Sources */,
+				426D667A229C69DC004070A6 /* Images.swift in Sources */,
 				9D1575051CB1B27500EA395E /* AppDelegate.swift in Sources */,
+				42F782A222988180000F9907 /* LibraryTab.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
