@@ -289,21 +289,21 @@
 		9D1575031CB1B27500EA395E /* WBooks */ = {
 			isa = PBXGroup;
 			children = (
-				426D667B229C6B70004070A6 /* Images */,
-				423A28FD229C56E6008609EE /* MainTabBar */,
-				42F782A7229883DA000F9907 /* Settings */,
-				42F782A6229883D1000F9907 /* Rentals */,
-				42F782A4229883BC000F9907 /* AddNew */,
-				42F782A3229883A5000F9907 /* WishList */,
-				427BC0F62295A14E0033845C /* StartingScreen */,
+				9D1575041CB1B27500EA395E /* AppDelegate.swift */,
+				CEB934DC1D21992100DF75C2 /* Environment.swift */,
+				9D1575101CB1B27500EA395E /* Info.plist */,
+				9D15750B1CB1B27500EA395E /* Assets.xcassets */,
 				427BC0EF2295902A0033845C /* Models */,
+				427BC0F62295A14E0033845C /* StartingScreen */,
+				423A28FD229C56E6008609EE /* MainTabBar */,
 				427BC0EE22958FE20033845C /* Library */,
+				42F782A3229883A5000F9907 /* WishList */,
+				42F782A4229883BC000F9907 /* AddNew */,
+				42F782A6229883D1000F9907 /* Rentals */,
+				42F782A7229883DA000F9907 /* Settings */,
+				426D667B229C6B70004070A6 /* Images */,
 				E1530D9A1ED378F9002A9002 /* Services */,
 				CEB934DE1D21A44700DF75C2 /* ConfigurationFiles */,
-				9D1575041CB1B27500EA395E /* AppDelegate.swift */,
-				9D15750B1CB1B27500EA395E /* Assets.xcassets */,
-				9D1575101CB1B27500EA395E /* Info.plist */,
-				CEB934DC1D21992100DF75C2 /* Environment.swift */,
 			);
 			path = WBooks;
 			sourceTree = "<group>";

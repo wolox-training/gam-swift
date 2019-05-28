@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina5_9" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -20,20 +16,20 @@
                     <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Designed, developed and used by woloxers " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jg2-Xi-MZT">
-                    <rect key="frame" x="37.666666666666657" y="748" width="300" height="18"/>
+                    <rect key="frame" x="37.5" y="782" width="300" height="18"/>
                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Group" translatesAutoresizingMaskIntoConstraints="NO" id="gjZ-0m-TZD">
-                    <rect key="frame" x="97.666666666666686" y="275.66666666666669" width="180" height="136.66666666666669"/>
+                    <rect key="frame" x="97.5" y="276" width="180" height="136"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="gjZ-0m-TZD" secondAttribute="height" multiplier="161:122" id="60N-dv-25x"/>
                         <constraint firstAttribute="width" constant="180" id="k6p-yE-3fA"/>
                     </constraints>
                 </imageView>
                 <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rqn-3Y-PO9">
-                    <rect key="frame" x="52.666666666666657" y="452.33333333333331" width="270" height="64.999999999999943"/>
+                    <rect key="frame" x="52.5" y="452" width="270" height="65"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="rqn-3Y-PO9" secondAttribute="height" multiplier="191:46" id="ERb-f3-lhW"/>
                         <constraint firstAttribute="width" constant="270" id="mXn-G1-TDH"/>
