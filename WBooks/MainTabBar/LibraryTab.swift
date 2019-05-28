@@ -12,8 +12,13 @@ class LibraryTab: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setNeedsStatusBarAppearanceUpdate()
         configureTabBar()
         addNavBarButtons()
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
     }
     
     private func addNavBarButtons() {

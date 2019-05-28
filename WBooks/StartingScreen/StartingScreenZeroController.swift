@@ -26,8 +26,13 @@ class StartingScreenZeroController: UIViewController {
     }
     
     override func viewDidLoad() {
-        setAction()
         super.viewDidLoad()
+        setNeedsStatusBarAppearanceUpdate()
+        setAction()
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
     }
     
     func setAction() {
@@ -38,5 +43,11 @@ class StartingScreenZeroController: UIViewController {
         print("Hello Wolox!")
         let controller = UINavigationController(rootViewController: LibraryTab())
         present(controller, animated: true)
+    }
+}
+
+extension UINavigationController {
+    override open var preferredStatusBarStyle: UIStatusBarStyle {
+        return topViewController?.preferredStatusBarStyle ?? .default
     }
 }
