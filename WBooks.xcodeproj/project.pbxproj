@@ -197,6 +197,14 @@
 			path = MainTabBar;
 			sourceTree = "<group>";
 		};
+		42689E48229DC09D00EA02A7 /* Navigation Bar */ = {
+			isa = PBXGroup;
+			children = (
+				423A28FB229C4578008609EE /* NavBarButtons.swift */,
+			);
+			path = "Navigation Bar";
+			sourceTree = "<group>";
+		};
 		426D667B229C6B70004070A6 /* Images */ = {
 			isa = PBXGroup;
 			children = (
@@ -214,7 +222,6 @@
 				427BC0F4229593EB0033845C /* BookCell.xib */,
 				427BC0F0229590840033845C /* MainMenuView.xib */,
 				427BC0F2229590C90033845C /* MainMenuView.swift */,
-				423A28FB229C4578008609EE /* NavBarButtons.swift */,
 			);
 			path = Library;
 			sourceTree = "<group>";
@@ -307,6 +314,7 @@
 				42F782A4229883BC000F9907 /* AddNew */,
 				42F782A6229883D1000F9907 /* Rentals */,
 				42F782A7229883DA000F9907 /* Settings */,
+				42689E48229DC09D00EA02A7 /* Navigation Bar */,
 				426D667B229C6B70004070A6 /* Images */,
 				E1530D9A1ED378F9002A9002 /* Services */,
 				CEB934DE1D21A44700DF75C2 /* ConfigurationFiles */,

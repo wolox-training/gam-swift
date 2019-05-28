@@ -48,9 +48,9 @@ class MainMenuController: UIViewController {
 
 extension MainMenuController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let book = _viewModel.books[indexPath.row]
+        let bookViewModel = _viewModel.books[indexPath.row]
         let cell = _view.tableView.dequeue(cell: BookCell.self)!
-        cell.setBook(bookViewModel: book)
+        cell.setBook(bookViewModel: bookViewModel)
         return cell
     }
     
