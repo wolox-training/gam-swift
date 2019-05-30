@@ -28,6 +28,14 @@ class BookCell: UITableViewCell, NibLoadable {
     func setBook(bookViewModel: BookViewModel) {
         title.text = bookViewModel.title
         author.text = bookViewModel.author
-        cover.image = bookViewModel.cover
+        let url = URL(string: bookViewModel.image)
+        if let url = url {
+            do {
+                let data = try Data(contentsOf: url)
+                cover.image = UIImage(data: data)
+            } catch {
+                cover.image = UIImage(named: "no_image_available")
+            }
+        }
     }
 }

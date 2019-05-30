@@ -31,11 +31,20 @@ class MainMenuController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setNeedsStatusBarAppearanceUpdate()
+        setReferenceInViewModel()
         configureTableView()
     }
     
     override open var shouldAutorotate: Bool {
         return false
+    }
+    
+    private func setReferenceInViewModel() {
+        _viewModel.menuController = self
+    }
+    
+    func updateTableView() {
+        _view.tableView.reloadData()
     }
     
     private func configureTableView() {

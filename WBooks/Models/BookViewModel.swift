@@ -20,8 +20,24 @@ class BookViewModel {
         return _book.author
     }
     
+    var id: Int {
+        return _book.id
+    }
+    
+    var genre: String {
+        return _book.genre
+    }
+    
+    var year: String {
+        return _book.year
+    }
+    
+    var image: String {
+        return _book.image
+    }
+    
     var cover: UIImage {
-        return _book.cover
+        return UIImage.addNewImage
     }
     
     init(book: Book) {
