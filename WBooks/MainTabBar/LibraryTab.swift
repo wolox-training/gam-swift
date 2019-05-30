@@ -32,7 +32,7 @@ class LibraryTab: UITabBarController {
     
     private func configureTabBar() {
         tabBar.barTintColor = .white
-        let library = MainMenuController()
+        let library = MainMenuController(viewModel: MainMenuViewModel())
         library.tabBarItem = UITabBarItem()
         library.tabBarItem.title = "Library"
         library.tabBarItem.image = UIImage.libraryImage
