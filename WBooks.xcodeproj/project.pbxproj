@@ -25,6 +25,12 @@
 		427BC0FC2295A2270033845C /* StartingScreenZeroView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 427BC0FB2295A2270033845C /* StartingScreenZeroView.xib */; };
 		427D7AC62297488000B5B29E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 427D7AC82297488000B5B29E /* Localizable.strings */; };
 		42D5AAF222A0114A00084F74 /* BookRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D5AAF122A0114A00084F74 /* BookRepository.swift */; };
+		42D5AAF522A075EE00084F74 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D5AAF422A075EE00084F74 /* DetailViewController.swift */; };
+		42D5AAF722A0762900084F74 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D5AAF622A0762900084F74 /* DetailView.swift */; };
+		42D5AAF922A0763D00084F74 /* DetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42D5AAF822A0763D00084F74 /* DetailView.xib */; };
+		42D5AAFB22A0764D00084F74 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D5AAFA22A0764D00084F74 /* DetailViewModel.swift */; };
+		42D5AB0122A07B2D00084F74 /* DetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D5AB0022A07B2D00084F74 /* DetailCell.swift */; };
+		42D5AB0322A07B3800084F74 /* DetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42D5AB0222A07B3800084F74 /* DetailCell.xib */; };
 		42F782A222988180000F9907 /* LibraryTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F782A122988180000F9907 /* LibraryTab.swift */; };
 		42F782A922988405000F9907 /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F782A822988405000F9907 /* SettingsController.swift */; };
 		42F782AB22988414000F9907 /* RentalsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F782AA22988414000F9907 /* RentalsController.swift */; };
@@ -108,6 +114,12 @@
 		427D7AC9229749EE00B5B29E /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		427D7ACA229749FD00B5B29E /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		42D5AAF122A0114A00084F74 /* BookRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookRepository.swift; sourceTree = "<group>"; };
+		42D5AAF422A075EE00084F74 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		42D5AAF622A0762900084F74 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		42D5AAF822A0763D00084F74 /* DetailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailView.xib; sourceTree = "<group>"; };
+		42D5AAFA22A0764D00084F74 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
+		42D5AB0022A07B2D00084F74 /* DetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCell.swift; sourceTree = "<group>"; };
+		42D5AB0222A07B3800084F74 /* DetailCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailCell.xib; sourceTree = "<group>"; };
 		42F782A122988180000F9907 /* LibraryTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryTab.swift; sourceTree = "<group>"; };
 		42F782A822988405000F9907 /* SettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
 		42F782AA22988414000F9907 /* RentalsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RentalsController.swift; sourceTree = "<group>"; };
@@ -248,6 +260,19 @@
 			path = StartingScreen;
 			sourceTree = "<group>";
 		};
+		42D5AAF322A075B300084F74 /* Detail View */ = {
+			isa = PBXGroup;
+			children = (
+				42D5AAF422A075EE00084F74 /* DetailViewController.swift */,
+				42D5AAF622A0762900084F74 /* DetailView.swift */,
+				42D5AAF822A0763D00084F74 /* DetailView.xib */,
+				42D5AB0022A07B2D00084F74 /* DetailCell.swift */,
+				42D5AB0222A07B3800084F74 /* DetailCell.xib */,
+				42D5AAFA22A0764D00084F74 /* DetailViewModel.swift */,
+			);
+			path = "Detail View";
+			sourceTree = "<group>";
+		};
 		42F782A3229883A5000F9907 /* WishList */ = {
 			isa = PBXGroup;
 			children = (
@@ -313,6 +338,7 @@
 				427BC0F62295A14E0033845C /* StartingScreen */,
 				423A28FD229C56E6008609EE /* MainTabBar */,
 				427BC0EE22958FE20033845C /* Library */,
+				42D5AAF322A075B300084F74 /* Detail View */,
 				42F782A3229883A5000F9907 /* WishList */,
 				42F782A4229883BC000F9907 /* AddNew */,
 				42F782A6229883D1000F9907 /* Rentals */,
@@ -505,6 +531,8 @@
 				427D7AC62297488000B5B29E /* Localizable.strings in Resources */,
 				427BC0F1229590840033845C /* MainMenuView.xib in Resources */,
 				427BC0FC2295A2270033845C /* StartingScreenZeroView.xib in Resources */,
+				42D5AAF922A0763D00084F74 /* DetailView.xib in Resources */,
+				42D5AB0322A07B3800084F74 /* DetailCell.xib in Resources */,
 				427BC0F5229593EB0033845C /* BookCell.xib in Resources */,
 				9D15750C1CB1B27500EA395E /* Assets.xcassets in Resources */,
 			);
@@ -584,8 +612,12 @@
 				423A28FC229C4578008609EE /* NavBarButtons.swift in Sources */,
 				42F782AF22988434000F9907 /* WishListController.swift in Sources */,
 				42689E47229DBA4E00EA02A7 /* BookViewModel.swift in Sources */,
+				42D5AAF522A075EE00084F74 /* DetailViewController.swift in Sources */,
 				427BC0F82295A18E0033845C /* StartingScreenZeroController.swift in Sources */,
+				42D5AB0122A07B2D00084F74 /* DetailCell.swift in Sources */,
+				42D5AAFB22A0764D00084F74 /* DetailViewModel.swift in Sources */,
 				427BC0F3229590C90033845C /* MainMenuView.swift in Sources */,
+				42D5AAF722A0762900084F74 /* DetailView.swift in Sources */,
 				427BC0EC22958D750033845C /* Book.swift in Sources */,
 				CEB934DD1D21992100DF75C2 /* Environment.swift in Sources */,
 				42F782A922988405000F9907 /* SettingsController.swift in Sources */,
