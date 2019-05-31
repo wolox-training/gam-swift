@@ -31,5 +31,27 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         _view.setBook(bookViewModel: _viewModel.bookViewModel)
+        setNeedsStatusBarAppearanceUpdate()
+        addNavBarButtons()
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
+    private func addNavBarButtons() {
+        title = "BOOK_DETAIL".localized()
+        setNavigationBarTitle("BOOK_DETAIL".localized(), font: UIFont.systemFont(ofSize: 20, weight: UIFont.Weight.medium), color: UIColor.white)
+        //Back button
+        let backButton = UIButton(type: .system)
+        backButton.setImage(#imageLiteral(resourceName: "ic_back").withRenderingMode(.alwaysOriginal), for: .normal)
+        backButton.frame = CGRect(x: 0, y: 0, width: 34, height: 34)
+        backButton.addTarget(self, action: #selector(backAction), for: UIControlEvents.touchUpInside)
+        navigationItem.leftBarButtonItem = UIBarButtonItem(customView: backButton)
+    }
+    
+    @objc func backAction() {
+        self.navigationController!.popViewController(animated: true)
+        print("Button pressed")
     }
 }
