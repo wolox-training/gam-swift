@@ -13,7 +13,10 @@ class DetailViewController: UIViewController {
     
     private lazy var _view: DetailView = DetailView.loadFromNib()!
     
-    init() {
+    private var _viewModel: DetailViewModel
+    
+    init(viewModel: DetailViewModel) {
+        _viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -27,5 +30,6 @@ class DetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        _view.setBook(bookViewModel: _viewModel.bookViewModel)
     }
 }
