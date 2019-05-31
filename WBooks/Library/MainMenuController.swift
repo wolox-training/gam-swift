@@ -38,7 +38,13 @@ class MainMenuController: UIViewController {
         return false
     }
     
+    func onSuccess(books: [Book]) {
+        _viewModel.onSuccess(books: books)
+        _view.tableView.reloadData()
+    }
+    
     private func configureTableView() {
+        _viewModel.loadBooks(onSuccess: onSuccess)
         _view.tableView.delegate = self
         _view.tableView.dataSource = self
         _view.tableView.register(cell: BookCell.self)
