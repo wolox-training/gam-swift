@@ -21,7 +21,6 @@ class MainMenuViewModel {
     
     func onSuccess(books: [Book]) {
         setBooks(books: books)
-        print(books)
     }
     
     let onError = { error in
