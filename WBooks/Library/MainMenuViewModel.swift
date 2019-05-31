@@ -7,20 +7,20 @@
 //
 
 import Foundation
+import UIKit
 
 class MainMenuViewModel {
     
     var books: [BookViewModel] = []
     
-    var menuController: MainMenuController?
+    var table: UITableView?
     
-    init() {
+    func loadBooks(onSuccess: @escaping ([Book]) -> Void) {
         BookRepository.fetchBooks(onSuccess: onSuccess, onError: onError)
     }
     
     func onSuccess(books: [Book]) {
         setBooks(books: books)
-        menuController!.updateTableView()
         print(books)
     }
     

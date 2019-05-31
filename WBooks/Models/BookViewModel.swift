@@ -37,7 +37,17 @@ class BookViewModel {
     }
     
     var cover: UIImage {
-        return UIImage.addNewImage
+        var image: UIImage = UIImage(named: "no_image_available")!
+        let url = URL(string: _book.image)
+        if let url = url {
+            do {
+                let data = try Data(contentsOf: url)
+                image = UIImage(data: data)!
+            } catch {
+                print("No image available for book \(_book.title)")
+            }
+        }
+        return image
     }
     
     init(book: Book) {

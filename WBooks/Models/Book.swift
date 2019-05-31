@@ -16,7 +16,6 @@ struct Book {
     let genre: String
     let year: String
     let image: String
-//    let cover: UIImage
     
     init(title: String, author: String, id: Int, genre: String, year: String, image: String) {
         self.title = title

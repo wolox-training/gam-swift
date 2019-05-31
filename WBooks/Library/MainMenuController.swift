@@ -31,7 +31,6 @@ class MainMenuController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setNeedsStatusBarAppearanceUpdate()
-        setReferenceInViewModel()
         configureTableView()
     }
     
@@ -39,15 +38,13 @@ class MainMenuController: UIViewController {
         return false
     }
     
-    private func setReferenceInViewModel() {
-        _viewModel.menuController = self
-    }
-    
-    func updateTableView() {
+    func onSuccess(books: [Book]) {
+        _viewModel.onSuccess(books: books)
         _view.tableView.reloadData()
     }
     
     private func configureTableView() {
+        _viewModel.loadBooks(onSuccess: onSuccess)
         _view.tableView.delegate = self
         _view.tableView.dataSource = self
         _view.tableView.register(cell: BookCell.self)
