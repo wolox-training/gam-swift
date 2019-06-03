@@ -12,7 +12,10 @@ class DetailViewModel {
     
     var bookViewModel: BookViewModel
     
-    init(bookViewModel: BookViewModel) {
+    var userId: Int
+    
+    init(bookViewModel: BookViewModel, id: Int) {
         self.bookViewModel = bookViewModel
+        self.userId = id
     }
 }

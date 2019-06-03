@@ -50,6 +50,10 @@ class BookViewModel {
         return image
     }
     
+    var status: String {
+        return _book.status
+    }
+    
     init(book: Book) {
         _book = book
     }    

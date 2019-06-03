@@ -13,14 +13,26 @@ class MainMenuViewModel {
     
     var books: [BookViewModel] = []
     
+    let userId: Int
+    
+    init(id: Int) {
+        userId = id
+    }
+    
     var table: UITableView?
     
     func loadBooks(onSuccess: @escaping ([Book]) -> Void) {
         BookRepository.fetchBooks(onSuccess: onSuccess, onError: onError)
+        RentsRepository.fetchRents(onSuccess: onSuccessRents, onError: onError)
     }
     
     func onSuccess(books: [Book]) {
+        print(books)
         setBooks(books: books)
+    }
+    
+    func onSuccessRents(rents: [Rent]) {
+        print(rents)
     }
     
     let onError = { error in

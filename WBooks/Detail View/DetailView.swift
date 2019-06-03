@@ -48,10 +48,23 @@ class DetailView: UIView, NibLoadable {
     
     func setBook(bookViewModel: BookViewModel) {
         title.text = bookViewModel.title
-        availability.text = "TODO"
         author.text = bookViewModel.author
         year.text = bookViewModel.year
         genre.text = bookViewModel.genre
         cover.image = bookViewModel.cover
+        setAvailability(status: bookViewModel.status)
+    }
+    
+    func setAvailability(status: String) {
+        switch status {
+        case "available", "Available":
+            availability.text = "Available"
+            availability.textColor = UIColor.green
+        case "unavailable", "Unavailable", "rented", "Rented":
+            availability.text = "Unavailable"
+            availability.textColor = UIColor.red
+        default:
+            availability.text = status
+        }
     }
 }
