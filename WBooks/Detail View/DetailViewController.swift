@@ -50,7 +50,7 @@ class DetailViewController: UIViewController {
         navigationItem.leftBarButtonItem = UIBarButtonItem(customView: backButton)
     }
     
-    @objc func backAction() {
+    @objc private func backAction() {
         self.navigationController!.popViewController(animated: true)
         print("Button pressed")
     }

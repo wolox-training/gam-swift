@@ -62,8 +62,9 @@ extension MainMenuController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let controller = UINavigationController(rootViewController: DetailViewController(viewModel: DetailViewModel(bookViewModel: _viewModel.books[indexPath.row])))
-        present(controller, animated: true)
+        let controller = DetailViewController(viewModel: DetailViewModel(bookViewModel: _viewModel.books[indexPath.row]))
+//        present(controller, animated: true)
+        navigationController?.pushViewController(controller, animated: true)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

@@ -54,5 +54,4 @@ class DetailView: UIView, NibLoadable {
         genre.text = bookViewModel.genre
         cover.image = bookViewModel.cover
     }
-    
 }
