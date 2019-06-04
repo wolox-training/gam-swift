@@ -10,38 +10,39 @@ import Foundation
 import UIKit
 
 struct Rent {
-    let book: String
-    let rentId: String
-    let usr: String
+    
+    let id: Int
     let to: String
     let from: String
+    let book: Book
+    let user: User
     
-    init(book: String, rentId: String, usr: String, to: String, from: String) {
-        self.book = book
-        self.rentId = rentId
-        self.usr = usr
+    init(id: Int, to: String, from: String, book: Book, user: User) {
+        self.id = id
         self.to = to
         self.from = from
+        self.book = book
+        self.user = user
     }
 }
 
 extension Rent: Codable {
     enum RentKey: String, CodingKey {
-        case book
-        case rentId
-        case usr
+        case id
         case to
         case from
+        case book
+        case user
     }
     
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: RentKey.self)
-        let book = try container.decode(String.self, forKey: .book)
-        let rentId = try container.decode(String.self, forKey: .rentId)
-        let usr = try container.decode(String.self, forKey: .usr)
+        let id = try container.decode(Int.self, forKey: .id)
         let to = try container.decode(String.self, forKey: .to)
         let from = try container.decode(String.self, forKey: .from)
+        let book = try container.decode(Book.self, forKey: .book)
+        let user = try container.decode(User.self, forKey: .user)
         
-        self.init(book: book, rentId: rentId, usr: usr, to: to, from: from)
+        self.init(id: id, to: to, from: from, book: book, user: user)
     }
 }

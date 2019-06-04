@@ -10,8 +10,6 @@ import UIKit
 
 class LibraryTab: UITabBarController {
 
-    var userId: Int = 1
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         setNeedsStatusBarAppearanceUpdate()
@@ -34,7 +32,7 @@ class LibraryTab: UITabBarController {
     
     private func configureTabBar() {
         tabBar.barTintColor = .white
-        let library = MainMenuController(viewModel: MainMenuViewModel(id: userId))
+        let library = MainMenuController(viewModel: MainMenuViewModel())
         library.tabBarItem = UITabBarItem()
         library.tabBarItem.title = "Library"
         library.tabBarItem.image = UIImage.libraryImage

@@ -8,3 +8,9 @@
 
 "NAVIGATION_BAR_TITLE" = "Library";
 "BOOK_DETAIL" = "BOOK DETAIL";
+"AVAILABLE" = "Available";
+"UNAVAILABLE" = "Unavailable";
+"IN_HANDS" = "In Your Hands";
+"ACCEPT" = "Ok";
+"CANNOT_RENT" = "This book is not available!";
+"THANKS" = "Thank you!";

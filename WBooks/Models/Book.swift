@@ -16,7 +16,7 @@ struct Book {
     let genre: String
     let year: String
     let image: String
-    let status: String
+    var status: String
     
     init(title: String, author: String, id: Int, genre: String, year: String, image: String, status: String) {
         self.title = title

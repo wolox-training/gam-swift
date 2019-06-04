@@ -8,3 +8,9 @@
 
 "NAVIGATION_BAR_TITLE" = "Bibliothèque";
 "BOOK_DETAIL" = "DÉTAILS DU LIVRE";
+"AVAILABLE" = "Disponible";
+"UNAVAILABLE" = "Indisponible";
+"IN_HANDS" = "Dans Tes Mains";
+"ACCEPT" = "Accepter";
+"CANNOT_RENT" = "Ce livre n'est pas disponible!";
+"THANKS" = "Merci!";

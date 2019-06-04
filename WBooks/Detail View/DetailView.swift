@@ -52,19 +52,19 @@ class DetailView: UIView, NibLoadable {
         year.text = bookViewModel.year
         genre.text = bookViewModel.genre
         cover.image = bookViewModel.cover
-        setAvailability(status: bookViewModel.status)
     }
     
-    func setAvailability(status: String) {
+    func setAvailability(status: Availability) {
         switch status {
-        case "available", "Available":
-            availability.text = "Available"
+        case .available:
+            availability.text = "AVAILABLE".localized()
             availability.textColor = UIColor.green
-        case "unavailable", "Unavailable", "rented", "Rented":
-            availability.text = "Unavailable"
+        case .notAvailable:
+            availability.text = "UNAVAILABLE".localized()
             availability.textColor = UIColor.red
-        default:
-            availability.text = status
+        case .inHands:
+            availability.text = "IN_HANDS".localized()
+            availability.textColor = UIColor.blue
         }
     }
 }
