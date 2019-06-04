@@ -46,6 +46,8 @@ class DetailView: UIView, NibLoadable {
         }
     }
     
+    @IBOutlet weak var comments: UITableView!
+    
     func setBook(bookViewModel: BookViewModel) {
         title.text = bookViewModel.title
         author.text = bookViewModel.author

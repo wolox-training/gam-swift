@@ -100,18 +100,27 @@
                         <constraint firstItem="UId-jS-lCl" firstAttribute="top" secondItem="fLw-b6-bUs" secondAttribute="bottom" constant="10" id="yRM-kj-efF"/>
                     </constraints>
                 </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gZx-hv-fR1">
+                    <rect key="frame" x="20" y="310" width="335" height="347"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </tableView>
             </subviews>
             <color key="backgroundColor" red="0.9247191548" green="0.96637803320000004" blue="0.97605592009999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="gZx-hv-fR1" firstAttribute="top" secondItem="gAE-Zf-udy" secondAttribute="bottom" constant="10" id="Kcn-8n-uDZ"/>
+                <constraint firstItem="Q0b-PX-Gt1" firstAttribute="trailing" secondItem="gZx-hv-fR1" secondAttribute="trailing" constant="20" id="M17-8z-1Vc"/>
                 <constraint firstItem="gAE-Zf-udy" firstAttribute="leading" secondItem="DLd-G0-haq" secondAttribute="leading" constant="20" id="U0N-v0-st9"/>
+                <constraint firstItem="Q0b-PX-Gt1" firstAttribute="bottom" secondItem="gZx-hv-fR1" secondAttribute="bottom" constant="10" id="U9E-q1-pMO"/>
                 <constraint firstItem="gAE-Zf-udy" firstAttribute="top" secondItem="Q0b-PX-Gt1" secondAttribute="top" constant="20" id="f1y-g1-Phz"/>
                 <constraint firstAttribute="trailing" secondItem="gAE-Zf-udy" secondAttribute="trailing" constant="20" id="kAW-wP-Foi"/>
+                <constraint firstItem="gZx-hv-fR1" firstAttribute="leading" secondItem="Q0b-PX-Gt1" secondAttribute="leading" constant="20" id="v6G-gc-wbN"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="Q0b-PX-Gt1"/>
             <connections>
                 <outlet property="addToWishlist" destination="fLw-b6-bUs" id="A3Y-oq-iXj"/>
                 <outlet property="author" destination="Anf-4y-jeB" id="Lfy-Ec-Afw"/>
                 <outlet property="availability" destination="q1p-6Y-3Po" id="pGU-ZN-daC"/>
+                <outlet property="comments" destination="gZx-hv-fR1" id="C4y-nF-IeS"/>
                 <outlet property="cover" destination="mQl-J9-SKK" id="B2V-cJ-C5D"/>
                 <outlet property="detailCell" destination="gAE-Zf-udy" id="GNP-gy-GY3"/>
                 <outlet property="genre" destination="BMD-Tx-b7f" id="J9i-8N-58t"/>

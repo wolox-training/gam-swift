@@ -15,6 +15,14 @@ class MainMenuController: UIViewController {
     
     private lazy var _view: MainMenuView = MainMenuView.loadFromNib()!
     
+    override open var shouldAutorotate: Bool {
+        return false
+    }
+    
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return .portrait
+    }
+    
     init(viewModel: MainMenuViewModel) {
         _viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
@@ -32,10 +40,6 @@ class MainMenuController: UIViewController {
         super.viewDidLoad()
         setNeedsStatusBarAppearanceUpdate()
         configureTableView()
-    }
-    
-    override open var shouldAutorotate: Bool {
-        return false
     }
     
     func onSuccess(books: [Book]) {

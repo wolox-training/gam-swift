@@ -15,6 +15,10 @@ class DetailViewController: UIViewController {
     
     private var _viewModel: DetailViewModel
     
+    override open var shouldAutorotate: Bool {
+        return false
+    }
+    
     init(viewModel: DetailViewModel) {
         _viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
@@ -37,6 +41,7 @@ class DetailViewController: UIViewController {
         setNeedsStatusBarAppearanceUpdate()
         setBookDetails()
         addNavBarButtons()
+        configureCommentsTableView()
     }
     
     private func setBookDetails() {
@@ -92,4 +97,36 @@ class DetailViewController: UIViewController {
             self.navigationController!.popViewController(animated: true)
         }
     }
+    
+    private func configureCommentsTableView() {
+        _viewModel.loadComments(onSuccess: <#T##([Comment]) -> Void#>, bookID: _viewModel.bookViewModel.id)
+//        _viewModel.loadBooks(onSuccess: onSuccess)
+//        _view.tableView.delegate = self
+//        _view.tableView.dataSource = self
+//        _view.tableView.register(cell: BookCell.self)
+//        _view.tableView.backgroundColor = UIColor.clear
+    }
+    
+    func onCommentRentSuccess() {
+        
+    }
+    
+}
+
+extension DetailViewController: UITableViewDataSource, UITableViewDelegate {
+//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//        return
+//    }
+    
+//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        return
+//    }
+    
+//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        return
+//    }
+    
+//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        return 
+//    }
 }
