@@ -46,7 +46,23 @@ class DetailView: UIView, NibLoadable {
         }
     }
     
-    @IBOutlet weak var comments: UITableView!
+    @IBOutlet weak var comments: UITableView! {
+        didSet {
+            self.comments.layer.cornerRadius = 10
+        }
+    }
+    
+    @IBOutlet weak var loadingCommentsIndicator: UIActivityIndicatorView!
+    
+    func startActivityIndicator() {
+        loadingCommentsIndicator.hidesWhenStopped = true
+        loadingCommentsIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.gray
+        loadingCommentsIndicator.startAnimating()
+    }
+    
+    func stopActivityIndicator() {
+        loadingCommentsIndicator.stopAnimating()
+    }
     
     func setBook(bookViewModel: BookViewModel) {
         title.text = bookViewModel.title

@@ -100,18 +100,28 @@
                         <constraint firstItem="UId-jS-lCl" firstAttribute="top" secondItem="fLw-b6-bUs" secondAttribute="bottom" constant="10" id="yRM-kj-efF"/>
                     </constraints>
                 </view>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gZx-hv-fR1">
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gZx-hv-fR1">
                     <rect key="frame" x="20" y="310" width="335" height="347"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </tableView>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="ux0-93-SDZ">
+                    <rect key="frame" x="172.5" y="400" width="30" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="30" id="IEd-Ia-LYY"/>
+                        <constraint firstAttribute="height" constant="30" id="dyn-bR-AqW"/>
+                    </constraints>
+                </activityIndicatorView>
             </subviews>
             <color key="backgroundColor" red="0.9247191548" green="0.96637803320000004" blue="0.97605592009999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="gZx-hv-fR1" firstAttribute="top" secondItem="gAE-Zf-udy" secondAttribute="bottom" constant="10" id="Kcn-8n-uDZ"/>
                 <constraint firstItem="Q0b-PX-Gt1" firstAttribute="trailing" secondItem="gZx-hv-fR1" secondAttribute="trailing" constant="20" id="M17-8z-1Vc"/>
+                <constraint firstItem="ux0-93-SDZ" firstAttribute="top" secondItem="gAE-Zf-udy" secondAttribute="bottom" constant="100" id="TzT-pa-lx8"/>
                 <constraint firstItem="gAE-Zf-udy" firstAttribute="leading" secondItem="DLd-G0-haq" secondAttribute="leading" constant="20" id="U0N-v0-st9"/>
                 <constraint firstItem="Q0b-PX-Gt1" firstAttribute="bottom" secondItem="gZx-hv-fR1" secondAttribute="bottom" constant="10" id="U9E-q1-pMO"/>
                 <constraint firstItem="gAE-Zf-udy" firstAttribute="top" secondItem="Q0b-PX-Gt1" secondAttribute="top" constant="20" id="f1y-g1-Phz"/>
+                <constraint firstItem="ux0-93-SDZ" firstAttribute="centerX" secondItem="DLd-G0-haq" secondAttribute="centerX" id="ixm-7e-seL"/>
                 <constraint firstAttribute="trailing" secondItem="gAE-Zf-udy" secondAttribute="trailing" constant="20" id="kAW-wP-Foi"/>
                 <constraint firstItem="gZx-hv-fR1" firstAttribute="leading" secondItem="Q0b-PX-Gt1" secondAttribute="leading" constant="20" id="v6G-gc-wbN"/>
             </constraints>
@@ -124,6 +134,7 @@
                 <outlet property="cover" destination="mQl-J9-SKK" id="B2V-cJ-C5D"/>
                 <outlet property="detailCell" destination="gAE-Zf-udy" id="GNP-gy-GY3"/>
                 <outlet property="genre" destination="BMD-Tx-b7f" id="J9i-8N-58t"/>
+                <outlet property="loadingCommentsIndicator" destination="ux0-93-SDZ" id="bQw-u7-qcF"/>
                 <outlet property="rent" destination="UId-jS-lCl" id="Btp-SN-hM7"/>
                 <outlet property="title" destination="2Ag-k6-eIT" id="FYb-t6-9QN"/>
                 <outlet property="year" destination="1jD-c8-PYI" id="y3j-4C-bbQ"/>

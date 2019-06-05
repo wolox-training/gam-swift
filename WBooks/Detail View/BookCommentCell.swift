@@ -7,17 +7,29 @@
 //
 
 import UIKit
+import WolmoCore
 
-class BookCommentCell: UITableViewCell {
+class BookCommentCell: UITableViewCell, NibLoadable {
 
+    @IBOutlet weak var profilePic: UIImageView! {
+        didSet {
+            self.profilePic.layer.borderWidth = 1.5
+            self.profilePic.layer.masksToBounds = false
+            self.profilePic.layer.borderColor = UIColor(red: 73/255, green: 194/255, blue: 1, alpha: 1).cgColor
+            self.profilePic.layer.cornerRadius = self.profilePic.layer.frame.height / 2
+            self.profilePic.clipsToBounds = true
+        }
+    }
+    @IBOutlet weak var userName: UILabel!
+    @IBOutlet weak var content: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    func setComment(comment: Comment) {
+        userName.text = comment.user.username
+        content.text = comment.content
+        profilePic.image = comment.profilePic
     }
 }

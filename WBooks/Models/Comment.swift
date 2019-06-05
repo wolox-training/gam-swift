@@ -12,12 +12,25 @@ import UIKit
 struct Comment {
     
     var user: User
-    
     var content: String
-    
     var book: Book
-    
     var id: Int
+    
+    var profilePic: UIImage {
+        var image: UIImage = UIImage(named: "no_image_available")!
+        if let profilePic = user.image {
+            let url = URL(string: profilePic)
+            if let url = url {
+                do {
+                    let data = try Data(contentsOf: url)
+                    image = UIImage(data: data)!
+                } catch {
+                    print("No image available for user \(user.id)")
+                }
+            }
+        }
+        return image
+    }
     
     init(user: User, content: String, book: Book, id: Int) {
         self.user = user

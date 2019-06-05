@@ -99,34 +99,39 @@ class DetailViewController: UIViewController {
     }
     
     private func configureCommentsTableView() {
-        _viewModel.loadComments(onSuccess: <#T##([Comment]) -> Void#>, bookID: _viewModel.bookViewModel.id)
-//        _viewModel.loadBooks(onSuccess: onSuccess)
-//        _view.tableView.delegate = self
-//        _view.tableView.dataSource = self
-//        _view.tableView.register(cell: BookCell.self)
-//        _view.tableView.backgroundColor = UIColor.clear
+        _view.startActivityIndicator()
+        _viewModel.loadComments(onSuccess: onCommentLoadSuccess, bookID: _viewModel.bookViewModel.id)
+        _view.comments.delegate = self
+        _view.comments.dataSource = self
+        _view.comments.register(cell: BookCommentCell.self)
+        _view.comments.backgroundColor = UIColor.clear
     }
     
-    func onCommentRentSuccess() {
-        
+    func onCommentLoadSuccess(comments: [Comment]) {
+        _viewModel.onCommentLoadSuccess(comments: comments)
+        _view.stopActivityIndicator()
+        _view.comments.reloadData()
     }
-    
 }
 
 extension DetailViewController: UITableViewDataSource, UITableViewDelegate {
-//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        return
-//    }
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let comment = _viewModel.comments[indexPath.row]
+        let cell = _view.comments.dequeue(cell: BookCommentCell.self)!
+        cell.setComment(comment: comment)
+        return cell
+    }
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return _viewModel.comments.count
+    }
     
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        return
-//    }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
+    }
     
-//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return
-//    }
-    
-//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        return 
-//    }
+    func tableView(_ tableView: UITableView,
+                   didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
 }
