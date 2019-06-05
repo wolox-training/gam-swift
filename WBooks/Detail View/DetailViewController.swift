@@ -46,31 +46,38 @@ class DetailViewController: UIViewController {
     
     func onLoadRentsSuccess(rents: [Rent]) {
         _viewModel.onLoadRentsSuccess(rents: rents)
-        _view.setAvailability(status: _viewModel.status!)
+        _view.setAvailability(status: _viewModel.status)
         _view.rent.addTarget(self, action: #selector(rent), for: .touchUpInside)
     }
     
     @objc func rent() {
-        switch _viewModel.status! {
+        switch _viewModel.status {
         case .available:
-            let alert = UIAlertController(title: "THANKS".localized(), message: nil, preferredStyle: UIAlertController.Style.alert)
-            alert.addAction(UIAlertAction(title: "ACCEPT".localized(), style: UIAlertAction.Style.cancel, handler: nil))
+            let alert = UIAlertController(alertViewModel: ErrorAlertViewModel(title: "THANKS".localized(), message: "PROCESSING_RENT".localized(), dismissButtonTitle: "ACCEPT".localized()))
             self.present(alert, animated: true, completion: nil)
-            _viewModel.rentBook(onSuccess: onBookRentSuccess)
+            _viewModel.rentBook(onSuccess: onBookRentSuccess, onError: onBookRentError)
         case .notAvailable, .inHands:
-            let alert = UIAlertController(title: "UPS!", message: "CANNOT_RENT".localized(), preferredStyle: UIAlertController.Style.alert)
-            alert.addAction(UIAlertAction(title: "ACCEPT".localized(), style: UIAlertAction.Style.cancel, handler: nil))
+            let alert = UIAlertController(alertViewModel: ErrorAlertViewModel(title: "UPS!", message: "CANNOT_RENT".localized(), dismissButtonTitle: "ACCEPT".localized()))
+            self.present(alert, animated: true, completion: nil)
+        case .notLoaded:
+            let alert = UIAlertController(alertViewModel: ErrorAlertViewModel(title: "UPS!", message: "There seems to be a problem. Please try again later.", dismissButtonTitle: "ACCEPT".localized()))
             self.present(alert, animated: true, completion: nil)
         }
     }
     
     func onBookRentSuccess() {
         _viewModel.onBookRentSuccess()
-        _view.setAvailability(status: .inHands)
+        let alert = UIAlertController(alertViewModel: ErrorAlertViewModel(title: "THANKS".localized(), message: "RENT_COMPLETED".localized(), dismissButtonTitle: "ACCEPT".localized()))
+        self.present(alert, animated: true, completion: nil)
+        _view.setAvailability(status: _viewModel.status)
+    }
+    
+    func onBookRentError() {
+        let alert = UIAlertController(alertViewModel: ErrorAlertViewModel(title: "Error!", message: "RENT_ERROR".localized(), dismissButtonTitle: "ACCEPT".localized()))
+        self.present(alert, animated: true, completion: nil)
     }
     
     private func addNavBarButtons() {
-        title = "BOOK_DETAIL".localized()
         setNavigationBarTitle("BOOK_DETAIL".localized(), font: UIFont.systemFont(ofSize: 20, weight: UIFont.Weight.medium), color: UIColor.white)
         //Back button
         let backButton = UIButton(type: .system)
@@ -81,7 +88,8 @@ class DetailViewController: UIViewController {
     }
     
     @objc private func backAction() {
-        self.navigationController!.popViewController(animated: true)
-        print("Button pressed")
+        if navigationController != nil {
+            self.navigationController!.popViewController(animated: true)
+        }
     }
 }

@@ -14,3 +14,6 @@
 "ACCEPT" = "Ok";
 "CANNOT_RENT" = "This book is not available!";
 "THANKS" = "Thank you!";
+"PROCESSING_RENT" = "We are processing your rent. Please wait!";
+"RENT_COMPLETED" = "Book successfully rented!";
+"RENT_ERROR" = "Error trying to rent book!";

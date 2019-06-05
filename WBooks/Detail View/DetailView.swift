@@ -55,16 +55,7 @@ class DetailView: UIView, NibLoadable {
     }
     
     func setAvailability(status: Availability) {
-        switch status {
-        case .available:
-            availability.text = "AVAILABLE".localized()
-            availability.textColor = UIColor.green
-        case .notAvailable:
-            availability.text = "UNAVAILABLE".localized()
-            availability.textColor = UIColor.red
-        case .inHands:
-            availability.text = "IN_HANDS".localized()
-            availability.textColor = UIColor.blue
-        }
+        availability.text = status.text
+        availability.textColor = status.textColor
     }
 }

@@ -35,7 +35,7 @@ class RentsRepository {
         }
     }
     
-    static func rentBook(onSuccess: @escaping () -> Void, bookID: Int, from: String, to: String) {
+    static func rentBook(onSuccess: @escaping () -> Void, onError: @escaping () -> Void, bookID: Int, from: String, to: String) {
         let url = URL(string: "https://swift-training-backend.herokuapp.com/users/7/rents")!
         let parameters = [
             "userID": 7,
@@ -48,6 +48,7 @@ class RentsRepository {
             case .success(let value):
                 onSuccess()
             case .failure(let error):
+                onError()
                 print(error)
             }
             
