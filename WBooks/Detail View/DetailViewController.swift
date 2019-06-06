@@ -88,8 +88,8 @@ class DetailViewController: UIViewController {
     }
     
     @objc private func backAction() {
-        if navigationController != nil {
-            self.navigationController!.popViewController(animated: true)
+        if let currentNavigationController = navigationController {
+            currentNavigationController.popViewController(animated: true)
         }
     }
 }
