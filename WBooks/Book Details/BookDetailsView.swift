@@ -1,16 +1,15 @@
 //
-//  DetailView.swift
+//  BookDetailsView.swift
 //  WBooks
 //
-//  Created by Gaston Maspero on 30/05/2019.
+//  Created by Gaston Maspero on 06/06/2019.
 //  Copyright © 2019 Wolox. All rights reserved.
 //
 
 import UIKit
 import WolmoCore
 
-class DetailView: UIView, NibLoadable {
-    
+class BookDetailsView: UIView, NibLoadable {
     @IBOutlet weak var detailCell: UIView! {
         didSet {
             self.detailCell.layer.cornerRadius = 10
@@ -44,24 +43,6 @@ class DetailView: UIView, NibLoadable {
             self.rent.layer.cornerRadius = 20
             self.rent.clipsToBounds = true
         }
-    }
-    
-    @IBOutlet weak var comments: UITableView! {
-        didSet {
-            self.comments.layer.cornerRadius = 10
-        }
-    }
-    
-    @IBOutlet weak var loadingCommentsIndicator: UIActivityIndicatorView!
-    
-    func startActivityIndicator() {
-        loadingCommentsIndicator.hidesWhenStopped = true
-        loadingCommentsIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.gray
-        loadingCommentsIndicator.startAnimating()
-    }
-    
-    func stopActivityIndicator() {
-        loadingCommentsIndicator.stopAnimating()
     }
     
     func setBook(bookViewModel: BookViewModel) {

@@ -46,6 +46,7 @@ class RentsRepository {
         Alamofire.request(url, method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: nil).responseJSON { response in
             switch response.result {
             case .success(let value):
+                print(value)
                 onSuccess()
             case .failure(let error):
                 onError()

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="AYf-Ky-jUt" customClass="BookCommentsView" customModule="WBooks" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Sf1-E5-3AH">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </tableView>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="BdM-bj-lh4">
+                    <rect key="frame" x="170" y="316" width="35" height="35"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="35" id="cyn-3P-K9m"/>
+                        <constraint firstAttribute="width" constant="35" id="wuZ-zY-GVt"/>
+                    </constraints>
+                </activityIndicatorView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="BdM-bj-lh4" firstAttribute="centerX" secondItem="AYf-Ky-jUt" secondAttribute="centerX" id="6sP-wp-NcL"/>
+                <constraint firstItem="BdM-bj-lh4" firstAttribute="centerY" secondItem="AYf-Ky-jUt" secondAttribute="centerY" id="Bqj-U3-hPU"/>
+                <constraint firstItem="Sf1-E5-3AH" firstAttribute="top" secondItem="AYf-Ky-jUt" secondAttribute="top" id="JpC-Tn-JQj"/>
+                <constraint firstItem="Sf1-E5-3AH" firstAttribute="leading" secondItem="AYf-Ky-jUt" secondAttribute="leading" id="uZj-gA-7HW"/>
+                <constraint firstAttribute="bottom" secondItem="Sf1-E5-3AH" secondAttribute="bottom" id="xuw-3g-w8j"/>
+                <constraint firstAttribute="trailing" secondItem="Sf1-E5-3AH" secondAttribute="trailing" id="z3R-0e-T1T"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="FmI-9Q-l9R"/>
+            <connections>
+                <outlet property="comments" destination="Sf1-E5-3AH" id="2EU-AZ-uIx"/>
+                <outlet property="loadingCommentsIndicator" destination="BdM-bj-lh4" id="Hfw-xo-6CZ"/>
+            </connections>
+            <point key="canvasLocation" x="340" y="-382"/>
+        </view>
+    </objects>
+</document>

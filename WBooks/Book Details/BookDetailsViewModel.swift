@@ -1,13 +1,13 @@
 //
-//  DetailViewModel.swift
+//  BookDetailsViewModel.swift
 //  WBooks
 //
-//  Created by Gaston Maspero on 30/05/2019.
+//  Created by Gaston Maspero on 06/06/2019.
 //  Copyright © 2019 Wolox. All rights reserved.
 //
 
 import Foundation
-import WolmoCore
+import UIKit
 
 enum Availability: String {
     case available
@@ -42,11 +42,8 @@ enum Availability: String {
     }
 }
 
-class DetailViewModel {
-    
+class BookDetailsViewModel {
     var bookViewModel: BookViewModel
-    
-    var comments: [Comment] = []
     
     var rents: [Rent] = []
     
@@ -91,13 +88,5 @@ class DetailViewModel {
             return true
         }
         return false
-    }
-    
-    func loadComments(onSuccess: @escaping ([Comment]) -> Void, bookID: Int) {
-        CommentsRepository.fetchComments(onSuccess: onSuccess, onError: onError, bookID: bookID)
-    }
-    
-    func onCommentLoadSuccess(comments: [Comment]) {
-        self.comments = comments
     }
 }
