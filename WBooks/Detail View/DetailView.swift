@@ -35,7 +35,7 @@ class DetailView: UIView, NibLoadable {
             self.addToWishlist.layer.borderWidth = 1
             self.addToWishlist.backgroundColor = .clear
             self.addToWishlist.clipsToBounds = true
-            self.addToWishlist.layer.borderColor = UIColor(red: 73/255, green: 194/255, blue: 1, alpha: 1).cgColor
+            self.addToWishlist.layer.borderColor = UIColor.wBooksBlue
         }
     }
     
@@ -44,6 +44,24 @@ class DetailView: UIView, NibLoadable {
             self.rent.layer.cornerRadius = 20
             self.rent.clipsToBounds = true
         }
+    }
+    
+    @IBOutlet weak var comments: UITableView! {
+        didSet {
+            self.comments.layer.cornerRadius = 10
+        }
+    }
+    
+    @IBOutlet weak var loadingCommentsIndicator: UIActivityIndicatorView!
+    
+    func startActivityIndicator() {
+        loadingCommentsIndicator.hidesWhenStopped = true
+        loadingCommentsIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.gray
+        loadingCommentsIndicator.startAnimating()
+    }
+    
+    func stopActivityIndicator() {
+        loadingCommentsIndicator.stopAnimating()
     }
     
     func setBook(bookViewModel: BookViewModel) {

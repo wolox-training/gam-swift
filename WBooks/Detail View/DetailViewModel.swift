@@ -46,6 +46,8 @@ class DetailViewModel {
     
     var bookViewModel: BookViewModel
     
+    var comments: [Comment] = []
+    
     var rents: [Rent] = []
     
     var status: Availability = .notLoaded
@@ -89,5 +91,13 @@ class DetailViewModel {
             return true
         }
         return false
+    }
+    
+    func loadComments(onSuccess: @escaping ([Comment]) -> Void, bookID: Int) {
+        CommentsRepository.fetchComments(onSuccess: onSuccess, onError: onError, bookID: bookID)
+    }
+    
+    func onCommentLoadSuccess(comments: [Comment]) {
+        self.comments = comments
     }
 }

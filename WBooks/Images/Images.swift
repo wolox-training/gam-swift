@@ -27,5 +27,9 @@ extension UIImage {
     
     static var addNewImage: UIImage {
         return UIImage(named: "ic_add new")!
-    }    
+    }
+    
+    static var noProfilePic: UIImage {
+        return UIImage(named: "no_image_available")!
+    }
 }

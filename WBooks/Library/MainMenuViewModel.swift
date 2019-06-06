@@ -13,8 +13,6 @@ class MainMenuViewModel {
     
     var books: [BookViewModel] = []
     
-    var table: UITableView?
-    
     func loadBooks(onSuccess: @escaping ([Book]) -> Void) {
         BookRepository.fetchBooks(onSuccess: onSuccess, onError: onError)
     }
