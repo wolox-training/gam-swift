@@ -37,6 +37,7 @@ class DetailViewController: UIViewController {
         setNeedsStatusBarAppearanceUpdate()
         setBookDetails()
         addNavBarButtons()
+        configureCommentsTableView()
     }
     
     private func setBookDetails() {
@@ -91,5 +92,42 @@ class DetailViewController: UIViewController {
         if let currentNavigationController = navigationController {
             currentNavigationController.popViewController(animated: true)
         }
+    }
+    
+    private func configureCommentsTableView() {
+        _view.startActivityIndicator()
+        _viewModel.loadComments(onSuccess: onCommentLoadSuccess, bookID: _viewModel.bookViewModel.id)
+        _view.comments.delegate = self
+        _view.comments.dataSource = self
+        _view.comments.register(cell: BookCommentCell.self)
+        _view.comments.backgroundColor = UIColor.clear
+    }
+    
+    func onCommentLoadSuccess(comments: [Comment]) {
+        _viewModel.onCommentLoadSuccess(comments: comments)
+        _view.stopActivityIndicator()
+        _view.comments.reloadData()
+    }
+}
+
+extension DetailViewController: UITableViewDataSource, UITableViewDelegate {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let comment = _viewModel.comments[indexPath.row]
+        let cell = _view.comments.dequeue(cell: BookCommentCell.self)!
+        cell.setComment(comment: comment)
+        return cell
+    }
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return _viewModel.comments.count
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
+    }
+    
+    func tableView(_ tableView: UITableView,
+                   didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }

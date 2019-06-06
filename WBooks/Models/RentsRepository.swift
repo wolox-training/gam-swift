@@ -51,7 +51,6 @@ class RentsRepository {
                 onError()
                 print(error)
             }
-            
         }
     }
 }

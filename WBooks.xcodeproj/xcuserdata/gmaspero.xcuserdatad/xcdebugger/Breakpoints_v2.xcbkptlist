@@ -10,77 +10,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WBooks/Library/MainMenuController.swift"
-            timestampString = "581030977.834802"
+            timestampString = "581378329.253293"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "63"
-            endingLineNumber = "63"
+            startingLineNumber = "67"
+            endingLineNumber = "67"
             landmarkName = "MainMenuController"
             landmarkType = "21">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "WBooks/Models/BookRepository.swift"
-            timestampString = "581019206.9978451"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "19"
-            endingLineNumber = "19"
-            landmarkName = "fetchBooks(onSuccess:onError:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "WBooks/Models/BookRepository.swift"
-            timestampString = "581019206.997907"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "21"
-            endingLineNumber = "21"
-            landmarkName = "fetchBooks(onSuccess:onError:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "static WBooks.BookRepository.fetchBooks(onSuccess: (Swift.Array&lt;WBooks.Book&gt;) -&gt; (), onError: (Swift.Error) -&gt; ()) -&gt; ()"
-                  moduleName = "WBooks"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/gmaspero/Angst/Repos/iosTraining/WBooks/Models/BookRepository.swift"
-                  timestampString = "580927609.137849"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "21"
-                  endingLineNumber = "21"
-                  offsetFromSymbolStart = "285">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Any&gt;) -&gt; () in static WBooks.BookRepository.fetchBooks(onSuccess: (Swift.Array&lt;WBooks.Book&gt;) -&gt; (), onError: (Swift.Error) -&gt; ()) -&gt; ()"
-                  moduleName = "WBooks"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/gmaspero/Angst/Repos/iosTraining/WBooks/Models/BookRepository.swift"
-                  timestampString = "580927609.1403019"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "21"
-                  endingLineNumber = "21"
-                  offsetFromSymbolStart = "65">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

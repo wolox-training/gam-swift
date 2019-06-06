@@ -34,10 +34,6 @@ class MainMenuController: UIViewController {
         configureTableView()
     }
     
-    override open var shouldAutorotate: Bool {
-        return false
-    }
-    
     func onSuccess(books: [Book]) {
         _viewModel.onSuccess(books: books)
         _view.tableView.reloadData()
