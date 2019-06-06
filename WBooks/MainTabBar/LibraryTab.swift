@@ -21,14 +21,6 @@ class LibraryTab: UITabBarController {
         return .lightContent
     }
     
-    override open var shouldAutorotate: Bool {
-        return false
-    }
-    
-    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
-        return .portrait
-    }
-    
     private func addNavBarButtons() {
         title = "NAVIGATION_BAR_TITLE".localized()
         setNavigationBarTitle("NAVIGATION_BAR_TITLE".localized(), font: UIFont.systemFont(ofSize: 20, weight: UIFont.Weight.medium), color: UIColor.white)

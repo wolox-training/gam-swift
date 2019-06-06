@@ -11,13 +11,13 @@ import UIKit
 
 struct Comment {
     
-    var user: User
-    var content: String
-    var book: Book
-    var id: Int
+    let user: User
+    let content: String
+    let book: Book
+    let id: Int
     
     var profilePic: UIImage {
-        var image: UIImage = UIImage(named: "no_image_available")!
+        var image: UIImage = UIImage.noProfilePic
         if let profilePic = user.image {
             let url = URL(string: profilePic)
             if let url = url {

@@ -355,7 +355,6 @@
 		9D1575031CB1B27500EA395E /* WBooks */ = {
 			isa = PBXGroup;
 			children = (
-				422A889322A9A138002CF9B8 /* Colors */,
 				9D1575041CB1B27500EA395E /* AppDelegate.swift */,
 				CEB934DC1D21992100DF75C2 /* Environment.swift */,
 				9D1575101CB1B27500EA395E /* Info.plist */,
@@ -371,6 +370,7 @@
 				42F782A7229883DA000F9907 /* Settings */,
 				42689E48229DC09D00EA02A7 /* Navigation Bar */,
 				426D667B229C6B70004070A6 /* Images */,
+				422A889322A9A138002CF9B8 /* Colors */,
 				E1530D9A1ED378F9002A9002 /* Services */,
 				CEB934DE1D21A44700DF75C2 /* ConfigurationFiles */,
 			);

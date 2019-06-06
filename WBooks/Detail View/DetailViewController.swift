@@ -15,10 +15,6 @@ class DetailViewController: UIViewController {
     
     private var _viewModel: DetailViewModel
     
-    override open var shouldAutorotate: Bool {
-        return false
-    }
-    
     init(viewModel: DetailViewModel) {
         _viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
