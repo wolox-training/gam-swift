@@ -13,14 +13,17 @@ class BookCommentsView: UIView, NibLoadable {
 
     @IBOutlet weak var comments: UITableView! {
         didSet {
-            self.comments.layer.cornerRadius = 30
+            self.comments.layer.cornerRadius = 10
             self.comments.clipsToBounds = true
-            self.comments.layer.masksToBounds = true
         }
     }
     
     @IBOutlet weak var loadingCommentsIndicator: UIActivityIndicatorView!
 
+    override func awakeFromNib() {
+        self.translatesAutoresizingMaskIntoConstraints = false
+    }
+    
     func startActivityIndicator() {
         loadingCommentsIndicator.hidesWhenStopped = true
         loadingCommentsIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.gray

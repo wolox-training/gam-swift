@@ -45,6 +45,10 @@ class BookDetailsView: UIView, NibLoadable {
         }
     }
     
+    override func awakeFromNib() {
+        self.translatesAutoresizingMaskIntoConstraints = false
+    }
+    
     func setBook(bookViewModel: BookViewModel) {
         title.text = bookViewModel.title
         author.text = bookViewModel.author

@@ -10,6 +10,4 @@ import UIKit
 import WolmoCore
 
 class BookInfoView: UIView, NibLoadable {
-    
-
 }

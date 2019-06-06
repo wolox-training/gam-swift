@@ -42,17 +42,23 @@ class BookInfoViewController: UIViewController {
         super.viewDidLoad()
         setNeedsStatusBarAppearanceUpdate()
         addNavBarButtons()
-//        self.view.addSubview(_commentsController.view)
-//        _commentsController.view.translatesAutoresizingMaskIntoConstraints = false
-//        _commentsController.view.topAnchor.constraint(equalTo: topLayoutGuide.bottomAnchor, constant: 10).isActive = true
-//        _commentsController.view.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 20).isActive = true
-//        _commentsController.view.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -20).isActive = true
-//        _commentsController.view.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -20).isActive = true
-        self.view.addSubview(_bookDetailsController.view)
+        view.addSubview(_bookDetailsController.view)
+        view.addSubview(_commentsController.view)
+        setupLayout()
+    }
+    
+    private func setupLayout() {
+        //Book details
         _bookDetailsController.view.translatesAutoresizingMaskIntoConstraints = false
         _bookDetailsController.view.topAnchor.constraint(equalTo: topLayoutGuide.bottomAnchor, constant: 10).isActive = true
         _bookDetailsController.view.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 20).isActive = true
         _bookDetailsController.view.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -20).isActive = true
+        //Comments
+        _commentsController.view.topAnchor.constraint(equalTo: _bookDetailsController.view.bottomAnchor, constant: 10).isActive = true
+        _commentsController.view.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 20).isActive = true
+        _commentsController.view.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -20).isActive = true
+        _commentsController.view.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -20).isActive = true
+
     }
     
     private func addNavBarButtons() {
