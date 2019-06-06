@@ -16,14 +16,16 @@ struct Book {
     let genre: String
     let year: String
     let image: String
+    var status: String
     
-    init(title: String, author: String, id: Int, genre: String, year: String, image: String) {
+    init(title: String, author: String, id: Int, genre: String, year: String, image: String, status: String) {
         self.title = title
         self.author = author
         self.id = id
         self.genre = genre
         self.year = year
         self.image = image
+        self.status = status
     }
 }
 
@@ -35,6 +37,7 @@ extension Book: Codable {
         case genre
         case year
         case image
+        case status
     }
     
     init(from decoder: Decoder) throws {
@@ -45,7 +48,8 @@ extension Book: Codable {
         let genre = try container.decode(String.self, forKey: .genre)
         let year = try container.decode(String.self, forKey: .year)
         let image = try container.decode(String.self, forKey: .image)
+        let status = try container.decode(String.self, forKey: .status)
         
-        self.init(title: title, author: author, id: id, genre: genre, year: year, image: image)
+        self.init(title: title, author: author, id: id, genre: genre, year: year, image: image, status: status)
     }
 }

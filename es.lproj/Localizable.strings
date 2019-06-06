@@ -7,3 +7,13 @@
 */
 
 "NAVIGATION_BAR_TITLE" = "Biblioteca";
+"BOOK_DETAIL" = "DETALLES DEL LIBRO";
+"AVAILABLE" = "Disponible";
+"UNAVAILABLE" = "No disponible";
+"IN_HANDS" = "En Tus Manos";
+"ACCEPT" = "Aceptar";
+"CANNOT_RENT" = "Este libro no está disponible!";
+"THANKS" = "Gracias!";
+"PROCESSING_RENT" = "Estamos procesando su operación. Por favor espere!";
+"RENT_COMPLETED" = "Alquilaste exitosamente el libro!";
+"RENT_ERROR" = "Error al alquilar el libro!";

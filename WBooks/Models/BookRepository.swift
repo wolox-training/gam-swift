@@ -15,7 +15,6 @@ enum BookError: Error {
 }
 
 class BookRepository {
-    
     static func fetchBooks(onSuccess: @escaping ([Book]) -> Void, onError: @escaping (Error) -> Void) {
         let url = URL(string: "https://swift-training-backend.herokuapp.com/books")!
         request(url, method: .get).responseJSON { response in
@@ -24,7 +23,6 @@ class BookRepository {
             switch response.result {
             case .success(let value):
                 // request was successful
-                
                 //check if data is valid, if not call error function
                 guard let JSONbooks = try? JSONSerialization.data(withJSONObject: value, options: []) else {
                     onError(BookError.decodeError)

@@ -57,7 +57,13 @@ extension MainMenuController: UITableViewDataSource, UITableViewDelegate {
         let bookViewModel = _viewModel.books[indexPath.row]
         let cell = _view.tableView.dequeue(cell: BookCell.self)!
         cell.setBook(bookViewModel: bookViewModel)
+        cell.selectionStyle = UITableViewCell.SelectionStyle.none
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let controller = DetailViewController(viewModel: DetailViewModel(bookViewModel: _viewModel.books[indexPath.row]))
+        navigationController?.pushViewController(controller, animated: true)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

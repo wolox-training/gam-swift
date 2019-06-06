@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 class BookViewModel {
-    private let _book: Book
+    private var _book: Book
     
     var title: String {
         return _book.title
@@ -48,6 +48,15 @@ class BookViewModel {
             }
         }
         return image
+    }
+    
+    var status: String {
+        get {
+            return _book.status
+        }
+        set {
+            _book.status = newValue
+        }
     }
     
     init(book: Book) {

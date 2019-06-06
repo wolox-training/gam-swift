@@ -23,8 +23,8 @@ class MainMenuViewModel {
         setBooks(books: books)
     }
     
-    let onError = { error in
-        print(error)
+    func onError(error: Error) {
+        return
     }
     
     private func setBooks(books: [Book]) {
