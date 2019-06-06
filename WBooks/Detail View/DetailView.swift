@@ -35,7 +35,7 @@ class DetailView: UIView, NibLoadable {
             self.addToWishlist.layer.borderWidth = 1
             self.addToWishlist.backgroundColor = .clear
             self.addToWishlist.clipsToBounds = true
-            self.addToWishlist.layer.borderColor = UIColor(red: 73/255, green: 194/255, blue: 1, alpha: 1).cgColor
+            self.addToWishlist.layer.borderColor = UIColor.wBooksBlue
         }
     }
     

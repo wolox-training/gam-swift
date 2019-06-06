@@ -10,6 +10,7 @@
 		0CCF002A219208080061050C /* WolmoReactiveCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CCF0029219208080061050C /* WolmoReactiveCore.framework */; };
 		0CCF002C219208110061050C /* Wormholy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CCF002B219208110061050C /* Wormholy.framework */; };
 		0CCF002E219208180061050C /* WolmoCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CCF002D219208180061050C /* WolmoCore.framework */; };
+		422A889522A9A151002CF9B8 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422A889422A9A151002CF9B8 /* Colors.swift */; };
 		423A28FC229C4578008609EE /* NavBarButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423A28FB229C4578008609EE /* NavBarButtons.swift */; };
 		423E478522A6D67C00318F83 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423E478422A6D67C00318F83 /* User.swift */; };
 		42689E45229DB7B200EA02A7 /* MainMenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42689E44229DB7B200EA02A7 /* MainMenuViewModel.swift */; };
@@ -102,6 +103,7 @@
 		0CCF0029219208080061050C /* WolmoReactiveCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WolmoReactiveCore.framework; path = Carthage/Build/iOS/WolmoReactiveCore.framework; sourceTree = "<group>"; };
 		0CCF002B219208110061050C /* Wormholy.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Wormholy.framework; path = Carthage/Build/iOS/Wormholy.framework; sourceTree = "<group>"; };
 		0CCF002D219208180061050C /* WolmoCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WolmoCore.framework; path = Carthage/Build/iOS/WolmoCore.framework; sourceTree = "<group>"; };
+		422A889422A9A151002CF9B8 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		423A28FB229C4578008609EE /* NavBarButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavBarButtons.swift; sourceTree = "<group>"; };
 		423E478422A6D67C00318F83 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		42689E44229DB7B200EA02A7 /* MainMenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuViewModel.swift; sourceTree = "<group>"; };
@@ -213,6 +215,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		422A889322A9A138002CF9B8 /* Colors */ = {
+			isa = PBXGroup;
+			children = (
+				422A889422A9A151002CF9B8 /* Colors.swift */,
+			);
+			path = Colors;
+			sourceTree = "<group>";
+		};
 		423A28FD229C56E6008609EE /* MainTabBar */ = {
 			isa = PBXGroup;
 			children = (
@@ -345,6 +355,7 @@
 		9D1575031CB1B27500EA395E /* WBooks */ = {
 			isa = PBXGroup;
 			children = (
+				422A889322A9A138002CF9B8 /* Colors */,
 				9D1575041CB1B27500EA395E /* AppDelegate.swift */,
 				CEB934DC1D21992100DF75C2 /* Environment.swift */,
 				9D1575101CB1B27500EA395E /* Info.plist */,
@@ -640,6 +651,7 @@
 				CEB934DD1D21992100DF75C2 /* Environment.swift in Sources */,
 				42F782A922988405000F9907 /* SettingsController.swift in Sources */,
 				4271CF5622A5A0C6002F0A98 /* RentsRepository.swift in Sources */,
+				422A889522A9A151002CF9B8 /* Colors.swift in Sources */,
 				E1530D9C1ED37905002A9002 /* RollbarService.swift in Sources */,
 				42F782AB22988414000F9907 /* RentalsController.swift in Sources */,
 				427BC0E8229587D20033845C /* BookCell.swift in Sources */,

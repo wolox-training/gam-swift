@@ -65,7 +65,7 @@ class DetailViewController: UIViewController {
             let alert = UIAlertController(alertViewModel: ErrorAlertViewModel(title: "UPS!", message: "CANNOT_RENT".localized(), dismissButtonTitle: "ACCEPT".localized()))
             self.present(alert, animated: true, completion: nil)
         case .notLoaded:
-            let alert = UIAlertController(alertViewModel: ErrorAlertViewModel(title: "UPS!", message: "There seems to be a problem. Please try again later.", dismissButtonTitle: "ACCEPT".localized()))
+            let alert = UIAlertController(alertViewModel: ErrorAlertViewModel(title: "UPS!", message: "RENT_ERROR".localized(), dismissButtonTitle: "ACCEPT".localized()))
             self.present(alert, animated: true, completion: nil)
         }
     }
@@ -93,8 +93,8 @@ class DetailViewController: UIViewController {
     }
     
     @objc private func backAction() {
-        if navigationController != nil {
-            self.navigationController!.popViewController(animated: true)
+        if let currentNavigationController = navigationController {
+            currentNavigationController.popViewController(animated: true)
         }
     }
     

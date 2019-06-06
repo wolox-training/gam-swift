@@ -15,7 +15,7 @@ class BookCommentCell: UITableViewCell, NibLoadable {
         didSet {
             self.profilePic.layer.borderWidth = 1.5
             self.profilePic.layer.masksToBounds = false
-            self.profilePic.layer.borderColor = UIColor(red: 73/255, green: 194/255, blue: 1, alpha: 1).cgColor
+            self.profilePic.layer.borderColor = UIColor.wBooksBlue
             self.profilePic.layer.cornerRadius = self.profilePic.layer.frame.height / 2
             self.profilePic.clipsToBounds = true
         }
