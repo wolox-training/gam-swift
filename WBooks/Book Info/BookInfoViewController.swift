@@ -11,6 +11,8 @@ import WolmoCore
 
 class BookInfoViewController: UIViewController {
     
+    private let margin: CGFloat = 20
+    
     private lazy var _view: BookInfoView = BookInfoView.loadFromNib()!
     
     private var _viewModel: BookInfoViewModel
@@ -48,17 +50,18 @@ class BookInfoViewController: UIViewController {
     }
     
     private func setupLayout() {
-        //Book details
-        _bookDetailsController.view.translatesAutoresizingMaskIntoConstraints = false
-        _bookDetailsController.view.topAnchor.constraint(equalTo: topLayoutGuide.bottomAnchor, constant: 10).isActive = true
-        _bookDetailsController.view.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 20).isActive = true
-        _bookDetailsController.view.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -20).isActive = true
-        //Comments
-        _commentsController.view.topAnchor.constraint(equalTo: _bookDetailsController.view.bottomAnchor, constant: 10).isActive = true
-        _commentsController.view.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 20).isActive = true
-        _commentsController.view.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -20).isActive = true
-        _commentsController.view.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -20).isActive = true
-
+        NSLayoutConstraint.activate([
+            //Book details
+            _bookDetailsController.view.topAnchor.constraint(equalTo: topLayoutGuide.bottomAnchor, constant: 10),
+            _bookDetailsController.view.leftAnchor.constraint(equalTo: view.leftAnchor, constant: margin),
+            _bookDetailsController.view.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -margin),
+            //Comments
+            _commentsController.view.topAnchor.constraint(equalTo: _bookDetailsController.view.bottomAnchor, constant: 10),
+            _commentsController.view.leftAnchor.constraint(equalTo: view.leftAnchor, constant: margin),
+            _commentsController.view.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -margin),
+            _commentsController.view.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -margin)
+            ]
+        )
     }
     
     private func addNavBarButtons() {

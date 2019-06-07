@@ -51,10 +51,10 @@ class BookDetailsViewController: UIViewController {
             self.present(alert, animated: true, completion: nil)
             _viewModel.rentBook(onSuccess: onBookRentSuccess, onError: onBookRentError)
         case .notAvailable, .inHands:
-            let alert = UIAlertController(alertViewModel: ErrorAlertViewModel(title: "UPS!", message: "CANNOT_RENT".localized(), dismissButtonTitle: "ACCEPT".localized()))
+            let alert = UIAlertController(alertViewModel: ErrorAlertViewModel(title: "UPS".localized(), message: "CANNOT_RENT".localized(), dismissButtonTitle: "ACCEPT".localized()))
             self.present(alert, animated: true, completion: nil)
         case .notLoaded:
-            let alert = UIAlertController(alertViewModel: ErrorAlertViewModel(title: "UPS!", message: "RENT_ERROR".localized(), dismissButtonTitle: "ACCEPT".localized()))
+            let alert = UIAlertController(alertViewModel: ErrorAlertViewModel(title: "UPS".localized(), message: "RENT_ERROR".localized(), dismissButtonTitle: "ACCEPT".localized()))
             self.present(alert, animated: true, completion: nil)
         }
     }
@@ -67,7 +67,7 @@ class BookDetailsViewController: UIViewController {
     }
     
     func onBookRentError() {
-        let alert = UIAlertController(alertViewModel: ErrorAlertViewModel(title: "Error!", message: "RENT_ERROR".localized(), dismissButtonTitle: "ACCEPT".localized()))
+        let alert = UIAlertController(alertViewModel: ErrorAlertViewModel(title: "ERROR".localized(), message: "RENT_ERROR".localized(), dismissButtonTitle: "ACCEPT".localized()))
         self.present(alert, animated: true, completion: nil)
     }
 }
