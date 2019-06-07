@@ -59,7 +59,7 @@ class BookInfoViewController: UIViewController {
             _commentsController.view.topAnchor.constraint(equalTo: _bookDetailsController.view.bottomAnchor, constant: 10),
             _commentsController.view.leftAnchor.constraint(equalTo: view.leftAnchor, constant: margin),
             _commentsController.view.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -margin),
-            _commentsController.view.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -margin)
+            _commentsController.view.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0)
             ]
         )
     }

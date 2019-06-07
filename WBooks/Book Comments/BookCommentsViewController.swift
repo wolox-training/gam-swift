@@ -38,7 +38,6 @@ class BookCommentsViewController: UIViewController {
         _view.comments.delegate = self
         _view.comments.dataSource = self
         _view.comments.register(cell: BookCommentCell.self)
-        _view.comments.backgroundColor = UIColor.clear
     }
     
     func onCommentLoadSuccess(comments: [Comment]) {
