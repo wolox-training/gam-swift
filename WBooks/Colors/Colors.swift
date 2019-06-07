@@ -13,4 +13,8 @@ extension UIColor {
     static var wBooksBlue: CGColor {
         return UIColor(red: 73/255, green: 194/255, blue: 1, alpha: 1).cgColor
     }
+    
+    static var wBooksBackground: UIColor {
+        return UIColor(red: 236/255, green: 246/255, blue: 249/255, alpha: 1)
+    }
 }

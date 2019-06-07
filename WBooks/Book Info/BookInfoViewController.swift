@@ -12,9 +12,7 @@ import WolmoCore
 class BookInfoViewController: UIViewController {
     
     private let margin: CGFloat = 20
-    
-    private lazy var _view: BookInfoView = BookInfoView.loadFromNib()!
-    
+
     private var _viewModel: BookInfoViewModel
     
     private var _commentsController: BookCommentsViewController
@@ -35,18 +33,19 @@ class BookInfoViewController: UIViewController {
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
-    override func loadView() {
-        view = _view
-    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setNeedsStatusBarAppearanceUpdate()
         addNavBarButtons()
+        setupView()
+        setupLayout()
+    }
+    
+    private func setupView() {
         view.addSubview(_bookDetailsController.view)
         view.addSubview(_commentsController.view)
-        setupLayout()
+        view.backgroundColor = UIColor.wBooksBackground
     }
     
     private func setupLayout() {
