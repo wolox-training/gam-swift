@@ -14,20 +14,10 @@ class LibraryTab: UITabBarController {
         super.viewDidLoad()
         setNeedsStatusBarAppearanceUpdate()
         configureTabBar()
-        addNavBarButtons()
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
-    }
-    
-    private func addNavBarButtons() {
-        title = "NAVIGATION_BAR_TITLE".localized()
-        setNavigationBarTitle("NAVIGATION_BAR_TITLE".localized(), font: UIFont.systemFont(ofSize: 20, weight: UIFont.Weight.medium), color: UIColor.white)
-        //Left notification button
-        navigationItem.leftBarButtonItem = UIBarButtonItem.notificationButton()
-        //Right search button
-        navigationItem.rightBarButtonItem = UIBarButtonItem.searchButton()
     }
     
     private func configureTabBar() {

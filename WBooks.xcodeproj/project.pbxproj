@@ -36,7 +36,18 @@
 		427BC0FA2295A20F0033845C /* StartingScreenZeroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427BC0F92295A20F0033845C /* StartingScreenZeroView.swift */; };
 		427BC0FC2295A2270033845C /* StartingScreenZeroView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 427BC0FB2295A2270033845C /* StartingScreenZeroView.xib */; };
 		427D7AC62297488000B5B29E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 427D7AC82297488000B5B29E /* Localizable.strings */; };
-		428D2F3522AB0A0A009934B2 /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428D2F3422AB0A0A009934B2 /* Buttons.swift */; };
+		428D2F1C22AAF7DF009934B2 /* AddNewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428D2F1B22AAF7DF009934B2 /* AddNewView.swift */; };
+		428D2F1E22AAF7EB009934B2 /* AddNewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428D2F1D22AAF7EB009934B2 /* AddNewViewModel.swift */; };
+		428D2F2022AAF7F5009934B2 /* AddNewView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 428D2F1F22AAF7F5009934B2 /* AddNewView.xib */; };
+		428D2F2222AB0104009934B2 /* WishListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428D2F2122AB0104009934B2 /* WishListView.swift */; };
+		428D2F2422AB0114009934B2 /* WishListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428D2F2322AB0114009934B2 /* WishListViewModel.swift */; };
+		428D2F2622AB0127009934B2 /* WishListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 428D2F2522AB0127009934B2 /* WishListView.xib */; };
+		428D2F2822AB0140009934B2 /* RentalsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428D2F2722AB0140009934B2 /* RentalsView.swift */; };
+		428D2F2A22AB014A009934B2 /* RentalsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428D2F2922AB014A009934B2 /* RentalsViewModel.swift */; };
+		428D2F2C22AB0155009934B2 /* RentalsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 428D2F2B22AB0155009934B2 /* RentalsView.xib */; };
+		428D2F2E22AB0169009934B2 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428D2F2D22AB0169009934B2 /* SettingsView.swift */; };
+		428D2F3022AB0178009934B2 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428D2F2F22AB0178009934B2 /* SettingsViewModel.swift */; };
+		428D2F3222AB0186009934B2 /* SettingsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 428D2F3122AB0186009934B2 /* SettingsView.xib */; };
 		42A91C7E22A7234A004B49EB /* BookCommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A91C7D22A7234A004B49EB /* BookCommentCell.swift */; };
 		42A91C8022A7239F004B49EB /* BookCommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42A91C7F22A7239F004B49EB /* BookCommentCell.xib */; };
 		42A91C8422A72749004B49EB /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A91C8322A72749004B49EB /* Comment.swift */; };
@@ -138,7 +149,22 @@
 		427D7AC72297488000B5B29E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		427D7AC9229749EE00B5B29E /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		427D7ACA229749FD00B5B29E /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+<<<<<<< HEAD
 		428D2F3422AB0A0A009934B2 /* Buttons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buttons.swift; sourceTree = "<group>"; };
+=======
+		428D2F1B22AAF7DF009934B2 /* AddNewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewView.swift; sourceTree = "<group>"; };
+		428D2F1D22AAF7EB009934B2 /* AddNewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewViewModel.swift; sourceTree = "<group>"; };
+		428D2F1F22AAF7F5009934B2 /* AddNewView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddNewView.xib; sourceTree = "<group>"; };
+		428D2F2122AB0104009934B2 /* WishListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishListView.swift; sourceTree = "<group>"; };
+		428D2F2322AB0114009934B2 /* WishListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishListViewModel.swift; sourceTree = "<group>"; };
+		428D2F2522AB0127009934B2 /* WishListView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WishListView.xib; sourceTree = "<group>"; };
+		428D2F2722AB0140009934B2 /* RentalsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RentalsView.swift; sourceTree = "<group>"; };
+		428D2F2922AB014A009934B2 /* RentalsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RentalsViewModel.swift; sourceTree = "<group>"; };
+		428D2F2B22AB0155009934B2 /* RentalsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RentalsView.xib; sourceTree = "<group>"; };
+		428D2F2D22AB0169009934B2 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		428D2F2F22AB0178009934B2 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		428D2F3122AB0186009934B2 /* SettingsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsView.xib; sourceTree = "<group>"; };
+>>>>>>> started add new view
 		42A91C7D22A7234A004B49EB /* BookCommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCommentCell.swift; sourceTree = "<group>"; };
 		42A91C7F22A7239F004B49EB /* BookCommentCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookCommentCell.xib; sourceTree = "<group>"; };
 		42A91C8322A72749004B49EB /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
@@ -344,6 +370,9 @@
 			isa = PBXGroup;
 			children = (
 				42F782AE22988434000F9907 /* WishListController.swift */,
+				428D2F2322AB0114009934B2 /* WishListViewModel.swift */,
+				428D2F2122AB0104009934B2 /* WishListView.swift */,
+				428D2F2522AB0127009934B2 /* WishListView.xib */,
 			);
 			path = WishList;
 			sourceTree = "<group>";
@@ -352,6 +381,9 @@
 			isa = PBXGroup;
 			children = (
 				42F782AC22988423000F9907 /* AddNewController.swift */,
+				428D2F1D22AAF7EB009934B2 /* AddNewViewModel.swift */,
+				428D2F1B22AAF7DF009934B2 /* AddNewView.swift */,
+				428D2F1F22AAF7F5009934B2 /* AddNewView.xib */,
 			);
 			path = AddNew;
 			sourceTree = "<group>";
@@ -360,6 +392,9 @@
 			isa = PBXGroup;
 			children = (
 				42F782AA22988414000F9907 /* RentalsController.swift */,
+				428D2F2922AB014A009934B2 /* RentalsViewModel.swift */,
+				428D2F2722AB0140009934B2 /* RentalsView.swift */,
+				428D2F2B22AB0155009934B2 /* RentalsView.xib */,
 			);
 			path = Rentals;
 			sourceTree = "<group>";
@@ -368,6 +403,9 @@
 			isa = PBXGroup;
 			children = (
 				42F782A822988405000F9907 /* SettingsController.swift */,
+				428D2F2F22AB0178009934B2 /* SettingsViewModel.swift */,
+				428D2F2D22AB0169009934B2 /* SettingsView.swift */,
+				428D2F3122AB0186009934B2 /* SettingsView.xib */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -603,9 +641,13 @@
 				427D7AC62297488000B5B29E /* Localizable.strings in Resources */,
 				427BC0F1229590840033845C /* MainMenuView.xib in Resources */,
 				427BC0FC2295A2270033845C /* StartingScreenZeroView.xib in Resources */,
+				428D2F2022AAF7F5009934B2 /* AddNewView.xib in Resources */,
 				42A91C8022A7239F004B49EB /* BookCommentCell.xib in Resources */,
 				422A88A122A9B198002CF9B8 /* BookCommentsView.xib in Resources */,
+				428D2F2622AB0127009934B2 /* WishListView.xib in Resources */,
 				427BC0F5229593EB0033845C /* BookCell.xib in Resources */,
+				428D2F3222AB0186009934B2 /* SettingsView.xib in Resources */,
+				428D2F2C22AB0155009934B2 /* RentalsView.xib in Resources */,
 				9D15750C1CB1B27500EA395E /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -683,6 +725,7 @@
 				42D5AAF222A0114A00084F74 /* BookRepository.swift in Sources */,
 				42A91C8422A72749004B49EB /* Comment.swift in Sources */,
 				42A91C8622A728A0004B49EB /* CommentsRepository.swift in Sources */,
+				428D2F2E22AB0169009934B2 /* SettingsView.swift in Sources */,
 				423E478522A6D67C00318F83 /* User.swift in Sources */,
 				427BC0E62295873B0033845C /* MainMenuController.swift in Sources */,
 				423A28FC229C4578008609EE /* NavBarButtons.swift in Sources */,
@@ -694,12 +737,16 @@
 				427BC0F82295A18E0033845C /* StartingScreenZeroController.swift in Sources */,
 				42D5AAFB22A0764D00084F74 /* BookInfoViewModel.swift in Sources */,
 				422A88A722A9B1D8002CF9B8 /* BookCommentsViewController.swift in Sources */,
+				428D2F1C22AAF7DF009934B2 /* AddNewView.swift in Sources */,
+				428D2F2222AB0104009934B2 /* WishListView.swift in Sources */,
 				427BC0F3229590C90033845C /* MainMenuView.swift in Sources */,
 				427BC0EC22958D750033845C /* Book.swift in Sources */,
 				42A91C7E22A7234A004B49EB /* BookCommentCell.swift in Sources */,
 				422A889D22A9B17B002CF9B8 /* BookDetailsViewModel.swift in Sources */,
+				428D2F2A22AB014A009934B2 /* RentalsViewModel.swift in Sources */,
 				CEB934DD1D21992100DF75C2 /* Environment.swift in Sources */,
 				42F782A922988405000F9907 /* SettingsController.swift in Sources */,
+				428D2F2822AB0140009934B2 /* RentalsView.swift in Sources */,
 				4271CF5622A5A0C6002F0A98 /* RentsRepository.swift in Sources */,
 				422A889522A9A151002CF9B8 /* Colors.swift in Sources */,
 				E1530D9C1ED37905002A9002 /* RollbarService.swift in Sources */,
@@ -707,11 +754,14 @@
 				422A889922A9B154002CF9B8 /* BookDetailsViewController.swift in Sources */,
 				42F782AB22988414000F9907 /* RentalsController.swift in Sources */,
 				427BC0E8229587D20033845C /* BookCell.swift in Sources */,
+				428D2F2422AB0114009934B2 /* WishListViewModel.swift in Sources */,
 				427BC0FA2295A20F0033845C /* StartingScreenZeroView.swift in Sources */,
+				428D2F1E22AAF7EB009934B2 /* AddNewViewModel.swift in Sources */,
 				426D667A229C69DC004070A6 /* Images.swift in Sources */,
 				9D1575051CB1B27500EA395E /* AppDelegate.swift in Sources */,
 				4271CF5822A5A0F6002F0A98 /* Rent.swift in Sources */,
 				42F782A222988180000F9907 /* LibraryTab.swift in Sources */,
+				428D2F3022AB0178009934B2 /* SettingsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
