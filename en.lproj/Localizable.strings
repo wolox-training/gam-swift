@@ -17,6 +17,7 @@
 "PROCESSING_RENT" = "We are processing your rent. Please wait!";
 "RENT_COMPLETED" = "Book successfully rented!";
 "RENT_ERROR" = "Error trying to rent book!";
+"ALREADY_IN_HANDS" = "You already have this book!";
 "UPS" = "UPS!";
 "ERROR" = "Error!";
 "NO_COMMENTS" = "No comments yet!";

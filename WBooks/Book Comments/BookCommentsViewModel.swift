@@ -7,12 +7,13 @@
 //
 
 import Foundation
+import ReactiveSwift
 
 class BookCommentsViewModel {
     
     var bookViewModel: BookViewModel
     
-    var comments: [Comment] = []
+    var comments = MutableProperty<[Comment]>([])
     
     init(bookViewModel: BookViewModel) {
         self.bookViewModel = bookViewModel
@@ -23,7 +24,7 @@ class BookCommentsViewModel {
     }
     
     func onCommentLoadSuccess(comments: [Comment]) {
-        self.comments = comments
+        self.comments.value = comments
     }
     
     func onError(error: Error) {

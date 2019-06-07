@@ -33,6 +33,9 @@ class BookCommentsViewController: UIViewController {
     }
     
     private func configureCommentsTableView() {
+        _viewModel.comments.producer.startWithValues { _ in
+            self._view.comments.reloadData()
+        }
         _view.startActivityIndicator()
         _viewModel.loadComments(onSuccess: onCommentLoadSuccess, bookID: _viewModel.bookViewModel.id)
         _view.comments.delegate = self
@@ -43,23 +46,22 @@ class BookCommentsViewController: UIViewController {
     func onCommentLoadSuccess(comments: [Comment]) {
         _viewModel.onCommentLoadSuccess(comments: comments)
         _view.stopActivityIndicator()
-        if _viewModel.comments.isEmpty {
+        if _viewModel.comments.value.isEmpty {
             _view.displayNoCommentsYet()
         }
-        _view.comments.reloadData()
     }
 }
 
 extension BookCommentsViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let comment = _viewModel.comments[indexPath.row]
+        let comment = _viewModel.comments.value[indexPath.row]
         let cell = _view.comments.dequeue(cell: BookCommentCell.self)!
         cell.setComment(comment: comment)
         return cell
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return _viewModel.comments.count
+        return _viewModel.comments.value.count
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

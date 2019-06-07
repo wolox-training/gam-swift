@@ -66,16 +66,6 @@ class BookInfoViewController: UIViewController {
     private func addNavBarButtons() {
         setNavigationBarTitle("BOOK_DETAIL".localized(), font: UIFont.systemFont(ofSize: 20, weight: UIFont.Weight.medium), color: UIColor.white)
         //Back button
-        let backButton = UIButton(type: .system)
-        backButton.setImage(#imageLiteral(resourceName: "ic_back").withRenderingMode(.alwaysOriginal), for: .normal)
-        backButton.frame = CGRect(x: 0, y: 0, width: 34, height: 34)
-        backButton.addTarget(self, action: #selector(backAction), for: UIControlEvents.touchUpInside)
-        navigationItem.leftBarButtonItem = UIBarButtonItem(customView: backButton)
-    }
-    
-    @objc private func backAction() {
-        if let currentNavigationController = navigationController {
-            currentNavigationController.popViewController(animated: true)
-        }
+        navigationItem.leftBarButtonItem = UIBarButtonItem.backNavBarButton(controller: self)
     }
 }

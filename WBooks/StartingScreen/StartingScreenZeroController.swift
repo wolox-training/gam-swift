@@ -8,6 +8,7 @@
 
 import UIKit
 import WolmoCore
+import ReactiveCocoa
 
 class StartingScreenZeroController: UIViewController {
 
@@ -28,21 +29,19 @@ class StartingScreenZeroController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setNeedsStatusBarAppearanceUpdate()
-        setAction()
+        setSignInButton()
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
     
-    func setAction() {
-        _view.signInGoogleButton.addTarget(self, action: #selector(signIn), for: .touchUpInside)
-    }
-    
-    @objc func signIn() {
-        print("Hello Wolox!")
-        let controller = UINavigationController(rootViewController: LibraryTab())
-        present(controller, animated: true)
+    func setSignInButton() {
+        _view.signInGoogleButton.reactive.controlEvents(.touchUpInside).observeValues { _ in
+            print("Hello Wolox!")
+            let controller = UINavigationController(rootViewController: LibraryTab())
+            self.present(controller, animated: true)
+        }
     }
 }
 
