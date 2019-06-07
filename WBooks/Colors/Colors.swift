@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import WolmoCore
 
 extension UIColor {
     static var wBooksBlue: CGColor {
@@ -16,5 +17,12 @@ extension UIColor {
     
     static var wBooksBackground: UIColor {
         return UIColor(red: 236/255, green: 246/255, blue: 249/255, alpha: 1)
+    }
+    
+    static func wBooksButtonGradient() -> ViewGradient {
+        let colorLeft = UIColor(red: 0/255, green: 165/255, blue: 233/255, alpha: 1)
+        let colorRight = UIColor(red: 48/255, green: 196/255, blue: 198/255, alpha: 1)
+        let gradient = ViewGradient(colors: [colorLeft, colorRight], direction: .leftToRight)
+        return gradient
     }
 }

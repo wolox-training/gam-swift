@@ -48,7 +48,7 @@
                                 <constraint firstAttribute="height" constant="45" id="rWE-g6-bTk"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" weight="black" pointSize="15"/>
-                            <state key="normal" title="RENT" backgroundImage="img_main button">
+                            <state key="normal" title="RENT">
                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
                         </button>
@@ -125,7 +125,4 @@
             <point key="canvasLocation" x="298.39999999999998" y="-745.72713643178417"/>
         </view>
     </objects>
-    <resources>
-        <image name="img_main button" width="550" height="88"/>
-    </resources>
 </document>

@@ -42,6 +42,7 @@ class BookDetailsView: UIView, NibLoadable {
         didSet {
             self.rent.layer.cornerRadius = 20
             self.rent.clipsToBounds = true
+            self.rent.gradient = UIColor.wBooksButtonGradient()
         }
     }
     
