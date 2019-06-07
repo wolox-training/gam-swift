@@ -43,6 +43,9 @@ class BookCommentsViewController: UIViewController {
     func onCommentLoadSuccess(comments: [Comment]) {
         _viewModel.onCommentLoadSuccess(comments: comments)
         _view.stopActivityIndicator()
+        if _viewModel.comments.isEmpty {
+            _view.displayNoCommentsYet()
+        }
         _view.comments.reloadData()
     }
 }

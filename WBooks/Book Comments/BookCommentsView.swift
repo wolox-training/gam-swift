@@ -33,4 +33,17 @@ class BookCommentsView: UIView, NibLoadable {
     func stopActivityIndicator() {
         loadingCommentsIndicator.stopAnimating()
     }
+    
+    func displayNoCommentsYet() {
+        let noComments = UILabel()
+        noComments.text = "NO_COMMENTS".localized()
+        noComments.textColor = UIColor.gray
+        self.addSubview(noComments)
+        noComments.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            noComments.centerXAnchor.constraint(equalTo: self.centerXAnchor),
+            noComments.centerYAnchor.constraint(equalTo: self.centerYAnchor)
+            ]
+        )
+    }
 }
