@@ -14,6 +14,9 @@
 "ACCEPT" = "Accepter";
 "CANNOT_RENT" = "Ce livre n'est pas disponible!";
 "THANKS" = "Merci!";
-"PROCESSING_RENT" = "Estamos procesando su operación. Por favor espere!";
-"RENT_COMPLETED" = "Alquilaste exitosamente el libro!";
-"RENT_ERROR" = "Error al alquilar el libro!";
+"PROCESSING_RENT" = "Opération de traitement. S'il-vous-plait attendez!";
+"RENT_COMPLETED" = "Vous avez loué le livre avec succès!!";
+"RENT_ERROR" = "Erreur lors de la location du livre!";
+"UPS" = "UPS!";
+"ERROR" = "Erreur!";
+"NO_COMMENTS" = "Pas encore de commentaires!";
