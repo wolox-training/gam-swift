@@ -23,14 +23,12 @@ extension UIBarButtonItem {
         return UIBarButtonItem(customView: searchButton)
     }
     
-    static func backNavBarButton(controller: UIViewController) -> UIBarButtonItem {
+    static func backNavBarButton(action: @escaping () -> Void) -> UIBarButtonItem {
         let backButton = UIButton(type: .system)
         backButton.setImage(#imageLiteral(resourceName: "ic_back").withRenderingMode(.alwaysOriginal), for: .normal)
         backButton.frame = CGRect(x: 0, y: 0, width: 34, height: 34)
         backButton.reactive.controlEvents(.touchUpInside).observeValues { _ in
-            if let currentNavigationController = controller.navigationController {
-                currentNavigationController.popViewController(animated: true)
-            }
+            action()
         }
         return UIBarButtonItem(customView: backButton)
     }

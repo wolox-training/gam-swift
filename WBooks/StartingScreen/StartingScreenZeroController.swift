@@ -37,10 +37,10 @@ class StartingScreenZeroController: UIViewController {
     }
     
     func setSignInButton() {
-        _view.signInGoogleButton.reactive.controlEvents(.touchUpInside).observeValues { _ in
+        _view.signInGoogleButton.reactive.controlEvents(.touchUpInside).observeValues {[weak self] _ in
             print("Hello Wolox!")
             let controller = UINavigationController(rootViewController: LibraryTab())
-            self.present(controller, animated: true)
+            self?.present(controller, animated: true)
         }
     }
 }

@@ -13,7 +13,7 @@ class BookCommentsViewModel {
     
     var bookViewModel: BookViewModel
     
-    var comments = MutableProperty<[Comment]>([])
+    let comments = MutableProperty<[Comment]>([])
     
     init(bookViewModel: BookViewModel) {
         self.bookViewModel = bookViewModel

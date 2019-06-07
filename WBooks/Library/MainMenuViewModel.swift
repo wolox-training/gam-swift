@@ -13,7 +13,7 @@ import ReactiveSwift
 
 class MainMenuViewModel {
     
-    var books = MutableProperty<[BookViewModel]>([])
+    let books = MutableProperty<[BookViewModel]>([])
     
     func loadBooks(onSuccess: @escaping ([Book]) -> Void) {
         BookRepository.fetchBooks(onSuccess: onSuccess, onError: onError)
