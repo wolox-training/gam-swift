@@ -99,6 +99,7 @@
                 <outlet property="author" destination="Jrv-Wu-K9X" id="0k3-Gg-LF1"/>
                 <outlet property="bookDescription" destination="png-n3-Nl6" id="L9p-Ye-0Bp"/>
                 <outlet property="booksName" destination="XXC-hK-HfU" id="Fue-go-Nn8"/>
+                <outlet property="cover" destination="XkA-ht-zU2" id="OMR-i2-fgh"/>
                 <outlet property="formFrame" destination="Fc6-IF-tk4" id="09f-VD-SH5"/>
                 <outlet property="submitButton" destination="I2u-8b-jC4" id="Qc9-T1-Vyg"/>
                 <outlet property="topic" destination="DbQ-3s-cY8" id="z91-Kj-ZMz"/>

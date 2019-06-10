@@ -17,6 +17,9 @@ class AddNewView: UIView, NibLoadable {
             self.formFrame.clipsToBounds = true
         }
     }
+    
+    @IBOutlet weak var cover: UIImageView!
+    
     @IBOutlet weak var submitButton: UIButton! {
         didSet {
             self.submitButton.layer.cornerRadius = 20

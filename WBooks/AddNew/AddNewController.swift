@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ReactiveSwift
 
 class AddNewController: UIViewController {
     
@@ -19,6 +20,7 @@ class AddNewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         _view.setView()
+        setImagePicker()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -26,6 +28,17 @@ class AddNewController: UIViewController {
         configureNavBar()
     }
     
+    private func setImagePicker() {
+        let tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped))
+        tapRecognizer.delegate = self
+        _view.cover.addGestureRecognizer(tapRecognizer)
+        _view.cover.isUserInteractionEnabled = true
+    }
+    
+    @objc private func imageTapped(sender: AnyObject) {
+        print("Image tapped!")
+    }
+
     private func configureNavBar() {
         self.tabBarController?.setNavigationBarTitle("NAVIGATION_BAR_TITLE_ADD_NEW".localized(), font: UIFont.systemFont(ofSize: 18, weight: UIFont.Weight.medium), color: UIColor.white)
         //Left notification button
@@ -33,4 +46,12 @@ class AddNewController: UIViewController {
         //Right search button
         self.tabBarController?.navigationItem.rightBarButtonItem = nil
     }
+}
+
+extension AddNewController: UIImagePickerControllerDelegate {
+    
+}
+
+extension AddNewController: UIGestureRecognizerDelegate {
+    
 }
