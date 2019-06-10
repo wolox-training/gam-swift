@@ -33,7 +33,20 @@ class BookCommentsViewController: UIViewController {
     }
     
     private func configureCommentsTableView() {
-        _view.startActivityIndicator()
+        _viewModel.state.producer.startWithValues { [weak self] state in
+            if let this = self {
+                switch state {
+                case .loading:
+                    this._view.startActivityIndicator()
+                case .error, .empty:
+                    this._view.stopActivityIndicator()
+                    this._view.displayCommentsIndicator(state: this._viewModel.state.value)
+                case .withValues:
+                    this._view.stopActivityIndicator()
+                    this._view.comments.reloadData()
+                }
+            }
+        }
         _viewModel.loadComments(onSuccess: onCommentLoadSuccess, bookID: _viewModel.bookViewModel.id)
         _view.comments.delegate = self
         _view.comments.dataSource = self
@@ -42,11 +55,6 @@ class BookCommentsViewController: UIViewController {
     
     func onCommentLoadSuccess(comments: [Comment]) {
         _viewModel.onCommentLoadSuccess(comments: comments)
-        _view.stopActivityIndicator()
-        if _viewModel.comments.isEmpty {
-            _view.displayNoCommentsYet()
-        }
-        _view.comments.reloadData()
     }
 }
 

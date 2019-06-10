@@ -31,6 +31,7 @@ class BookDetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setBookDetails()
+        setRentButton()
     }
     
     private func setBookDetails() {
@@ -41,17 +42,25 @@ class BookDetailsViewController: UIViewController {
     func onLoadRentsSuccess(rents: [Rent]) {
         _viewModel.onLoadRentsSuccess(rents: rents)
         _view.setAvailability(status: _viewModel.status)
-        _view.rent.addTarget(self, action: #selector(rent), for: .touchUpInside)
     }
     
-    @objc func rent() {
+    func setRentButton() {
+        _view.rent.reactive.controlEvents(.touchUpInside).observeValues { [weak self] _ in
+            self?.rent()
+        }
+    }
+    
+    func rent() {
         switch _viewModel.status {
         case .available:
             let alert = UIAlertController(alertViewModel: ErrorAlertViewModel(title: "THANKS".localized(), message: "PROCESSING_RENT".localized(), dismissButtonTitle: "ACCEPT".localized()))
             self.present(alert, animated: true, completion: nil)
             _viewModel.rentBook(onSuccess: onBookRentSuccess, onError: onBookRentError)
-        case .notAvailable, .inHands:
+        case .notAvailable:
             let alert = UIAlertController(alertViewModel: ErrorAlertViewModel(title: "UPS".localized(), message: "CANNOT_RENT".localized(), dismissButtonTitle: "ACCEPT".localized()))
+            self.present(alert, animated: true, completion: nil)
+        case .inHands:
+            let alert = UIAlertController(alertViewModel: ErrorAlertViewModel(title: "UPS".localized(), message: "ALREADY_IN_HANDS".localized(), dismissButtonTitle: "ACCEPT".localized()))
             self.present(alert, animated: true, completion: nil)
         case .notLoaded:
             let alert = UIAlertController(alertViewModel: ErrorAlertViewModel(title: "UPS".localized(), message: "RENT_ERROR".localized(), dismissButtonTitle: "ACCEPT".localized()))

@@ -8,10 +8,12 @@
 
 import Foundation
 import UIKit
+import ReactiveCocoa
+import ReactiveSwift
 
 class MainMenuViewModel {
     
-    var books: [BookViewModel] = []
+    let books = MutableProperty<[BookViewModel]>([])
     
     func loadBooks(onSuccess: @escaping ([Book]) -> Void) {
         BookRepository.fetchBooks(onSuccess: onSuccess, onError: onError)
@@ -26,7 +28,7 @@ class MainMenuViewModel {
     }
     
     private func setBooks(books: [Book]) {
-        self.books = books.map({ (book) in
+        self.books.value = books.map({ (book) in
             BookViewModel(book: book)
         })
     }

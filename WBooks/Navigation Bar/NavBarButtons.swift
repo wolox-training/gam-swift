@@ -22,4 +22,14 @@ extension UIBarButtonItem {
         searchButton.frame = CGRect(x: 0, y: 0, width: 34, height: 34)
         return UIBarButtonItem(customView: searchButton)
     }
+    
+    static func backNavBarButton(action: @escaping () -> Void) -> UIBarButtonItem {
+        let backButton = UIButton(type: .system)
+        backButton.setImage(#imageLiteral(resourceName: "ic_back").withRenderingMode(.alwaysOriginal), for: .normal)
+        backButton.frame = CGRect(x: 0, y: 0, width: 34, height: 34)
+        backButton.reactive.controlEvents(.touchUpInside).observeValues { _ in
+            action()
+        }
+        return UIBarButtonItem(customView: backButton)
+    }
 }

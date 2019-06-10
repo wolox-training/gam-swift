@@ -17,6 +17,8 @@
 "PROCESSING_RENT" = "Estamos procesando su operación. Por favor espere!";
 "RENT_COMPLETED" = "Alquilaste exitosamente el libro!";
 "RENT_ERROR" = "Error al alquilar el libro!";
+"ALREADY_IN_HANDS" = "Ya tienes este libro!";
 "UPS" = "UPS!";
 "ERROR" = "Error!";
 "NO_COMMENTS" = "Aún no hay comentarios!";
+"COMMENT_ERROR" = "No pudimos cargar los comentarios.";

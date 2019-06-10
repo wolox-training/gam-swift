@@ -7,12 +7,22 @@
 //
 
 import Foundation
+import ReactiveSwift
+
+public enum TableState {
+    case loading
+    case withValues
+    case error
+    case empty
+}
 
 class BookCommentsViewModel {
     
     var bookViewModel: BookViewModel
     
     var comments: [Comment] = []
+    
+    let state = MutableProperty(TableState.loading)
     
     init(bookViewModel: BookViewModel) {
         self.bookViewModel = bookViewModel
@@ -24,9 +34,11 @@ class BookCommentsViewModel {
     
     func onCommentLoadSuccess(comments: [Comment]) {
         self.comments = comments
+        state.value = comments.isEmpty ? .empty : .withValues
     }
     
     func onError(error: Error) {
+        state.value = .error
         return
     }
 }

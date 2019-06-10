@@ -17,6 +17,8 @@
 "PROCESSING_RENT" = "Opération de traitement. S'il-vous-plait attendez!";
 "RENT_COMPLETED" = "Vous avez loué le livre avec succès!!";
 "RENT_ERROR" = "Erreur lors de la location du livre!";
+"ALREADY_IN_HANDS" = "Tu as déjà ce livre!";
 "UPS" = "UPS!";
 "ERROR" = "Erreur!";
 "NO_COMMENTS" = "Pas encore de commentaires!";
+"COMMENT_ERROR" = "Nous n'avons pas pu télécharger les commentaires.";
