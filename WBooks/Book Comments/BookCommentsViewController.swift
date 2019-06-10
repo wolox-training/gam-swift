@@ -33,22 +33,23 @@ class BookCommentsViewController: UIViewController {
     }
     
     private func configureCommentsTableView() {
-        _viewModel.state.producer.startWithValues { state in
-            switch state {
-            case .loading:
-                break
-            case .error:
-                self._view.stopActivityIndicator()
-                self._view.displayCommentsIndicator(state: self._viewModel.state.value)
-            case .empty:
-                self._view.stopActivityIndicator()
-                self._view.displayCommentsIndicator(state: self._viewModel.state.value)
-            case .withValues:
-                self._view.stopActivityIndicator()
-                self._view.comments.reloadData()
+        _viewModel.state.producer.startWithValues { [weak self] state in
+            if let this = self {
+                switch state {
+                case .loading:
+                    break
+                case .error:
+                    this._view.stopActivityIndicator()
+                    this._view.displayCommentsIndicator(state: this._viewModel.state.value)
+                case .empty:
+                    this._view.stopActivityIndicator()
+                    this._view.displayCommentsIndicator(state: this._viewModel.state.value)
+                case .withValues:
+                    this._view.stopActivityIndicator()
+                    this._view.comments.reloadData()
+                }
             }
         }
-        
         _view.startActivityIndicator()
         _viewModel.loadComments(onSuccess: onCommentLoadSuccess, bookID: _viewModel.bookViewModel.id)
         _view.comments.delegate = self
