@@ -21,3 +21,4 @@
 "UPS" = "UPS!";
 "ERROR" = "Error!";
 "NO_COMMENTS" = "Aún no hay comentarios!";
+"COMMENT_ERROR" = "No pudimos cargar los comentarios.";

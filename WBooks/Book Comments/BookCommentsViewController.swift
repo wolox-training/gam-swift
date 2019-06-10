@@ -33,10 +33,22 @@ class BookCommentsViewController: UIViewController {
     }
     
     private func configureCommentsTableView() {
-        _viewModel.comments.producer.startWithValues { [weak self] _ in
-            self?._view.comments.reloadData()
-            self?._view.stopActivityIndicator()
+        _viewModel.state.producer.startWithValues { state in
+            switch state {
+            case .loading:
+                break
+            case .error:
+                self._view.stopActivityIndicator()
+                self._view.displayCommentsIndicator(state: self._viewModel.state.value)
+            case .empty:
+                self._view.stopActivityIndicator()
+                self._view.displayCommentsIndicator(state: self._viewModel.state.value)
+            case .withValues:
+                self._view.stopActivityIndicator()
+                self._view.comments.reloadData()
+            }
         }
+        
         _view.startActivityIndicator()
         _viewModel.loadComments(onSuccess: onCommentLoadSuccess, bookID: _viewModel.bookViewModel.id)
         _view.comments.delegate = self
@@ -46,22 +58,19 @@ class BookCommentsViewController: UIViewController {
     
     func onCommentLoadSuccess(comments: [Comment]) {
         _viewModel.onCommentLoadSuccess(comments: comments)
-        if _viewModel.comments.value.isEmpty {
-            self._view.displayNoCommentsYet()
-        }
     }
 }
 
 extension BookCommentsViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let comment = _viewModel.comments.value[indexPath.row]
+        let comment = _viewModel.comments[indexPath.row]
         let cell = _view.comments.dequeue(cell: BookCommentCell.self)!
         cell.setComment(comment: comment)
         return cell
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return _viewModel.comments.value.count
+        return _viewModel.comments.count
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

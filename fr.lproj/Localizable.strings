@@ -21,3 +21,4 @@
 "UPS" = "UPS!";
 "ERROR" = "Erreur!";
 "NO_COMMENTS" = "Pas encore de commentaires!";
+"COMMENT_ERROR" = "Nous n'avons pas pu télécharger les commentaires.";

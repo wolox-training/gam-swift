@@ -11,6 +11,8 @@ import WolmoCore
 
 class BookCommentsView: UIView, NibLoadable {
 
+    let commentIndicator = UILabel()
+    
     @IBOutlet weak var comments: UITableView! {
         didSet {
             self.comments.layer.cornerRadius = 10
@@ -34,15 +36,19 @@ class BookCommentsView: UIView, NibLoadable {
         loadingCommentsIndicator.stopAnimating()
     }
     
-    func displayNoCommentsYet() {
-        let noComments = UILabel()
-        noComments.text = "NO_COMMENTS".localized()
-        noComments.textColor = UIColor.gray
-        self.addSubview(noComments)
-        noComments.translatesAutoresizingMaskIntoConstraints = false
+    func displayCommentsIndicator(state: TableState) {
+        if state == TableState.empty {
+            commentIndicator.text = "NO_COMMENTS".localized()
+        }
+        if state == TableState.withValues {
+            commentIndicator.text = "COMMENT_ERROR".localized()
+        }
+        commentIndicator.textColor = UIColor.gray
+        self.addSubview(commentIndicator)
+        commentIndicator.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            noComments.centerXAnchor.constraint(equalTo: self.centerXAnchor),
-            noComments.centerYAnchor.constraint(equalTo: self.centerYAnchor)
+            commentIndicator.centerXAnchor.constraint(equalTo: self.centerXAnchor),
+            commentIndicator.centerYAnchor.constraint(equalTo: self.centerYAnchor)
             ]
         )
     }
