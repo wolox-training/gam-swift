@@ -59,7 +59,7 @@
                 <outlet property="formFrame" destination="n07-XG-Dcd" id="7AS-js-PUY"/>
                 <outlet property="submitButton" destination="Fzq-Su-klm" id="5oB-eV-oVV"/>
             </connections>
-            <point key="canvasLocation" x="389.60000000000002" y="-148.87556221889056"/>
+            <point key="canvasLocation" x="445" y="-173"/>
         </view>
     </objects>
     <resources>

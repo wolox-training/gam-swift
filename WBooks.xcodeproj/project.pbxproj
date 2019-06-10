@@ -21,6 +21,8 @@
 		422A88A722A9B1D8002CF9B8 /* BookCommentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422A88A622A9B1D8002CF9B8 /* BookCommentsViewController.swift */; };
 		423A28FC229C4578008609EE /* NavBarButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423A28FB229C4578008609EE /* NavBarButtons.swift */; };
 		423E478522A6D67C00318F83 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423E478422A6D67C00318F83 /* User.swift */; };
+		4258877122AEDB8B00082C1F /* TextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4258877022AEDB8B00082C1F /* TextFieldExtension.swift */; };
+		4258877322AEDC2F00082C1F /* FormField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4258877222AEDC2F00082C1F /* FormField.swift */; };
 		42689E45229DB7B200EA02A7 /* MainMenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42689E44229DB7B200EA02A7 /* MainMenuViewModel.swift */; };
 		42689E47229DBA4E00EA02A7 /* BookViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42689E46229DBA4E00EA02A7 /* BookViewModel.swift */; };
 		426D667A229C69DC004070A6 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426D6679229C69DC004070A6 /* Images.swift */; };
@@ -132,6 +134,8 @@
 		422A88A622A9B1D8002CF9B8 /* BookCommentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCommentsViewController.swift; sourceTree = "<group>"; };
 		423A28FB229C4578008609EE /* NavBarButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavBarButtons.swift; sourceTree = "<group>"; };
 		423E478422A6D67C00318F83 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		4258877022AEDB8B00082C1F /* TextFieldExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldExtension.swift; sourceTree = "<group>"; };
+		4258877222AEDC2F00082C1F /* FormField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormField.swift; sourceTree = "<group>"; };
 		42689E44229DB7B200EA02A7 /* MainMenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuViewModel.swift; sourceTree = "<group>"; };
 		42689E46229DBA4E00EA02A7 /* BookViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookViewModel.swift; sourceTree = "<group>"; };
 		426D6679229C69DC004070A6 /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
@@ -295,6 +299,15 @@
 			path = MainTabBar;
 			sourceTree = "<group>";
 		};
+		4258876F22AEDB6000082C1F /* Text Field */ = {
+			isa = PBXGroup;
+			children = (
+				4258877022AEDB8B00082C1F /* TextFieldExtension.swift */,
+				4258877222AEDC2F00082C1F /* FormField.swift */,
+			);
+			path = "Text Field";
+			sourceTree = "<group>";
+		};
 		42689E48229DC09D00EA02A7 /* Navigation Bar */ = {
 			isa = PBXGroup;
 			children = (
@@ -454,6 +467,7 @@
 				426D667B229C6B70004070A6 /* Images */,
 				428D2F3322AB09D5009934B2 /* Button */,
 				422A889322A9A138002CF9B8 /* Colors */,
+				4258876F22AEDB6000082C1F /* Text Field */,
 				E1530D9A1ED378F9002A9002 /* Services */,
 				CEB934DE1D21A44700DF75C2 /* ConfigurationFiles */,
 			);
@@ -730,6 +744,8 @@
 				427BC0E62295873B0033845C /* MainMenuController.swift in Sources */,
 				423A28FC229C4578008609EE /* NavBarButtons.swift in Sources */,
 				42F782AF22988434000F9907 /* WishListController.swift in Sources */,
+				4258877322AEDC2F00082C1F /* FormField.swift in Sources */,
+				4258877122AEDB8B00082C1F /* TextFieldExtension.swift in Sources */,
 				42689E47229DBA4E00EA02A7 /* BookViewModel.swift in Sources */,
 				42D5AAF522A075EE00084F74 /* BookInfoViewController.swift in Sources */,
 				422A88A322A9B1A8002CF9B8 /* BookCommentsViewModel.swift in Sources */,
