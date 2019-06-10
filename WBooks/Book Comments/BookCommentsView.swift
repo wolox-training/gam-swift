@@ -40,7 +40,7 @@ class BookCommentsView: UIView, NibLoadable {
         if state == TableState.empty {
             commentIndicator.text = "NO_COMMENTS".localized()
         }
-        if state == TableState.withValues {
+        if state == TableState.error {
             commentIndicator.text = "COMMENT_ERROR".localized()
         }
         commentIndicator.textColor = UIColor.gray

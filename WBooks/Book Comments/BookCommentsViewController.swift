@@ -37,11 +37,8 @@ class BookCommentsViewController: UIViewController {
             if let this = self {
                 switch state {
                 case .loading:
-                    break
-                case .error:
-                    this._view.stopActivityIndicator()
-                    this._view.displayCommentsIndicator(state: this._viewModel.state.value)
-                case .empty:
+                    this._view.startActivityIndicator()
+                case .error, .empty:
                     this._view.stopActivityIndicator()
                     this._view.displayCommentsIndicator(state: this._viewModel.state.value)
                 case .withValues:
@@ -50,7 +47,6 @@ class BookCommentsViewController: UIViewController {
                 }
             }
         }
-        _view.startActivityIndicator()
         _viewModel.loadComments(onSuccess: onCommentLoadSuccess, bookID: _viewModel.bookViewModel.id)
         _view.comments.delegate = self
         _view.comments.dataSource = self

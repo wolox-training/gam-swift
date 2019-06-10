@@ -34,11 +34,7 @@ class BookCommentsViewModel {
     
     func onCommentLoadSuccess(comments: [Comment]) {
         self.comments = comments
-        if comments.isEmpty {
-            state.value = .empty
-        } else {
-            state.value = .withValues
-        }
+        state.value = comments.isEmpty ? .empty : .withValues
     }
     
     func onError(error: Error) {
