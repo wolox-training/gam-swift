@@ -40,7 +40,6 @@
 		427D7AC62297488000B5B29E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 427D7AC82297488000B5B29E /* Localizable.strings */; };
 		428D2F1C22AAF7DF009934B2 /* AddNewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428D2F1B22AAF7DF009934B2 /* AddNewView.swift */; };
 		428D2F1E22AAF7EB009934B2 /* AddNewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428D2F1D22AAF7EB009934B2 /* AddNewViewModel.swift */; };
-		428D2F2022AAF7F5009934B2 /* AddNewView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 428D2F1F22AAF7F5009934B2 /* AddNewView.xib */; };
 		428D2F2222AB0104009934B2 /* WishListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428D2F2122AB0104009934B2 /* WishListView.swift */; };
 		428D2F2422AB0114009934B2 /* WishListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428D2F2322AB0114009934B2 /* WishListViewModel.swift */; };
 		428D2F2622AB0127009934B2 /* WishListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 428D2F2522AB0127009934B2 /* WishListView.xib */; };
@@ -54,6 +53,8 @@
 		42A91C8022A7239F004B49EB /* BookCommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42A91C7F22A7239F004B49EB /* BookCommentCell.xib */; };
 		42A91C8422A72749004B49EB /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A91C8322A72749004B49EB /* Comment.swift */; };
 		42A91C8622A728A0004B49EB /* CommentsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A91C8522A728A0004B49EB /* CommentsRepository.swift */; };
+		42AA5AE422AEEF38000D1CE4 /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42AA5AE322AEEF38000D1CE4 /* Buttons.swift */; };
+		42AA5AE622AEFACB000D1CE4 /* AddNewView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42AA5AE522AEFACB000D1CE4 /* AddNewView.xib */; };
 		42D5AAF222A0114A00084F74 /* BookRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D5AAF122A0114A00084F74 /* BookRepository.swift */; };
 		42D5AAF522A075EE00084F74 /* BookInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D5AAF422A075EE00084F74 /* BookInfoViewController.swift */; };
 		42D5AAFB22A0764D00084F74 /* BookInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D5AAFA22A0764D00084F74 /* BookInfoViewModel.swift */; };
@@ -153,10 +154,8 @@
 		427D7AC72297488000B5B29E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		427D7AC9229749EE00B5B29E /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		427D7ACA229749FD00B5B29E /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
-		428D2F3422AB0A0A009934B2 /* Buttons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buttons.swift; sourceTree = "<group>"; };
 		428D2F1B22AAF7DF009934B2 /* AddNewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewView.swift; sourceTree = "<group>"; };
 		428D2F1D22AAF7EB009934B2 /* AddNewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewViewModel.swift; sourceTree = "<group>"; };
-		428D2F1F22AAF7F5009934B2 /* AddNewView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddNewView.xib; sourceTree = "<group>"; };
 		428D2F2122AB0104009934B2 /* WishListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishListView.swift; sourceTree = "<group>"; };
 		428D2F2322AB0114009934B2 /* WishListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishListViewModel.swift; sourceTree = "<group>"; };
 		428D2F2522AB0127009934B2 /* WishListView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WishListView.xib; sourceTree = "<group>"; };
@@ -170,6 +169,8 @@
 		42A91C7F22A7239F004B49EB /* BookCommentCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookCommentCell.xib; sourceTree = "<group>"; };
 		42A91C8322A72749004B49EB /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		42A91C8522A728A0004B49EB /* CommentsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsRepository.swift; sourceTree = "<group>"; };
+		42AA5AE322AEEF38000D1CE4 /* Buttons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buttons.swift; sourceTree = "<group>"; };
+		42AA5AE522AEFACB000D1CE4 /* AddNewView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddNewView.xib; sourceTree = "<group>"; };
 		42D5AAF122A0114A00084F74 /* BookRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookRepository.swift; sourceTree = "<group>"; };
 		42D5AAF422A075EE00084F74 /* BookInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookInfoViewController.swift; sourceTree = "<group>"; };
 		42D5AAFA22A0764D00084F74 /* BookInfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookInfoViewModel.swift; sourceTree = "<group>"; };
@@ -359,12 +360,12 @@
 			path = StartingScreen;
 			sourceTree = "<group>";
 		};
-		428D2F3322AB09D5009934B2 /* Button */ = {
+		42AA5AE222AEEF26000D1CE4 /* Buttons */ = {
 			isa = PBXGroup;
 			children = (
-				428D2F3422AB0A0A009934B2 /* Buttons.swift */,
+				42AA5AE322AEEF38000D1CE4 /* Buttons.swift */,
 			);
-			path = Button;
+			path = Buttons;
 			sourceTree = "<group>";
 		};
 		42D5AAF322A075B300084F74 /* Book Info */ = {
@@ -393,7 +394,7 @@
 				42F782AC22988423000F9907 /* AddNewController.swift */,
 				428D2F1D22AAF7EB009934B2 /* AddNewViewModel.swift */,
 				428D2F1B22AAF7DF009934B2 /* AddNewView.swift */,
-				428D2F1F22AAF7F5009934B2 /* AddNewView.xib */,
+				42AA5AE522AEFACB000D1CE4 /* AddNewView.xib */,
 			);
 			path = AddNew;
 			sourceTree = "<group>";
@@ -462,7 +463,7 @@
 				42F782A7229883DA000F9907 /* Settings */,
 				42689E48229DC09D00EA02A7 /* Navigation Bar */,
 				426D667B229C6B70004070A6 /* Images */,
-				428D2F3322AB09D5009934B2 /* Button */,
+				42AA5AE222AEEF26000D1CE4 /* Buttons */,
 				422A889322A9A138002CF9B8 /* Colors */,
 				4258876F22AEDB6000082C1F /* Text Field */,
 				E1530D9A1ED378F9002A9002 /* Services */,
@@ -649,10 +650,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				422A889F22A9B188002CF9B8 /* BookDetailsView.xib in Resources */,
+				42AA5AE622AEFACB000D1CE4 /* AddNewView.xib in Resources */,
 				427D7AC62297488000B5B29E /* Localizable.strings in Resources */,
 				427BC0F1229590840033845C /* MainMenuView.xib in Resources */,
 				427BC0FC2295A2270033845C /* StartingScreenZeroView.xib in Resources */,
-				428D2F2022AAF7F5009934B2 /* AddNewView.xib in Resources */,
 				42A91C8022A7239F004B49EB /* BookCommentCell.xib in Resources */,
 				422A88A122A9B198002CF9B8 /* BookCommentsView.xib in Resources */,
 				428D2F2622AB0127009934B2 /* WishListView.xib in Resources */,
@@ -730,7 +731,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				428D2F3522AB0A0A009934B2 /* Buttons.swift in Sources */,
+				42AA5AE422AEEF38000D1CE4 /* Buttons.swift in Sources */,
 				42689E45229DB7B200EA02A7 /* MainMenuViewModel.swift in Sources */,
 				42F782AD22988423000F9907 /* AddNewController.swift in Sources */,
 				42D5AAF222A0114A00084F74 /* BookRepository.swift in Sources */,

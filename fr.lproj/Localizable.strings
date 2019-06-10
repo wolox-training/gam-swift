@@ -11,6 +11,11 @@
 "NAVIGATION_BAR_TITLE_ADD_NEW" = "AJOUTER UN NOUVEAU LIVRE";
 "NAVIGATION_BAR_TITLE_RENTALS" = "LOYERS";
 "NAVIGATION_BAR_TITLE_SETTINGS" = "CONFIGURATION";
+"TAB_BAR_LIBRARY" = "Bibliothèque";
+"TAB_BAR_WISHLIST" = "Wishlist";
+"TAB_BAR_ADD_NEW" = "Ajouter";
+"TAB_BAR_RENTALS" = "Loyers";
+"TAB_BAR_SETTINGS" = "Configuration";
 "BOOK_DETAIL" = "DÉTAILS DU LIVRE";
 "AVAILABLE" = "Disponible";
 "UNAVAILABLE" = "Indisponible";
@@ -26,3 +31,8 @@
 "ERROR" = "Erreur!";
 "NO_COMMENTS" = "Pas encore de commentaires!";
 "COMMENT_ERROR" = "Nous n'avons pas pu télécharger les commentaires.";
+"BOOKS_NAME" = "Nom du livre";
+"AUTHOR" = "Auteur";
+"YEAR" = "Année";
+"TOPIC" = "Genre";
+"DESCRIPTION" = "Description";

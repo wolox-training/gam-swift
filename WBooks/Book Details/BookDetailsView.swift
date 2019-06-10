@@ -43,6 +43,7 @@ class BookDetailsView: UIView, NibLoadable {
             rent.layer.cornerRadius = 20
             rent.clipsToBounds = true
             rent.setWBookGradient()
+            
         }
     }
     

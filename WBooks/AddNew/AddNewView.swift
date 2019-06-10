@@ -21,7 +21,37 @@ class AddNewView: UIView, NibLoadable {
         didSet {
             self.submitButton.layer.cornerRadius = 20
             self.submitButton.clipsToBounds = true
-            self.submitButton.gradient = UIColor.wBooksButtonGradient()
+            self.submitButton.gradient = UIButton.wBooksButtonGradient
+        }
+    }
+    
+    @IBOutlet weak var booksName: FormField! {
+        didSet {
+            booksName.formPlaceholder = "BOOKS_NAME".localized()
+        }
+    }
+    
+    @IBOutlet weak var author: FormField! {
+        didSet {
+            author.formPlaceholder = "AUTHOR".localized()
+        }
+    }
+    
+    @IBOutlet weak var year: FormField! {
+        didSet {
+            year.formPlaceholder = "YEAR".localized()
+        }
+    }
+    
+    @IBOutlet weak var topic: FormField! {
+        didSet {
+            topic.formPlaceholder = "TOPIC".localized()
+        }
+    }
+    
+    @IBOutlet weak var bookDescription: FormField! {
+        didSet {
+            bookDescription.formPlaceholder = "DESCRIPTION".localized()
         }
     }
     
