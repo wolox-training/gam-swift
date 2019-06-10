@@ -12,7 +12,7 @@ import WolmoCore
 class BookDetailsView: UIView, NibLoadable {
     @IBOutlet weak var detailCell: UIView! {
         didSet {
-            self.detailCell.layer.cornerRadius = 10
+            detailCell.layer.cornerRadius = 10
         }
     }
     
@@ -30,24 +30,24 @@ class BookDetailsView: UIView, NibLoadable {
     
     @IBOutlet weak var addToWishlist: UIButton! {
         didSet {
-            self.addToWishlist.layer.cornerRadius = 20
-            self.addToWishlist.layer.borderWidth = 1
-            self.addToWishlist.backgroundColor = .clear
-            self.addToWishlist.clipsToBounds = true
-            self.addToWishlist.layer.borderColor = UIColor.wBooksBlue
+            addToWishlist.layer.cornerRadius = 20
+            addToWishlist.layer.borderWidth = 1
+            addToWishlist.backgroundColor = .clear
+            addToWishlist.clipsToBounds = true
+            addToWishlist.layer.borderColor = UIColor.wBooksBlue
         }
     }
     
     @IBOutlet weak var rent: UIButton! {
         didSet {
-            self.rent.layer.cornerRadius = 20
-            self.rent.clipsToBounds = true
-            self.rent.setWBookGradient()
+            rent.layer.cornerRadius = 20
+            rent.clipsToBounds = true
+            rent.setWBookGradient()
         }
     }
     
     override func awakeFromNib() {
-        self.translatesAutoresizingMaskIntoConstraints = false
+        translatesAutoresizingMaskIntoConstraints = false
     }
     
     func setBook(bookViewModel: BookViewModel) {

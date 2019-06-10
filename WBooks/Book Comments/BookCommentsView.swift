@@ -15,15 +15,15 @@ class BookCommentsView: UIView, NibLoadable {
     
     @IBOutlet weak var comments: UITableView! {
         didSet {
-            self.comments.layer.cornerRadius = 10
-            self.comments.clipsToBounds = true
+            comments.layer.cornerRadius = 10
+            comments.clipsToBounds = true
         }
     }
     
     @IBOutlet weak var loadingCommentsIndicator: UIActivityIndicatorView!
 
     override func awakeFromNib() {
-        self.translatesAutoresizingMaskIntoConstraints = false
+        translatesAutoresizingMaskIntoConstraints = false
     }
     
     func startActivityIndicator() {
@@ -44,7 +44,7 @@ class BookCommentsView: UIView, NibLoadable {
             commentIndicator.text = "COMMENT_ERROR".localized()
         }
         commentIndicator.textColor = UIColor.gray
-        self.addSubview(commentIndicator)
+        addSubview(commentIndicator)
         commentIndicator.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             commentIndicator.centerXAnchor.constraint(equalTo: self.centerXAnchor),
