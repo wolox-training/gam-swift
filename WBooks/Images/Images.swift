@@ -32,4 +32,8 @@ extension UIImage {
     static var noProfilePic: UIImage {
         return UIImage(named: "no_image_available")!
     }
+    
+    static var addNewBookCover: UIImage {
+        return UIImage(named: "ic_add photo")!
+    }
 }

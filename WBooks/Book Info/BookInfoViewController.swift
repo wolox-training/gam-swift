@@ -37,7 +37,7 @@ class BookInfoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setNeedsStatusBarAppearanceUpdate()
-        addNavBarButtons()
+        configureBookInfoNavBar()
         setupView()
         setupLayout()
     }
@@ -63,7 +63,7 @@ class BookInfoViewController: UIViewController {
         )
     }
     
-    private func addNavBarButtons() {
+    private func configureBookInfoNavBar() {
         setNavigationBarTitle("BOOK_DETAIL".localized(), font: UIFont.systemFont(ofSize: 20, weight: UIFont.Weight.medium), color: UIColor.white)
         //Back button
         navigationItem.leftBarButtonItem = UIBarButtonItem.backNavBarButton {

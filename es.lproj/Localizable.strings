@@ -6,12 +6,22 @@
   Copyright © 2019 Wolox. All rights reserved.
 */
 
-"NAVIGATION_BAR_TITLE" = "Biblioteca";
+"NAVIGATION_BAR_TITLE_LIBRARY" = "BIBLIOTECA";
+"NAVIGATION_BAR_TITLE_WISHLIST" = "LISTA DE DESEOS";
+"NAVIGATION_BAR_TITLE_ADD_NEW" = "AGREGAR NUEVO LIBRO";
+"NAVIGATION_BAR_TITLE_RENTALS" = "ALQUILERES";
+"NAVIGATION_BAR_TITLE_SETTINGS" = "CONFIGURACIÓN";
+"TAB_BAR_LIBRARY" = "Biblioteca";
+"TAB_BAR_WISHLIST" = "Wishlist";
+"TAB_BAR_ADD_NEW" = "Agregar";
+"TAB_BAR_RENTALS" = "Alquileres";
+"TAB_BAR_SETTINGS" = "Configuración";
 "BOOK_DETAIL" = "DETALLES DEL LIBRO";
 "AVAILABLE" = "Disponible";
 "UNAVAILABLE" = "No disponible";
 "IN_HANDS" = "En Tus Manos";
 "ACCEPT" = "Aceptar";
+"CANCEL" = "Cancelar";
 "CANNOT_RENT" = "Este libro no está disponible!";
 "THANKS" = "Gracias!";
 "PROCESSING_RENT" = "Estamos procesando su operación. Por favor espere!";
@@ -22,3 +32,12 @@
 "ERROR" = "Error!";
 "NO_COMMENTS" = "Aún no hay comentarios!";
 "COMMENT_ERROR" = "No pudimos cargar los comentarios.";
+"BOOKS_NAME" = "Nombre del libro";
+"AUTHOR" = "Autor";
+"YEAR" = "Año";
+"GENRE" = "Género";
+"DESCRIPTION" = "Descripción del libro";
+"BOOK_ADD_ERROR" = "Ocurrió un error. Por favor intentar más tarde.";
+"BOOK_ADDED" = "Libro agregado exitosamente!";
+"GALLERY" = "Galería";
+"CAMERA" = "Cámara";

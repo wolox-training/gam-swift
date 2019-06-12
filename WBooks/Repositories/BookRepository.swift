@@ -41,4 +41,28 @@ class BookRepository {
             }
         }
     }
+    
+    static func addNewBook(book: Book, onSuccess: @escaping () -> Void, onError: @escaping (Error) -> Void) {
+        let url = URL(string: "https://swift-training-backend.herokuapp.com/books")!
+        
+        let parameters = [
+            "author": book.author,
+            "title": book.title,
+            "image": book.image,
+            "year": book.year,
+            "genre": book.genre,
+            "status": book.status
+        ] as [String: Any]
+        
+        Alamofire.request(url, method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: nil).responseJSON { response in
+            switch response.result {
+            case .success(let value):
+                print(value)
+                onSuccess()
+            case .failure(let error):
+                onError(error)
+                print(error)
+            }
+        }
+    }
 }

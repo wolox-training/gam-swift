@@ -6,12 +6,22 @@
   Copyright © 2019 Wolox. All rights reserved.
 */
 
-"NAVIGATION_BAR_TITLE" = "Bibliothèque";
+"NAVIGATION_BAR_TITLE_LIBRARY" = "BIBLIOTHÈQUE";
+"NAVIGATION_BAR_TITLE_WISHLIST" = "LISTE DE VOEUX";
+"NAVIGATION_BAR_TITLE_ADD_NEW" = "AJOUTER UN NOUVEAU LIVRE";
+"NAVIGATION_BAR_TITLE_RENTALS" = "LOYERS";
+"NAVIGATION_BAR_TITLE_SETTINGS" = "CONFIGURATION";
+"TAB_BAR_LIBRARY" = "Bibliothèque";
+"TAB_BAR_WISHLIST" = "Wishlist";
+"TAB_BAR_ADD_NEW" = "Ajouter";
+"TAB_BAR_RENTALS" = "Loyers";
+"TAB_BAR_SETTINGS" = "Configuration";
 "BOOK_DETAIL" = "DÉTAILS DU LIVRE";
 "AVAILABLE" = "Disponible";
 "UNAVAILABLE" = "Indisponible";
 "IN_HANDS" = "Dans Tes Mains";
 "ACCEPT" = "Accepter";
+"CANCEL" = "Annuler";
 "CANNOT_RENT" = "Ce livre n'est pas disponible!";
 "THANKS" = "Merci!";
 "PROCESSING_RENT" = "Opération de traitement. S'il-vous-plait attendez!";
@@ -22,3 +32,12 @@
 "ERROR" = "Erreur!";
 "NO_COMMENTS" = "Pas encore de commentaires!";
 "COMMENT_ERROR" = "Nous n'avons pas pu télécharger les commentaires.";
+"BOOKS_NAME" = "Nom du livre";
+"AUTHOR" = "Auteur";
+"YEAR" = "Année";
+"GENRE" = "Genre";
+"DESCRIPTION" = "Description";
+"BOOK_ADD_ERROR" = "Une erreur est survenue. Réessayez plus tard.";
+"BOOK_ADDED" = "Le livre a été ajouté avec succès!";
+"GALLERY" = "Galerie";
+"CAMERA" = "Caméra";

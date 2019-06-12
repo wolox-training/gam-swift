@@ -10,9 +10,19 @@ import UIKit
 
 class RentalsController: UIViewController {
 
+    private lazy var _view: RentalsView = RentalsView.loadFromNib()!
+    
+    override func loadView() {
+        view = _view
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        _view.setView()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        configureNavBar(title: "NAVIGATION_BAR_TITLE_RENTALS".localized())
     }
 }
