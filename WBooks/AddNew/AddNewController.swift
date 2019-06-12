@@ -14,12 +14,9 @@ import WolmoCore
 
 class AddNewController: UIViewController {
     
-    private let formFilled = MutableProperty(false)
-    
-    private var loading = false
-    
+    private let _formFilled = MutableProperty(false)
+    private var _loading = false
     private lazy var _view: AddNewView = AddNewView.loadFromNib()!
-    
     private var _viewModel: AddNewViewModel = AddNewViewModel()
     
     override func loadView() {
@@ -37,7 +34,7 @@ class AddNewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        configureNavBar()
+        configureAddNewNavBar()
     }
     
     private func setBindings() {
@@ -50,33 +47,33 @@ class AddNewController: UIViewController {
     
     private func setFormValidation() {
         let bookNameValidation = _view.booksName.reactive.continuousTextValues.skipNil().map { text in
-            !text.isEmpty
+            text.isNotEmpty
         }
         let authorValidation = _view.author.reactive.continuousTextValues.skipNil().map { text in
-            !text.isEmpty
+            text.isNotEmpty
         }
         let yearValidation = _view.year.reactive.continuousTextValues.skipNil().map {text in
-            !text.isEmpty
+            text.isNotEmpty
         }
         let genreValidation = _view.genre.reactive.continuousTextValues.skipNil().map {text in
-            !text.isEmpty
+            text.isNotEmpty
         }
         let descriptionValidation = _view.bookDescription.reactive.continuousTextValues.skipNil().map {text in
-            !text.isEmpty
+            text.isNotEmpty
         }
         let isButtonEnabled = Signal<Bool, NoError>.combineLatest(bookNameValidation, authorValidation, yearValidation, genreValidation, descriptionValidation).map {
             $0 && $1 && $2 && $3 && $4
         }
         
         isButtonEnabled.observeValues { [weak self] value in
-            self?.formFilled.value = value
+            self?._formFilled.value = value
         }
     }
     
     private func setSubmitButton() {
-        formFilled.producer.startWithValues { [weak self] formFilled in
+        _formFilled.producer.startWithValues { [weak self] formFilled in
             if let this = self {
-                if formFilled && !this.loading {
+                if formFilled && !this._loading {
                     this._view.enableSubmit()
                 } else {
                     this._view.disableSubmit()
@@ -84,7 +81,7 @@ class AddNewController: UIViewController {
             }
         }
         _view.submitButton.reactive.controlEvents(.touchUpInside).observeValues { [weak self] _ in
-            self?.loading = true
+            self?._loading = true
             self?._view.disableSubmit()
             self?._view.disableInteractions()
             self?.submit()
@@ -96,7 +93,7 @@ class AddNewController: UIViewController {
     }
     
     func onAddNewSuccess() {
-        loading = false
+        _loading = false
         _view.resetForm()
         _view.enableInteractions()
         let alert = UIAlertController(alertViewModel: ErrorAlertViewModel(title: "THANKS".localized(), message: "BOOK_ADDED".localized(), dismissButtonTitle: "ACCEPT".localized()))
@@ -104,7 +101,7 @@ class AddNewController: UIViewController {
     }
     
     func onError(error: Error) {
-        loading = true
+        _loading = false
         _view.enableSubmit()
         _view.enableInteractions()
         let alert = UIAlertController(alertViewModel: ErrorAlertViewModel(title: "UPS".localized(), message: "BOOK_ADD_ERROR".localized(), dismissButtonTitle: "ACCEPT".localized()))
@@ -114,7 +111,6 @@ class AddNewController: UIViewController {
     
     private func setImagePicker() {
         let tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped))
-        tapRecognizer.delegate = self
         _view.cover.addGestureRecognizer(tapRecognizer)
         _view.cover.isUserInteractionEnabled = true
     }
@@ -123,49 +119,34 @@ class AddNewController: UIViewController {
         let alertController = UIAlertController(title: .none, message: .none, preferredStyle: .actionSheet)
         
         //Gallery option
-        let chooseAction = UIAlertAction(title: "Gallery", style: .default) { [weak self] _ in
+        let chooseAction = UIAlertAction(title: "GALLERY".localized(), style: .default) { [weak self] _ in
             let imagePickerController = UIImagePickerController.imagePicker
             imagePickerController.delegate = self
             imagePickerController.sourceType = .photoLibrary
             self?.present(imagePickerController, animated: true, completion: .none)
         }
         //Camera option
-        if UIImagePickerController.isSourceTypeAvailable(.camera) {
-            let takeAction = UIAlertAction(title: "Camera", style: .default) { [weak self] _ in
-                let imagePickerController = UIImagePickerController.imagePicker
-                imagePickerController.delegate = self
-                imagePickerController.sourceType = .camera
-                self?.present(imagePickerController, animated: true, completion: .none)
-            }
-            alertController.addAction(takeAction)
+        let takeAction = UIAlertAction(title: "CAMERA".localized(), style: .default) { [weak self] _ in
+            let imagePickerController = UIImagePickerController.imagePicker
+            imagePickerController.delegate = self
+            imagePickerController.sourceType = .camera
+            self?.present(imagePickerController, animated: true, completion: .none)
         }
-        //Cancel option
-        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: .none)
         
+        //Cancel option
+        let cancelAction = UIAlertAction(title: "CANCEL".localized(), style: .cancel, handler: .none)
+        
+        alertController.addAction(takeAction)
         alertController.addAction(chooseAction)
         alertController.addAction(cancelAction)
         
         self.present(alertController, animated: true, completion: nil)
     }
-
-    private func configureNavBar() {
-        self.tabBarController?.setNavigationBarTitle("NAVIGATION_BAR_TITLE_ADD_NEW".localized(), font: UIFont.systemFont(ofSize: 18, weight: UIFont.Weight.medium), color: UIColor.white)
-        //Left notification button
-        self.tabBarController?.navigationItem.leftBarButtonItem = nil
-        //Right search button
-        self.tabBarController?.navigationItem.rightBarButtonItem = nil
-    }
 }
 
-extension AddNewController: UIImagePickerControllerDelegate {
+extension AddNewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String: Any]) {
         _view.cover.image = info[UIImagePickerControllerOriginalImage] as? UIImage
         dismiss(animated: true, completion: nil)
     }
-}
-
-extension AddNewController: UINavigationControllerDelegate {
-}
-
-extension AddNewController: UIGestureRecognizerDelegate {
 }

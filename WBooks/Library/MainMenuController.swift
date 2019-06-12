@@ -36,7 +36,7 @@ class MainMenuController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        configureNavBar()
+        configureLibraryNavBar()
     }
     
     func onSuccess(books: [Book]) {
@@ -52,14 +52,6 @@ class MainMenuController: UIViewController {
         _view.tableView.dataSource = self
         _view.tableView.register(cell: BookCell.self)
         _view.tableView.backgroundColor = UIColor.clear
-    }
-    
-    private func configureNavBar() {
-        self.tabBarController?.setNavigationBarTitle("NAVIGATION_BAR_TITLE_LIBRARY".localized(), font: UIFont.systemFont(ofSize: 18, weight: UIFont.Weight.medium), color: UIColor.white)
-        //Left notification button
-        self.tabBarController?.navigationItem.leftBarButtonItem = UIBarButtonItem.notificationButton()
-        //Right search button
-        self.tabBarController?.navigationItem.rightBarButtonItem = UIBarButtonItem.searchButton()
     }
 }
 

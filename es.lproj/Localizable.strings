@@ -21,6 +21,7 @@
 "UNAVAILABLE" = "No disponible";
 "IN_HANDS" = "En Tus Manos";
 "ACCEPT" = "Aceptar";
+"CANCEL" = "Cancelar";
 "CANNOT_RENT" = "Este libro no está disponible!";
 "THANKS" = "Gracias!";
 "PROCESSING_RENT" = "Estamos procesando su operación. Por favor espere!";
@@ -38,3 +39,5 @@
 "DESCRIPTION" = "Descripción del libro";
 "BOOK_ADD_ERROR" = "Ocurrió un error. Por favor intentar más tarde.";
 "BOOK_ADDED" = "Libro agregado exitosamente!";
+"GALLERY" = "Galería";
+"CAMERA" = "Cámara";

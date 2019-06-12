@@ -19,7 +19,8 @@ class AddNewViewModel {
     let descrpition = MutableProperty("")
     
     private var book: Book {
-        return Book(title: bookName.value, author: author.value, id: 0, genre: genre.value, year: year.value, image: "some url", status: "available")
+        return Book(title: bookName.value, author: author.value, id: 0, genre: genre.value,
+                    year: year.value, image: "some url", status: "available")
     }
     
     func addBook(onSuccess: @escaping () -> Void, onError: @escaping (Error) -> Void) {

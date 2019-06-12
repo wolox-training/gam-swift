@@ -10,12 +10,13 @@ import Foundation
 import UIKit
 
 extension UITextField {
+    
     func setBottomBorder(borderColor: UIColor, width: Double) {
         borderStyle = UITextBorderStyle.none
         backgroundColor = UIColor.clear
         let borderLine = UIView()
-        borderLine.frame = CGRect(x: 0, y: Double(self.frame.height) - width, width: Double(self.frame.width), height: width)
+        borderLine.frame = CGRect(x: 0, y: Double(frame.height) - width, width: Double(frame.width), height: width)
         borderLine.backgroundColor = borderColor
-        self.addSubview(borderLine)
+        addSubview(borderLine)
     }
 }

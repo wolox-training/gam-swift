@@ -10,6 +10,7 @@
 		0CCF002A219208080061050C /* WolmoReactiveCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CCF0029219208080061050C /* WolmoReactiveCore.framework */; };
 		0CCF002C219208110061050C /* Wormholy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CCF002B219208110061050C /* Wormholy.framework */; };
 		0CCF002E219208180061050C /* WolmoCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CCF002D219208180061050C /* WolmoCore.framework */; };
+		4225959722B1601E0025080E /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4225959622B1601E0025080E /* UIViewControllerExtension.swift */; };
 		422A889522A9A151002CF9B8 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422A889422A9A151002CF9B8 /* Colors.swift */; };
 		422A889922A9B154002CF9B8 /* BookDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422A889822A9B154002CF9B8 /* BookDetailsViewController.swift */; };
 		422A889B22A9B16A002CF9B8 /* BookDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422A889A22A9B16A002CF9B8 /* BookDetailsView.swift */; };
@@ -19,8 +20,8 @@
 		422A88A322A9B1A8002CF9B8 /* BookCommentsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422A88A222A9B1A8002CF9B8 /* BookCommentsViewModel.swift */; };
 		422A88A522A9B1C4002CF9B8 /* BookCommentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422A88A422A9B1C4002CF9B8 /* BookCommentsView.swift */; };
 		422A88A722A9B1D8002CF9B8 /* BookCommentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422A88A622A9B1D8002CF9B8 /* BookCommentsViewController.swift */; };
-		423838A422B0257700800C90 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423838A322B0257700800C90 /* ImagePicker.swift */; };
-		423A28FC229C4578008609EE /* NavBarButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423A28FB229C4578008609EE /* NavBarButtons.swift */; };
+		423838A422B0257700800C90 /* UIImagePickerControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423838A322B0257700800C90 /* UIImagePickerControllerExtension.swift */; };
+		423A28FC229C4578008609EE /* UIBarButtonsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423A28FB229C4578008609EE /* UIBarButtonsExtension.swift */; };
 		423E478522A6D67C00318F83 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423E478422A6D67C00318F83 /* User.swift */; };
 		4258877122AEDB8B00082C1F /* TextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4258877022AEDB8B00082C1F /* TextFieldExtension.swift */; };
 		4258877322AEDC2F00082C1F /* FormField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4258877222AEDC2F00082C1F /* FormField.swift */; };
@@ -125,6 +126,7 @@
 		0CCF0029219208080061050C /* WolmoReactiveCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WolmoReactiveCore.framework; path = Carthage/Build/iOS/WolmoReactiveCore.framework; sourceTree = "<group>"; };
 		0CCF002B219208110061050C /* Wormholy.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Wormholy.framework; path = Carthage/Build/iOS/Wormholy.framework; sourceTree = "<group>"; };
 		0CCF002D219208180061050C /* WolmoCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WolmoCore.framework; path = Carthage/Build/iOS/WolmoCore.framework; sourceTree = "<group>"; };
+		4225959622B1601E0025080E /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		422A889422A9A151002CF9B8 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		422A889822A9B154002CF9B8 /* BookDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailsViewController.swift; sourceTree = "<group>"; };
 		422A889A22A9B16A002CF9B8 /* BookDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailsView.swift; sourceTree = "<group>"; };
@@ -134,8 +136,8 @@
 		422A88A222A9B1A8002CF9B8 /* BookCommentsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCommentsViewModel.swift; sourceTree = "<group>"; };
 		422A88A422A9B1C4002CF9B8 /* BookCommentsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCommentsView.swift; sourceTree = "<group>"; };
 		422A88A622A9B1D8002CF9B8 /* BookCommentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCommentsViewController.swift; sourceTree = "<group>"; };
-		423838A322B0257700800C90 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
-		423A28FB229C4578008609EE /* NavBarButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavBarButtons.swift; sourceTree = "<group>"; };
+		423838A322B0257700800C90 /* UIImagePickerControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImagePickerControllerExtension.swift; sourceTree = "<group>"; };
+		423A28FB229C4578008609EE /* UIBarButtonsExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIBarButtonsExtension.swift; sourceTree = "<group>"; };
 		423E478422A6D67C00318F83 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		4258877022AEDB8B00082C1F /* TextFieldExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldExtension.swift; sourceTree = "<group>"; };
 		4258877222AEDC2F00082C1F /* FormField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormField.swift; sourceTree = "<group>"; };
@@ -259,6 +261,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4225959422B15F040025080E /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				42D5AAF122A0114A00084F74 /* BookRepository.swift */,
+				4271CF5522A5A0C6002F0A98 /* RentsRepository.swift */,
+				42A91C8522A728A0004B49EB /* CommentsRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		4225959522B15FE20025080E /* UIViewController */ = {
+			isa = PBXGroup;
+			children = (
+				4225959622B1601E0025080E /* UIViewControllerExtension.swift */,
+			);
+			path = UIViewController;
+			sourceTree = "<group>";
+		};
 		422A889322A9A138002CF9B8 /* Colors */ = {
 			isa = PBXGroup;
 			children = (
@@ -294,7 +314,7 @@
 		423838A222B01C8100800C90 /* Image Picker */ = {
 			isa = PBXGroup;
 			children = (
-				423838A322B0257700800C90 /* ImagePicker.swift */,
+				423838A322B0257700800C90 /* UIImagePickerControllerExtension.swift */,
 			);
 			path = "Image Picker";
 			sourceTree = "<group>";
@@ -319,7 +339,7 @@
 		42689E48229DC09D00EA02A7 /* Navigation Bar */ = {
 			isa = PBXGroup;
 			children = (
-				423A28FB229C4578008609EE /* NavBarButtons.swift */,
+				423A28FB229C4578008609EE /* UIBarButtonsExtension.swift */,
 			);
 			path = "Navigation Bar";
 			sourceTree = "<group>";
@@ -351,11 +371,8 @@
 				423E478422A6D67C00318F83 /* User.swift */,
 				427BC0EB22958D750033845C /* Book.swift */,
 				42689E46229DBA4E00EA02A7 /* BookViewModel.swift */,
-				42D5AAF122A0114A00084F74 /* BookRepository.swift */,
 				4271CF5722A5A0F6002F0A98 /* Rent.swift */,
-				4271CF5522A5A0C6002F0A98 /* RentsRepository.swift */,
 				42A91C8322A72749004B49EB /* Comment.swift */,
-				42A91C8522A728A0004B49EB /* CommentsRepository.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -461,6 +478,7 @@
 				9D1575101CB1B27500EA395E /* Info.plist */,
 				9D15750B1CB1B27500EA395E /* Assets.xcassets */,
 				427BC0EF2295902A0033845C /* Models */,
+				4225959422B15F040025080E /* Repositories */,
 				427BC0F62295A14E0033845C /* StartingScreen */,
 				423A28FD229C56E6008609EE /* MainTabBar */,
 				427BC0EE22958FE20033845C /* Library */,
@@ -471,6 +489,7 @@
 				42F782A4229883BC000F9907 /* AddNew */,
 				42F782A6229883D1000F9907 /* Rentals */,
 				42F782A7229883DA000F9907 /* Settings */,
+				4225959522B15FE20025080E /* UIViewController */,
 				42689E48229DC09D00EA02A7 /* Navigation Bar */,
 				423838A222B01C8100800C90 /* Image Picker */,
 				426D667B229C6B70004070A6 /* Images */,
@@ -751,11 +770,11 @@
 				428D2F2E22AB0169009934B2 /* SettingsView.swift in Sources */,
 				423E478522A6D67C00318F83 /* User.swift in Sources */,
 				427BC0E62295873B0033845C /* MainMenuController.swift in Sources */,
-				423A28FC229C4578008609EE /* NavBarButtons.swift in Sources */,
+				423A28FC229C4578008609EE /* UIBarButtonsExtension.swift in Sources */,
 				42F782AF22988434000F9907 /* WishListController.swift in Sources */,
 				4258877322AEDC2F00082C1F /* FormField.swift in Sources */,
 				4258877122AEDB8B00082C1F /* TextFieldExtension.swift in Sources */,
-				423838A422B0257700800C90 /* ImagePicker.swift in Sources */,
+				423838A422B0257700800C90 /* UIImagePickerControllerExtension.swift in Sources */,
 				42689E47229DBA4E00EA02A7 /* BookViewModel.swift in Sources */,
 				42D5AAF522A075EE00084F74 /* BookInfoViewController.swift in Sources */,
 				422A88A322A9B1A8002CF9B8 /* BookCommentsViewModel.swift in Sources */,
@@ -786,6 +805,7 @@
 				426D667A229C69DC004070A6 /* Images.swift in Sources */,
 				9D1575051CB1B27500EA395E /* AppDelegate.swift in Sources */,
 				4271CF5822A5A0F6002F0A98 /* Rent.swift in Sources */,
+				4225959722B1601E0025080E /* UIViewControllerExtension.swift in Sources */,
 				42F782A222988180000F9907 /* LibraryTab.swift in Sources */,
 				428D2F3022AB0178009934B2 /* SettingsViewModel.swift in Sources */,
 			);

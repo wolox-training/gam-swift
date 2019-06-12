@@ -48,10 +48,10 @@ class BookRepository {
         let parameters = [
             "author": book.author,
             "title": book.title,
-            "image": "some url",
+            "image": book.image,
             "year": book.year,
             "genre": book.genre,
-            "status": "available"
+            "status": book.status
         ] as [String: Any]
         
         Alamofire.request(url, method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: nil).responseJSON { response in
