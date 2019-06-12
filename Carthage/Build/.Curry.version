@@ -1,0 +1,10 @@
+{
+  "commitish" : "v3.0.0",
+  "iOS" : [
+    {
+      "name" : "Curry",
+      "hash" : "d67888fd4be57003c116179d093093d387de52d48cb854f8188b081917ec4416",
+      "swiftToolchainVersion" : "4.2.1 (swiftlang-1000.11.42 clang-1000.11.45.1)"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "commitish" : "1.2.3",
+  "iOS" : [
+    {
+      "name" : "Wormholy",
+      "hash" : "729d3647c27bf541c3f979ab8844fc98de17cc9481da81acea3ec78cef0d657a",
+      "swiftToolchainVersion" : "4.2.1 (swiftlang-1000.11.42 clang-1000.11.45.1)"
+    }
+  ]
+}

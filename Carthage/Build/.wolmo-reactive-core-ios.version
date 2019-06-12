@@ -1,0 +1,10 @@
+{
+  "commitish" : "1.2.0",
+  "iOS" : [
+    {
+      "name" : "WolmoReactiveCore",
+      "hash" : "296c2b687cbcbeb49ac8369b4977c45444c3587ea2ec92e0c7a4c354a08adcf5",
+      "swiftToolchainVersion" : "4.2.1 (swiftlang-1000.11.42 clang-1000.11.45.1)"
+    }
+  ]
+}

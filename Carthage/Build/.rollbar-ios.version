@@ -1,0 +1,9 @@
+{
+  "commitish" : "de61598f7079357f7012965d070f371303fa3aad",
+  "iOS" : [
+    {
+      "name" : "Rollbar",
+      "hash" : "156ef04743c408a5f7ebbe396a2a91815f7863f893a6d4f54380278e00e2ff0d"
+    }
+  ]
+}

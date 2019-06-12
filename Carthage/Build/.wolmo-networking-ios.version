@@ -1,0 +1,10 @@
+{
+  "commitish" : "d88b8cb7077c3987db8e0ae97a7619e0f4379c6f",
+  "iOS" : [
+    {
+      "name" : "Networking",
+      "hash" : "546666012fb11b8816fa5aad6d1461993a3905142c07139193e62363def5c15b",
+      "swiftToolchainVersion" : "4.2.1 (swiftlang-1000.11.42 clang-1000.11.45.1)"
+    }
+  ]
+}

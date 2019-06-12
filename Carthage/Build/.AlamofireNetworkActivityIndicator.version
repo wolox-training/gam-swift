@@ -1,0 +1,10 @@
+{
+  "commitish" : "2.4.0",
+  "iOS" : [
+    {
+      "name" : "AlamofireNetworkActivityIndicator",
+      "hash" : "e4066e9daaac524ca4ee8f014f9127eefc27d087f5f9c9ff6d2106374c87de43",
+      "swiftToolchainVersion" : "4.2.1 (swiftlang-1000.11.42 clang-1000.11.45.1)"
+    }
+  ]
+}

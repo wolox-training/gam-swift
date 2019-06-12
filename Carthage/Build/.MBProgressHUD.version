@@ -1,0 +1,9 @@
+{
+  "commitish" : "84ae68c466c4f2c85fc3731b61e99aeb2e52b707",
+  "iOS" : [
+    {
+      "name" : "MBProgressHUD",
+      "hash" : "ffc67fd08e7266cc70f0337ce1979129d9d4ddcb2f3f86845b0efff967487b41"
+    }
+  ]
+}

@@ -5,7 +5,7 @@
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 ![Swift 3](https://img.shields.io/badge/Swift-3-orange.svg)
 
-WolMo - Networking iOS is a framework which provides an easy customizable HTTP request and session manager for iOS commonly used at [Wolox](http://www.wolox.com.ar/).
+WolMo - Networking iOS is a framework which provides an easy customizable HTTP request for iOS commonly used at [Wolox](http://www.wolox.com.ar/).
 
 
 ## Table of Contents
@@ -20,8 +20,6 @@ WolMo - Networking iOS is a framework which provides an easy customizable HTTP r
     * [Error decoding reporting](#error-decoding-reporting)
     * [Creating a repository instance](#creating-a-repository-instance)
     * [Enable SSL Pinning](#enable-ssl-pinning)
-    * [Session manager](#session-manager)
-    * [Storing a User](#storing-a-user)
     * [Enable AlamofireNetworkActivityLogger](#enable-alamofirenetworkactivitylogger)
     * [Enable NetworkActivityIndicatorManager](#enable-networkactivityindicatormanager)
   * [Bootstrap](#bootstrap) 
@@ -41,13 +39,9 @@ You can install Carthage with Homebrew using the following command:
 brew update
 brew install carthage
 ```
-To download wolmo-networking-iOS, add this to your Cartfile if you are using Swift 3.2 or 4:
+To download wolmo-networking-iOS, add this to your Cartfile:
 ```
-github "Wolox/wolmo-networking-ios" "swift-3.2-compatibility"
-```
-Or if you are using an older version of Swift:
-```
-github "Wolox/wolmo-networking-ios" "master"
+github "Wolox/wolmo-networking-ios" ~> 2.0.0
 ```
 
 ### Manually
@@ -63,7 +57,7 @@ The framework allows to create agile HTTP repositories by extending [AbstractRep
 
 ### Fetching an entity
 
-In case a custom repository should fetch a single or a collection of models, they must implement `Decodable` (see [Argo](https://github.com/thoughtbot/Argo)). This way they can be automatically decoded by the framework. Check [UserDemo](NetworkingDemo/UserDemo.swift) or [Entity](NetworkingDemo/Entity.swift).
+In case a custom repository should fetch a single or a collection of models, they must implement `Decodable` (see [Argo](https://github.com/thoughtbot/Argo)). This way they can be automatically decoded by the framework. Check [User](NetworkingDemo/User.swift) or the entity [Book](NetworkingDemo/Book.swift).
 
 In case the entity is too complex, it's possible to get the error: `Expression was too complex to be solved in reasonable time`. In this case check this [Argo issue](https://github.com/thoughtbot/Argo/issues/5) for a workaround.
 
@@ -71,13 +65,13 @@ In case the entity is too complex, it's possible to get the error: `Expression w
 
 Every implemented repository is thought to return a `Result` instance (see [Result](https://github.com/antitypical/Result)) in which the value is typed in the expected response type, and the error is always a [RepositoryError](Networking/Repository/RepositoryError.swift).
 
-The basic and expected errors are implemented, and a way to add custom errors related to the project itself is provided. In order to add new errors it should be necessary to create a new `enum` which implements the protocol `CustomRepositoryErrorType` as done in [EntityRepository](NetworkingTests/Tests/EntityRepository.swift) and match the expected status code in the HTTP response with each custom error. An example of this can be found in [EntityRepository](NetworkingTests/Tests/EntityRepository.swift) in the function `fetchCustomFailingEntity`.
+The basic and expected errors are implemented, and a way to add custom errors related to the project itself is provided. In order to add new errors it should be necessary to create a new `enum` which implements the protocol `CustomRepositoryErrorType` as done in [EntityRepository](NetworkingTests/Tests/EntityRepositorySpec.swift) and match the expected status code in the HTTP response with each custom error. An example of this can be found in [EntityRepository](NetworkingTests/Tests/EntityRepositorySpec.swift) in the function `fetchCustomFailingEntity`.
 
-Also, a custom `DecodeError` (see [Argo](https://github.com/thoughtbot/Argo)) can be sent manually. An example can be found in [EntityRepository](NetworkingTests/Tests/EntityRepository.swift) in the function `fetchEntities`. This is useful in case the response body does not match exactly the return type and some kind of decoding needs to be manually performed.
+Also, a custom `DecodeError` (see [Argo](https://github.com/thoughtbot/Argo)) can be sent manually. An example can be found in [EntityRepository](NetworkingTests/Tests/EntityRepositorySpec.swift) in the function `fetchEntities`. This is useful in case the response body does not match exactly the return type and some kind of decoding needs to be manually performed.
 
 ### Error decoding reporting
 
-In case a `DecodeError` is get, the framwork offers a way to perform an action (for example reporting the error using a third party service to notify about a mismatch between API and the client).
+In case you get a `DecodeError`, the framework offers a way to perform an action (for example reporting the error using a third party service to notify about a mismatch between API and the client).
 
 To do this provide a closure `decodedErrorHandler` in `DecodedErrorHandler`. Check [DecodedExtension](Networking/Extensions/DecodedErrorHandler.swift). This closure receives the `Argo.DecodeError` and returns `Void`.
 
@@ -92,26 +86,14 @@ The properties configurable from there are:
 - `port: String`: API port.
 - `subdomainURL: String`: API subdomain (optional parameter). This URL must start with `/` as required by `URLComponents`.
 - `usePinningCertificate: Bool`: enables SSL Pinning (false by default) (see next section).
+- `timeout`: The timeout of the requests in seconds. It defaults to 75 seconds.
+- `secondsBetweenPolls`: For polling requests, seconds between one polling and the next. It defaults to 1 second.
+- `maximumPollingRetries`: Maximum retries until a polling request gives timeout. If it's not set then it will use timeout/secondsBetweenPolls
+- `encodeAsURL`: Methods to be encoded as URL. The remaining methods will be encoded as JSON.
 
 ### Enable SSL Pinning
 
 If enabling SSL pinning a valid `.der` certificate must be provided. It needs to be added to the project and be present in "copy bundle resources" phase. The framework will automatically look for any certificate provided in bundle and use it.
-
-### Session manager
-
-The framework provides a [SessionManager](Networking/Services/SessionManager.swift) intended to manage the current session. It also stores the user session exposing a way to update it whenever the user logs in, logs out, updates and expires. These transitions are expected to be handled outside the framework, but always letting SessionManager know about them.
-
-When a user is logged in or signed up, `login:` must be called providing the fetched user. This will make `SessionManager` know a valid session is being used, and the session token will be injected in every request for authentication.
-
-The same way, when the user is logged out, `logout` must be called. This will make `SessionManager` remove the stored session token, and every request will return a `RepositoryError.unauthenticatedSession`.
-
-The function `update:` receiving a user can be useful to make `SessionManager` store an updated `User`.
-
-### Storing a User
-
-`SessionManager` can provide the current user reading the property `currentUser`. This property is set when `bootstrapSession` is called, which must be called only once. 
-
-This function fetches the current user if an instance of [CurrentUserFetcherType](Networking/Repository/CurrentUserFetcherType.swift) is provided. Since the user is not persisted in the device, and only stored in memory the user needs to be fetched every time the application is launched.
 
 ### Enable `AlamofireNetworkActivityLogger`
 
@@ -121,7 +103,7 @@ Check [NetworkingDemoLauncher](NetworkingDemo/NetworkingDemoLauncher.swift) for 
 
 ### Enable `NetworkActivityIndicatorManager`
 
-`NetworkActivityIndicatorManager` (see [NetworkActivityIndicatorManager](https://github.com/Alamofire/AlamofireNetworkActivityIndicator)) is available to be enabled directly by doing `NetworkActivityIndicatorManager.shared.isEnabled = true` to automatically mananger the visibility of the network activity indicator.
+`NetworkActivityIndicatorManager` (see [NetworkActivityIndicatorManager](https://github.com/Alamofire/AlamofireNetworkActivityIndicator)) is available to be enabled directly by doing `NetworkActivityIndicatorManager.shared.isEnabled = true` to automatically manage the visibility of the network activity indicator.
 
 Check [NetworkingDemoLauncher](NetworkingDemo/NetworkingDemoLauncher.swift) for an example.
 

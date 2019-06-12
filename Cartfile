@@ -1,6 +1,6 @@
 # Useful extensions
 github "Wolox/wolmo-core-ios" ~> 5.2.0
-github "Wolox/wolmo-networking-ios" ~> 1.1.0
+github "Wolox/wolmo-networking-ios" "master"
 
 # Reactive Core
 github "Wolox/wolmo-reactive-core-ios" ~> 1.1.0
@@ -9,4 +9,4 @@ github "Wolox/wolmo-reactive-core-ios" ~> 1.1.0
 github "rollbar/rollbar-ios" "master"
 
 # Requests logger
-github "pmusolino/Wormholy" ~> 1.1.3
+github "pmusolino/Wormholy" == 1.2.3

@@ -1,0 +1,10 @@
+{
+  "commitish" : "5.3.0",
+  "iOS" : [
+    {
+      "name" : "WolmoCore",
+      "hash" : "a2a1c4bba4285eb762270934c8675c3922f023439161d3f303b91c17e9303287",
+      "swiftToolchainVersion" : "4.2.1 (swiftlang-1000.11.42 clang-1000.11.45.1)"
+    }
+  ]
+}

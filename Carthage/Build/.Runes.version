@@ -1,0 +1,10 @@
+{
+  "commitish" : "v4.2.2",
+  "iOS" : [
+    {
+      "name" : "Runes",
+      "hash" : "01f1a00be1eb05b4a7be877d5c7650dd5bf8199160ae8f2c10572e01a7683c94",
+      "swiftToolchainVersion" : "4.2.1 (swiftlang-1000.11.42 clang-1000.11.45.1)"
+    }
+  ]
+}

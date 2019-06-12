@@ -1,0 +1,10 @@
+{
+  "commitish" : "v4.2.0",
+  "iOS" : [
+    {
+      "name" : "Argo",
+      "hash" : "0df19f8594fe961ea07e5c80d48f8886bbdc7d808588e1436d5c5ab67db6c2fc",
+      "swiftToolchainVersion" : "4.2.1 (swiftlang-1000.11.42 clang-1000.11.45.1)"
+    }
+  ]
+}
