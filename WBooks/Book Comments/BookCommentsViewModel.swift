@@ -9,13 +9,6 @@
 import Foundation
 import ReactiveSwift
 
-public enum TableState {
-    case loading
-    case withValues
-    case error
-    case empty
-}
-
 class BookCommentsViewModel {
     
     var bookViewModel: BookViewModel

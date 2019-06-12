@@ -57,6 +57,8 @@
 		42A91C8622A728A0004B49EB /* CommentsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A91C8522A728A0004B49EB /* CommentsRepository.swift */; };
 		42AA5AE422AEEF38000D1CE4 /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42AA5AE322AEEF38000D1CE4 /* Buttons.swift */; };
 		42AA5AE622AEFACB000D1CE4 /* AddNewView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42AA5AE522AEFACB000D1CE4 /* AddNewView.xib */; };
+		42B7104F22B1BAE60009A4F7 /* TableState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B7104E22B1BAE60009A4F7 /* TableState.swift */; };
+		42B7105122B1BB160009A4F7 /* RepositoryBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B7105022B1BB160009A4F7 /* RepositoryBuilder.swift */; };
 		42D5AAF222A0114A00084F74 /* BookRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D5AAF122A0114A00084F74 /* BookRepository.swift */; };
 		42D5AAF522A075EE00084F74 /* BookInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D5AAF422A075EE00084F74 /* BookInfoViewController.swift */; };
 		42D5AAFB22A0764D00084F74 /* BookInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D5AAFA22A0764D00084F74 /* BookInfoViewModel.swift */; };
@@ -175,6 +177,8 @@
 		42A91C8522A728A0004B49EB /* CommentsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsRepository.swift; sourceTree = "<group>"; };
 		42AA5AE322AEEF38000D1CE4 /* Buttons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buttons.swift; sourceTree = "<group>"; };
 		42AA5AE522AEFACB000D1CE4 /* AddNewView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddNewView.xib; sourceTree = "<group>"; };
+		42B7104E22B1BAE60009A4F7 /* TableState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableState.swift; sourceTree = "<group>"; };
+		42B7105022B1BB160009A4F7 /* RepositoryBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryBuilder.swift; sourceTree = "<group>"; };
 		42D5AAF122A0114A00084F74 /* BookRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookRepository.swift; sourceTree = "<group>"; };
 		42D5AAF422A075EE00084F74 /* BookInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookInfoViewController.swift; sourceTree = "<group>"; };
 		42D5AAFA22A0764D00084F74 /* BookInfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookInfoViewModel.swift; sourceTree = "<group>"; };
@@ -264,6 +268,7 @@
 		4225959422B15F040025080E /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
+				42B7105022B1BB160009A4F7 /* RepositoryBuilder.swift */,
 				42D5AAF122A0114A00084F74 /* BookRepository.swift */,
 				4271CF5522A5A0C6002F0A98 /* RentsRepository.swift */,
 				42A91C8522A728A0004B49EB /* CommentsRepository.swift */,
@@ -369,10 +374,11 @@
 			isa = PBXGroup;
 			children = (
 				423E478422A6D67C00318F83 /* User.swift */,
-				427BC0EB22958D750033845C /* Book.swift */,
-				42689E46229DBA4E00EA02A7 /* BookViewModel.swift */,
 				4271CF5722A5A0F6002F0A98 /* Rent.swift */,
 				42A91C8322A72749004B49EB /* Comment.swift */,
+				427BC0EB22958D750033845C /* Book.swift */,
+				42689E46229DBA4E00EA02A7 /* BookViewModel.swift */,
+				42B7104E22B1BAE60009A4F7 /* TableState.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -797,6 +803,8 @@
 				E1530D9C1ED37905002A9002 /* RollbarService.swift in Sources */,
 				422A88A522A9B1C4002CF9B8 /* BookCommentsView.swift in Sources */,
 				422A889922A9B154002CF9B8 /* BookDetailsViewController.swift in Sources */,
+				42B7105122B1BB160009A4F7 /* RepositoryBuilder.swift in Sources */,
+				42B7104F22B1BAE60009A4F7 /* TableState.swift in Sources */,
 				42F782AB22988414000F9907 /* RentalsController.swift in Sources */,
 				427BC0E8229587D20033845C /* BookCell.swift in Sources */,
 				428D2F2422AB0114009934B2 /* WishListViewModel.swift in Sources */,
