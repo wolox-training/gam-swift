@@ -46,9 +46,9 @@ class AddNewView: UIView, NibLoadable {
         }
     }
     
-    @IBOutlet weak var topic: FormField! {
+    @IBOutlet weak var genre: FormField! {
         didSet {
-            topic.formPlaceholder = "TOPIC".localized()
+            genre.formPlaceholder = "GENRE".localized()
         }
     }
     
@@ -60,5 +60,42 @@ class AddNewView: UIView, NibLoadable {
     
     func setView() {
         self.backgroundColor = UIColor.wBooksBackground
+    }
+    
+    func resetForm() {
+        booksName.text = ""
+        author.text = ""
+        year.text = ""
+        genre.text = ""
+        bookDescription.text = ""
+        cover.image = UIImage.addNewBookCover
+    }
+    
+    func enableSubmit() {
+        submitButton.alpha = 1
+        submitButton.isEnabled = true
+    }
+    
+    func disableSubmit() {
+        submitButton.alpha = 0.5
+        submitButton.isEnabled = false
+    }
+    
+    func disableInteractions() {
+        booksName.isUserInteractionEnabled = false
+        author.isUserInteractionEnabled = false
+        year.isUserInteractionEnabled = false
+        genre.isUserInteractionEnabled = false
+        bookDescription.isUserInteractionEnabled = false
+        cover.isUserInteractionEnabled = false
+    }
+    
+    func enableInteractions() {
+        booksName.isUserInteractionEnabled = true
+        author.isUserInteractionEnabled = true
+        year.isUserInteractionEnabled = true
+        genre.isUserInteractionEnabled = true
+        bookDescription.isUserInteractionEnabled = true
+        cover.isUserInteractionEnabled = true
     }
 }

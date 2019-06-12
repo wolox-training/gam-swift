@@ -7,6 +7,22 @@
 //
 
 import Foundation
+import ReactiveCocoa
+import ReactiveSwift
 
 class AddNewViewModel {
+    
+    let bookName = MutableProperty("")
+    let author = MutableProperty("")
+    let year = MutableProperty("")
+    let genre = MutableProperty("")
+    let descrpition = MutableProperty("")
+    
+    private var book: Book {
+        return Book(title: bookName.value, author: author.value, id: 0, genre: genre.value, year: year.value, image: "some url", status: "available")
+    }
+    
+    func addBook(onSuccess: @escaping () -> Void, onError: @escaping (Error) -> Void) {
+        BookRepository.addNewBook(book: book, onSuccess: onSuccess, onError: onError)
+    }
 }

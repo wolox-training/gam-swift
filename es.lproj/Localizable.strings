@@ -34,5 +34,7 @@
 "BOOKS_NAME" = "Nombre del libro";
 "AUTHOR" = "Autor";
 "YEAR" = "Año";
-"TOPIC" = "Género";
+"GENRE" = "Género";
 "DESCRIPTION" = "Descripción del libro";
+"BOOK_ADD_ERROR" = "Ocurrió un error. Por favor intentar más tarde.";
+"BOOK_ADDED" = "Libro agregado exitosamente!";

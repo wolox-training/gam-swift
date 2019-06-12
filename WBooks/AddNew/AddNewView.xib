@@ -29,7 +29,7 @@
                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
                         </button>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_add photo" translatesAutoresizingMaskIntoConstraints="NO" id="XkA-ht-zU2">
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_add photo" translatesAutoresizingMaskIntoConstraints="NO" id="XkA-ht-zU2">
                             <rect key="frame" x="20" y="20" width="110" height="110"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="110" id="fvg-rG-Kom"/>
@@ -101,8 +101,8 @@
                 <outlet property="booksName" destination="XXC-hK-HfU" id="Fue-go-Nn8"/>
                 <outlet property="cover" destination="XkA-ht-zU2" id="OMR-i2-fgh"/>
                 <outlet property="formFrame" destination="Fc6-IF-tk4" id="09f-VD-SH5"/>
+                <outlet property="genre" destination="DbQ-3s-cY8" id="8VV-xW-VHk"/>
                 <outlet property="submitButton" destination="I2u-8b-jC4" id="Qc9-T1-Vyg"/>
-                <outlet property="topic" destination="DbQ-3s-cY8" id="z91-Kj-ZMz"/>
                 <outlet property="year" destination="9Rv-pb-3hE" id="2L1-Gu-z9Y"/>
             </connections>
             <point key="canvasLocation" x="-98" y="-363"/>
