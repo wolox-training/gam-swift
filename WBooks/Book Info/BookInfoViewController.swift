@@ -62,4 +62,14 @@ class BookInfoViewController: UIViewController {
             ]
         )
     }
+    
+    private func configureBookInfoNavBar() {
+        setNavigationBarTitle("BOOK_DETAIL".localized(), font: UIFont.systemFont(ofSize: 20, weight: UIFont.Weight.medium), color: UIColor.white)
+        //Back button
+        navigationItem.leftBarButtonItem = UIBarButtonItem.backNavBarButton {
+            if let currentNavigationController = self.navigationController {
+                currentNavigationController.popViewController(animated: true)
+            }
+        }
+    }
 }

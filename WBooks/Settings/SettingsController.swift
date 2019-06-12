@@ -23,6 +23,6 @@ class SettingsController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        configureSettingsNavBar()
+        configureNavBar(title: "NAVIGATION_BAR_TITLE_SETTINGS".localized())
     }
 }

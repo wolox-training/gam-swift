@@ -23,6 +23,6 @@ class RentalsController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        configureRentalsNavBar()
+        configureNavBar(title: "NAVIGATION_BAR_TITLE_RENTALS".localized())
     }
 }

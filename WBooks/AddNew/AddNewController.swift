@@ -34,7 +34,7 @@ class AddNewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        configureAddNewNavBar()
+        configureNavBar(title: "NAVIGATION_BAR_TITLE_ADD_NEW".localized())
     }
     
     private func setBindings() {
@@ -126,17 +126,18 @@ class AddNewController: UIViewController {
             self?.present(imagePickerController, animated: true, completion: .none)
         }
         //Camera option
-        let takeAction = UIAlertAction(title: "CAMERA".localized(), style: .default) { [weak self] _ in
-            let imagePickerController = UIImagePickerController.imagePicker
-            imagePickerController.delegate = self
-            imagePickerController.sourceType = .camera
-            self?.present(imagePickerController, animated: true, completion: .none)
+        if UIImagePickerController.isSourceTypeAvailable(.camera) {
+            let takeAction = UIAlertAction(title: "CAMERA".localized(), style: .default) { [weak self] _ in
+                let imagePickerController = UIImagePickerController.imagePicker
+                imagePickerController.delegate = self
+                imagePickerController.sourceType = .camera
+                self?.present(imagePickerController, animated: true, completion: .none)
+            }
+            alertController.addAction(takeAction)
         }
-        
         //Cancel option
         let cancelAction = UIAlertAction(title: "CANCEL".localized(), style: .cancel, handler: .none)
         
-        alertController.addAction(takeAction)
         alertController.addAction(chooseAction)
         alertController.addAction(cancelAction)
         
