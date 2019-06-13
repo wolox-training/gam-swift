@@ -44,22 +44,22 @@ enum Availability: String {
 }
 
 enum RentState {
-    case sleep
+    case rentSleep
     case rentSuccess
     case rentError
 }
 
 class BookDetailsViewModel {
     
-    var bookViewModel: BookViewModel
-    
     let rentsRepository = RepositoryBuilder.getDefaultRentsRepository()
     
-    var rents: [Rent] = []
+    let rentState = MutableProperty(RentState.rentSleep)
+    
+    var bookViewModel: BookViewModel
     
     let status = MutableProperty(Availability.notLoaded)
     
-    let rentState = MutableProperty(RentState.sleep)
+    var rents: [Rent] = []
     
     init(bookViewModel: BookViewModel) {
         self.bookViewModel = bookViewModel
@@ -90,6 +90,7 @@ class BookDetailsViewModel {
     func rentBook() {
         let today = Date().toString()
         let tomorrow = Date().adding(days: 1).toString()
+        
         rentsRepository.rentBook(bookID: bookViewModel.id, from: today, to: tomorrow).startWithResult { [weak self] result in
             guard let this = self else {
                 return

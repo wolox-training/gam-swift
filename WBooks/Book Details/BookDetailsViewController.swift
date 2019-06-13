@@ -46,46 +46,46 @@ class BookDetailsViewController: UIViewController {
     }
     
     func setRentButton() {
+        //Rent button action
+        _view.rent.reactive.controlEvents(.touchUpInside).observeValues { [weak self] _ in
+            self?.rent()
+        }
         
+        //Actions when rent request is completed
         _viewModel.rentState.producer.startWithValues { [weak self] state in
             guard let this = self else {
                 return
             }
             switch state {
             case .rentError:
+                this._view.processingRentAlert.dismiss(animated: true, completion: nil)
                 let alert = UIAlertController(alertViewModel: ErrorAlertViewModel(title: "ERROR".localized(), message: "RENT_ERROR".localized(), dismissButtonTitle: "ACCEPT".localized()))
                 this.present(alert, animated: true, completion: nil)
-                this._viewModel.rentState.value = .sleep
             case .rentSuccess:
+                this._view.processingRentAlert.dismiss(animated: true, completion: nil)
                 let alert = UIAlertController(alertViewModel: ErrorAlertViewModel(title: "THANKS".localized(), message: "RENT_COMPLETED".localized(), dismissButtonTitle: "ACCEPT".localized()))
                 this.present(alert, animated: true, completion: nil)
                 this._view.setAvailability(status: this._viewModel.status.value)
-                this._viewModel.rentState.value = .sleep
-            case .sleep:
+            case .rentSleep:
                 break
             }
         }
-        
-        _view.rent.reactive.controlEvents(.touchUpInside).observeValues { [weak self] _ in
-            self?.rent()
-        }
     }
-    
+
     func rent() {
         switch _viewModel.status.value {
         case .available:
-            let alert = UIAlertController(alertViewModel: ErrorAlertViewModel(title: "THANKS".localized(), message: "PROCESSING_RENT".localized(), dismissButtonTitle: "ACCEPT".localized()))
-            self.present(alert, animated: true, completion: nil)
+            present(_view.processingRentAlert, animated: true, completion: nil)
             _viewModel.rentBook()
         case .notAvailable:
             let alert = UIAlertController(alertViewModel: ErrorAlertViewModel(title: "UPS".localized(), message: "CANNOT_RENT".localized(), dismissButtonTitle: "ACCEPT".localized()))
-            self.present(alert, animated: true, completion: nil)
+            present(alert, animated: true, completion: nil)
         case .inHands:
             let alert = UIAlertController(alertViewModel: ErrorAlertViewModel(title: "UPS".localized(), message: "ALREADY_IN_HANDS".localized(), dismissButtonTitle: "ACCEPT".localized()))
-            self.present(alert, animated: true, completion: nil)
+            present(alert, animated: true, completion: nil)
         case .notLoaded:
             let alert = UIAlertController(alertViewModel: ErrorAlertViewModel(title: "UPS".localized(), message: "RENT_ERROR".localized(), dismissButtonTitle: "ACCEPT".localized()))
-            self.present(alert, animated: true, completion: nil)
+            present(alert, animated: true, completion: nil)
         }
     }
 }

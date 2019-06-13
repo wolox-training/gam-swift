@@ -15,7 +15,7 @@ class MainMenuViewModel {
     
     var books = [BookViewModel]()
     
-    var state = MutableProperty(TableState.loading)
+    let state = MutableProperty(TableState.loading)
     
     let bookRepository = RepositoryBuilder.getDefaultBookRepository()
     

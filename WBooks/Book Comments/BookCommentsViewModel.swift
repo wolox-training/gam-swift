@@ -11,11 +11,11 @@ import ReactiveSwift
 
 class BookCommentsViewModel {
     
-    let commentsRepository = RepositoryBuilder.getDefaultCommentsRepository()
-    
     var bookViewModel: BookViewModel
     
     var comments = [Comment]()
+    
+    let commentsRepository = RepositoryBuilder.getDefaultCommentsRepository()
     
     let state = MutableProperty(TableState.loading)
     

@@ -71,6 +71,11 @@ class AddNewController: UIViewController {
     }
     
     private func setSubmitButton() {
+        setSubmitEnableLogic()
+        setSubmitAction()
+    }
+    
+    private func setSubmitEnableLogic() {
         _formFilled.producer.startWithValues { [weak self] formFilled in
             guard let this = self else {
                 return
@@ -81,6 +86,10 @@ class AddNewController: UIViewController {
                 this._view.disableSubmit()
             }
         }
+    }
+    
+    private func setSubmitAction() {
+        //Submit button action
         _view.submitButton.reactive.controlEvents(.touchUpInside).observeValues { [weak self] _ in
             guard let this = self else {
                 return
@@ -90,6 +99,7 @@ class AddNewController: UIViewController {
             this._view.disableInteractions()
             this._viewModel.addBook()
         }
+        //Actions when submit request is completed
         _viewModel.addState.producer.startWithValues { [weak self] state in
             guard let this = self else {
                 return
@@ -101,14 +111,12 @@ class AddNewController: UIViewController {
                 this._view.enableInteractions()
                 let alert = UIAlertController(alertViewModel: ErrorAlertViewModel(title: "UPS".localized(), message: "BOOK_ADD_ERROR".localized(), dismissButtonTitle: "ACCEPT".localized()))
                 this.present(alert, animated: true, completion: nil)
-                this._viewModel.addState.value = .sleep
             case .addSuccess:
                 this._loading = false
                 this._view.resetForm()
                 this._view.enableInteractions()
                 let alert = UIAlertController(alertViewModel: ErrorAlertViewModel(title: "THANKS".localized(), message: "BOOK_ADDED".localized(), dismissButtonTitle: "ACCEPT".localized()))
                 this.present(alert, animated: true, completion: nil)
-                this._viewModel.addState.value = .sleep
             case .sleep:
                 break
             }
