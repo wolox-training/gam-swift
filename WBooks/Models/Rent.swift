@@ -8,6 +8,11 @@
 
 import Foundation
 import UIKit
+import Argo
+import Networking
+import WolmoCore
+import Curry
+import Runes
 
 struct Rent {
     
@@ -26,23 +31,13 @@ struct Rent {
     }
 }
 
-extension Rent: Codable {
-    enum RentKey: String, CodingKey {
-        case id
-        case to
-        case from
-        case book
-        case user
-    }
-    
-    init(from decoder: Decoder) throws {
-        let container = try decoder.container(keyedBy: RentKey.self)
-        let id = try container.decode(Int.self, forKey: .id)
-        let to = try container.decode(String.self, forKey: .to)
-        let from = try container.decode(String.self, forKey: .from)
-        let book = try container.decode(Book.self, forKey: .book)
-        let user = try container.decode(User.self, forKey: .user)
-        
-        self.init(id: id, to: to, from: from, book: book, user: user)
+extension Rent: Argo.Decodable {
+    static func decode(_ json: JSON) -> Decoded<Rent> {
+        return curry(Rent.init)
+            <^> json <| "id"
+            <*> json <| "to"
+            <*> json <| "from"
+            <*> json <| "book"
+            <*> json <| "user"
     }
 }

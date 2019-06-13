@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import ReactiveSwift
 
 enum Availability: String {
     case available
@@ -43,44 +44,60 @@ enum Availability: String {
 }
 
 class BookDetailsViewModel {
+    
+    let rentsRepository = RepositoryBuilder.getDefaultRentsRepository()
+    
+    let rentState = MutableProperty(RequestState.sleep)
+    
     var bookViewModel: BookViewModel
     
-    var rents: [Rent] = []
+    let status = MutableProperty(Availability.notLoaded)
     
-    var status: Availability = .notLoaded
+    var rents: [Rent] = []
     
     init(bookViewModel: BookViewModel) {
         self.bookViewModel = bookViewModel
     }
     
-    func loadRents(onSuccess: @escaping ([Rent]) -> Void) {
-        RentsRepository.fetchRents(onSuccess: onSuccess, onError: onError)
-    }
-    
-    func onLoadRentsSuccess(rents: [Rent]) {
-        self.rents = rents
-        if bookViewModel.status == "Available" || bookViewModel.status == "available" {
-            self.status = .available
-        } else if isBookOnHands() {
-            self.status = .inHands
-        } else {
-            self.status = .notAvailable
+    func loadRents() {
+        rentsRepository.fetchRents().startWithResult { [weak self] result in
+            guard let this = self else {
+                return
+            }
+            switch result {
+            case .success(let resultArray):
+                this.rents = resultArray
+                if this.bookViewModel.status == "Available" || this.bookViewModel.status == "available" {
+                    this.status.value = .available
+                } else if this.isBookOnHands() {
+                    this.status.value = .inHands
+                } else {
+                    this.status.value = .notAvailable
+                }
+            case .failure(let error):
+                print(error)
+            }
         }
     }
     
-    func onError(error: Error) {
-        return
-    }
-    
-    func rentBook(onSuccess: @escaping () -> Void, onError: @escaping () -> Void) {
+    func rentBook() {
         let today = Date().toString()
         let tomorrow = Date().adding(days: 1).toString()
-        RentsRepository.rentBook(onSuccess: onSuccess, onError: onError, bookID: bookViewModel.id, from: today, to: tomorrow)
-    }
-    
-    func onBookRentSuccess() {
-        bookViewModel.status = "rented"
-        self.status = .inHands
+        
+        rentsRepository.rentBook(bookID: bookViewModel.id, from: today, to: tomorrow).startWithResult { [weak self] result in
+            guard let this = self else {
+                return
+            }
+            switch result {
+            case .success:
+                this.bookViewModel.status = "rented"
+                this.status.value = .inHands
+                this.rentState.value = .success
+            case .failure(let error):
+                this.rentState.value = .error
+                print(error)
+            }
+        }
     }
     
     private func isBookOnHands() -> Bool {

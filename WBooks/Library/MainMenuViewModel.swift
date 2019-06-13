@@ -13,22 +13,27 @@ import ReactiveSwift
 
 class MainMenuViewModel {
     
-    let books = MutableProperty<[BookViewModel]>([])
+    var books = [BookViewModel]()
     
-    func loadBooks(onSuccess: @escaping ([Book]) -> Void) {
-        BookRepository.fetchBooks(onSuccess: onSuccess, onError: onError)
-    }
+    let state = MutableProperty(TableState.loading)
     
-    func onSuccess(books: [Book]) {
-        setBooks(books: books)
-    }
+    let bookRepository = RepositoryBuilder.getDefaultBookRepository()
     
-    func onError(error: Error) {
-        return
+    func loadBooks() {
+        bookRepository.fetchBooks().startWithResult { [weak self] result in
+            switch result {
+            case .success(let resultArray):
+                self?.setBooks(books: resultArray)
+                self?.state.value = resultArray.isEmpty ? .empty : .withValues
+            case .failure(let error):
+                self?.state.value = .error
+                print(error)
+            }
+        }
     }
     
     private func setBooks(books: [Book]) {
-        self.books.value = books.map({ (book) in
+        self.books = books.map({ (book) in
             BookViewModel(book: book)
         })
     }

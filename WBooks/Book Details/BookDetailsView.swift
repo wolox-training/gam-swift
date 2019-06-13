@@ -10,6 +10,7 @@ import UIKit
 import WolmoCore
 
 class BookDetailsView: UIView, NibLoadable {
+    
     @IBOutlet weak var detailCell: UIView! {
         didSet {
             detailCell.layer.cornerRadius = 10

@@ -8,6 +8,11 @@
 
 import Foundation
 import UIKit
+import Argo
+import Networking
+import WolmoCore
+import Curry
+import Runes
 
 struct Comment {
     
@@ -40,21 +45,12 @@ struct Comment {
     }
 }
 
-extension Comment: Codable {
-    enum CommentKey: String, CodingKey {
-        case user
-        case content
-        case book
-        case id
-    }
-    
-    init(from decoder: Decoder) throws {
-        let container = try decoder.container(keyedBy: CommentKey.self)
-        let user = try container.decode(User.self, forKey: .user)
-        let content = try container.decode(String.self, forKey: .content)
-        let book = try container.decode(Book.self, forKey: .book)
-        let id = try container.decode(Int.self, forKey: .id)
-        
-        self.init(user: user, content: content, book: book, id: id)
+extension Comment: Argo.Decodable {
+    static func decode(_ json: JSON) -> Decoded<Comment> {
+        return curry(Comment.init)
+            <^> json <| "user"
+            <*> json <| "content"
+            <*> json <| "book"
+            <*> json <| "id"
     }
 }

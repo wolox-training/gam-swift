@@ -71,42 +71,56 @@ class AddNewController: UIViewController {
     }
     
     private func setSubmitButton() {
+        setSubmitEnableLogic()
+        setSubmitAction()
+    }
+    
+    private func setSubmitEnableLogic() {
         _formFilled.producer.startWithValues { [weak self] formFilled in
-            if let this = self {
-                if formFilled && !this._loading {
-                    this._view.enableSubmit()
-                } else {
-                    this._view.disableSubmit()
-                }
+            guard let this = self else {
+                return
+            }
+            if formFilled && !this._loading {
+                this._view.enableSubmit()
+            } else {
+                this._view.disableSubmit()
             }
         }
+    }
+    
+    private func setSubmitAction() {
+        //Submit button action
         _view.submitButton.reactive.controlEvents(.touchUpInside).observeValues { [weak self] _ in
-            self?._loading = true
-            self?._view.disableSubmit()
-            self?._view.disableInteractions()
-            self?.submit()
+            guard let this = self else {
+                return
+            }
+            this._loading = true
+            this._view.disableSubmit()
+            this._view.disableInteractions()
+            this._viewModel.addBook()
         }
-    }
-    
-    func submit() {
-        _viewModel.addBook(onSuccess: onAddNewSuccess, onError: onError)
-    }
-    
-    func onAddNewSuccess() {
-        _loading = false
-        _view.resetForm()
-        _view.enableInteractions()
-        let alert = UIAlertController(alertViewModel: ErrorAlertViewModel(title: "THANKS".localized(), message: "BOOK_ADDED".localized(), dismissButtonTitle: "ACCEPT".localized()))
-        self.present(alert, animated: true, completion: nil)
-    }
-    
-    func onError(error: Error) {
-        _loading = false
-        _view.enableSubmit()
-        _view.enableInteractions()
-        let alert = UIAlertController(alertViewModel: ErrorAlertViewModel(title: "UPS".localized(), message: "BOOK_ADD_ERROR".localized(), dismissButtonTitle: "ACCEPT".localized()))
-        self.present(alert, animated: true, completion: nil)
-        print(error)
+        //Actions when submit request is completed
+        _viewModel.addState.producer.startWithValues { [weak self] state in
+            guard let this = self else {
+                return
+            }
+            switch state {
+            case .error:
+                this._loading = false
+                this._view.enableSubmit()
+                this._view.enableInteractions()
+                let alert = UIAlertController(alertViewModel: ErrorAlertViewModel(title: "UPS".localized(), message: "BOOK_ADD_ERROR".localized(), dismissButtonTitle: "ACCEPT".localized()))
+                this.present(alert, animated: true, completion: nil)
+            case .success:
+                this._loading = false
+                this._view.resetForm()
+                this._view.enableInteractions()
+                let alert = UIAlertController(alertViewModel: ErrorAlertViewModel(title: "THANKS".localized(), message: "BOOK_ADDED".localized(), dismissButtonTitle: "ACCEPT".localized()))
+                this.present(alert, animated: true, completion: nil)
+            case .sleep:
+                break
+            }
+        }
     }
     
     private func setImagePicker() {
