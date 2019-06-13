@@ -24,7 +24,7 @@ class RentsRepository: AbstractRepository {
     
     private static let rentPath = "/users/7/rents"
     
-    func fetchRents() -> SignalProducer<[Rent], RepositoryError>{
+    func fetchRents() -> SignalProducer<[Rent], RepositoryError> {
         let path = RentsRepository.rentPath
         return performRequest(method: .get, path: path) { json in
             return decode(json).toResult()

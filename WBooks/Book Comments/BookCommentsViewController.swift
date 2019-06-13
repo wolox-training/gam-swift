@@ -47,14 +47,10 @@ class BookCommentsViewController: UIViewController {
                 }
             }
         }
-        _viewModel.loadComments(onSuccess: onCommentLoadSuccess, bookID: _viewModel.bookViewModel.id)
+        _viewModel.loadComments(bookID: _viewModel.bookViewModel.id)
         _view.comments.delegate = self
         _view.comments.dataSource = self
         _view.comments.register(cell: BookCommentCell.self)
-    }
-    
-    func onCommentLoadSuccess(comments: [Comment]) {
-        _viewModel.onCommentLoadSuccess(comments: comments)
     }
 }
 

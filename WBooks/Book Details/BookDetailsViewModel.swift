@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import ReactiveSwift
 
 enum Availability: String {
     case available
@@ -42,45 +43,68 @@ enum Availability: String {
     }
 }
 
+enum RentState {
+    case sleep
+    case rentSuccess
+    case rentError
+}
+
 class BookDetailsViewModel {
+    
     var bookViewModel: BookViewModel
+    
+    let rentsRepository = RepositoryBuilder.getDefaultRentsRepository()
     
     var rents: [Rent] = []
     
-    var status: Availability = .notLoaded
+    let status = MutableProperty(Availability.notLoaded)
+    
+    let rentState = MutableProperty(RentState.sleep)
     
     init(bookViewModel: BookViewModel) {
         self.bookViewModel = bookViewModel
     }
     
-    func loadRents(onSuccess: @escaping ([Rent]) -> Void) {
-        RentsRepository.fetchRents(onSuccess: onSuccess, onError: onError)
-    }
-    
-    func onLoadRentsSuccess(rents: [Rent]) {
-        self.rents = rents
-        if bookViewModel.status == "Available" || bookViewModel.status == "available" {
-            self.status = .available
-        } else if isBookOnHands() {
-            self.status = .inHands
-        } else {
-            self.status = .notAvailable
+    func loadRents() {
+        rentsRepository.fetchRents().startWithResult { [weak self] result in
+            guard let this = self else {
+                return
+            }
+            switch result {
+            case .success(let resultArray):
+                this.rents = resultArray
+                if this.bookViewModel.status == "Available" || this.bookViewModel.status == "available" {
+                    this.status.value = .available
+                } else if this.isBookOnHands() {
+                    this.status.value = .inHands
+                } else {
+                    this.status.value = .notAvailable
+                }
+            case .failure(let error):
+                // Here you can use error if you need it
+                print(error)
+            }
         }
     }
     
-    func onError(error: Error) {
-        return
-    }
-    
-    func rentBook(onSuccess: @escaping () -> Void, onError: @escaping () -> Void) {
+    func rentBook() {
         let today = Date().toString()
         let tomorrow = Date().adding(days: 1).toString()
-        RentsRepository.rentBook(onSuccess: onSuccess, onError: onError, bookID: bookViewModel.id, from: today, to: tomorrow)
-    }
-    
-    func onBookRentSuccess() {
-        bookViewModel.status = "rented"
-        self.status = .inHands
+        rentsRepository.rentBook(bookID: bookViewModel.id, from: today, to: tomorrow).startWithResult { [weak self] result in
+            guard let this = self else {
+                return
+            }
+            switch result {
+            case .success:
+                this.bookViewModel.status = "rented"
+                this.status.value = .inHands
+                this.rentState.value = .rentSuccess
+            case .failure(let error):
+                // Here you can use error if you need it
+                this.rentState.value = .rentError
+                print(error)
+            }
+        }
     }
     
     private func isBookOnHands() -> Bool {
