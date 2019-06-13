@@ -21,4 +21,16 @@ class RepositoryBuilder {
                               defaultHeaders: ["Content-Type": "application/json",
                                                "Accept": "application/json"])
     }
+    
+    static func getDefaultRentsRepository() -> RentsRepository {
+        return RentsRepository(configuration: RepositoryBuilder.defaultNetworkingConfiguration,
+                              defaultHeaders: ["Content-Type": "application/json",
+                                               "Accept": "application/json"])
+    }
+    
+    static func getDefaultCommentsRepository() -> CommentsRepository {
+        return CommentsRepository(configuration: RepositoryBuilder.defaultNetworkingConfiguration,
+                              defaultHeaders: ["Content-Type": "application/json",
+                                               "Accept": "application/json"])
+    }
 }

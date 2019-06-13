@@ -39,15 +39,11 @@ class MainMenuController: UIViewController {
         configureLibraryNavBar()
     }
     
-    func onSuccess(books: [Book]) {
-        _viewModel.onSuccess(books: books)
-    }
-    
     private func configureTableView() {
-        _viewModel.books.producer.startWithValues { [weak self] _ in
+        _viewModel.state.producer.startWithValues { [weak self] _ in
             self?._view.tableView.reloadData()
         }
-        _viewModel.loadBooks(onSuccess: onSuccess)
+        _viewModel.loadBooks()
         _view.tableView.delegate = self
         _view.tableView.dataSource = self
         _view.tableView.register(cell: BookCell.self)
@@ -65,25 +61,15 @@ class MainMenuController: UIViewController {
 
 extension MainMenuController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let bookViewModel = _viewModel.books.value[indexPath.row]
+        let bookViewModel = _viewModel.books[indexPath.row]
         let cell = _view.tableView.dequeue(cell: BookCell.self)!
         cell.setBook(bookViewModel: bookViewModel)
         cell.selectionStyle = UITableViewCell.SelectionStyle.none
         return cell
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let bookViewModel = _viewModel.books.value[indexPath.row]
-        let bookInfoViewModel = BookInfoViewModel(bookViewModel: bookViewModel)
-        let commentsController = BookCommentsViewController(viewModel: BookCommentsViewModel(bookViewModel: bookViewModel))
-        let bookDetailsController = BookDetailsViewController(viewModel: BookDetailsViewModel(bookViewModel: bookViewModel))
-        
-        let controller = BookInfoViewController(viewModel: bookInfoViewModel, commentsController: commentsController, bookDetailsController: bookDetailsController)
-        navigationController?.pushViewController(controller, animated: true)
-    }
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return _viewModel.books.value.count
+        return _viewModel.books.count
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

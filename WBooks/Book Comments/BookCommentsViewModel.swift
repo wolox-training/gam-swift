@@ -11,9 +11,11 @@ import ReactiveSwift
 
 class BookCommentsViewModel {
     
+    let commentsRepository = RepositoryBuilder.getDefaultCommentsRepository()
+    
     var bookViewModel: BookViewModel
     
-    var comments: [Comment] = []
+    var comments = [Comment]()
     
     let state = MutableProperty(TableState.loading)
     
@@ -21,17 +23,17 @@ class BookCommentsViewModel {
         self.bookViewModel = bookViewModel
     }
     
-    func loadComments(onSuccess: @escaping ([Comment]) -> Void, bookID: Int) {
-        CommentsRepository.fetchComments(onSuccess: onSuccess, onError: onError, bookID: bookID)
-    }
-    
-    func onCommentLoadSuccess(comments: [Comment]) {
-        self.comments = comments
-        state.value = comments.isEmpty ? .empty : .withValues
-    }
-    
-    func onError(error: Error) {
-        state.value = .error
-        return
+    func loadComments(bookID: Int) {
+        commentsRepository.fetchComments(bookID: bookID).startWithResult { [weak self] result in
+            switch result {
+            case .success(let resultArray):
+                self?.comments = resultArray
+                self?.state.value = resultArray.isEmpty ? .empty : .withValues
+            case .failure(let error):
+                // Here you can use error if you need it
+                self?.state.value = .error
+                print(error)
+            }
+        }
     }
 }
