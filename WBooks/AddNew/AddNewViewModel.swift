@@ -10,12 +10,6 @@ import Foundation
 import ReactiveCocoa
 import ReactiveSwift
 
-enum AddBookState {
-    case addSuccess
-    case addError
-    case sleep
-}
-
 class AddNewViewModel {
     
     let bookName = MutableProperty("")
@@ -26,10 +20,11 @@ class AddNewViewModel {
     
     let bookRepository = RepositoryBuilder.getDefaultBookRepository()
     
-    let addState = MutableProperty(AddBookState.sleep)
+    let addState = MutableProperty(RequestState.sleep)
     
     private var book: Book {
-        return Book(id: 0, title: bookName.value, author: author.value, genre: genre.value, year: year.value, image: "some url", status: "available")
+        return Book(id: 0, title: bookName.value, author: author.value,
+                    genre: genre.value, year: year.value, image: "some url", status: "available")
     }
     
     func addBook() {
@@ -39,10 +34,9 @@ class AddNewViewModel {
             }
             switch result {
             case .success:
-                this.addState.value = .addSuccess
+                this.addState.value = .success
             case .failure(let error):
-                // Here you can use error if you need it
-                this.addState.value = .addError
+                this.addState.value = .error
                 print(error)
             }
         }

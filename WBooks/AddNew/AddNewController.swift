@@ -105,13 +105,13 @@ class AddNewController: UIViewController {
                 return
             }
             switch state {
-            case .addError:
+            case .error:
                 this._loading = false
                 this._view.enableSubmit()
                 this._view.enableInteractions()
                 let alert = UIAlertController(alertViewModel: ErrorAlertViewModel(title: "UPS".localized(), message: "BOOK_ADD_ERROR".localized(), dismissButtonTitle: "ACCEPT".localized()))
                 this.present(alert, animated: true, completion: nil)
-            case .addSuccess:
+            case .success:
                 this._loading = false
                 this._view.resetForm()
                 this._view.enableInteractions()

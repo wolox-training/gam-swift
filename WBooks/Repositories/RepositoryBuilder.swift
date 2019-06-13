@@ -9,6 +9,12 @@
 import Foundation
 import Networking
 
+enum RequestState {
+    case sleep
+    case success
+    case error
+}
+
 class RepositoryBuilder {
     static var defaultNetworkingConfiguration: NetworkingConfiguration {
         var config = NetworkingConfiguration()

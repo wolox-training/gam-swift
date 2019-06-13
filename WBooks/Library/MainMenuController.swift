@@ -40,8 +40,10 @@ class MainMenuController: UIViewController {
     }
     
     private func configureTableView() {
-        _viewModel.state.producer.startWithValues { [weak self] _ in
-            self?._view.tableView.reloadData()
+        _viewModel.state.producer.startWithValues { [weak self] state in
+            if state == .withValues {
+                self?._view.tableView.reloadData()
+            }
         }
         _viewModel.loadBooks()
         _view.tableView.delegate = self

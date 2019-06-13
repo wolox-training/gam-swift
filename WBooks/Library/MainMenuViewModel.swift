@@ -26,7 +26,6 @@ class MainMenuViewModel {
                 self?.setBooks(books: resultArray)
                 self?.state.value = resultArray.isEmpty ? .empty : .withValues
             case .failure(let error):
-                // Here you can use error if you need it
                 self?.state.value = .error
                 print(error)
             }

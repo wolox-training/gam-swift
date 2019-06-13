@@ -43,17 +43,11 @@ enum Availability: String {
     }
 }
 
-enum RentState {
-    case rentSleep
-    case rentSuccess
-    case rentError
-}
-
 class BookDetailsViewModel {
     
     let rentsRepository = RepositoryBuilder.getDefaultRentsRepository()
     
-    let rentState = MutableProperty(RentState.rentSleep)
+    let rentState = MutableProperty(RequestState.sleep)
     
     var bookViewModel: BookViewModel
     
@@ -81,7 +75,6 @@ class BookDetailsViewModel {
                     this.status.value = .notAvailable
                 }
             case .failure(let error):
-                // Here you can use error if you need it
                 print(error)
             }
         }
@@ -99,10 +92,9 @@ class BookDetailsViewModel {
             case .success:
                 this.bookViewModel.status = "rented"
                 this.status.value = .inHands
-                this.rentState.value = .rentSuccess
+                this.rentState.value = .success
             case .failure(let error):
-                // Here you can use error if you need it
-                this.rentState.value = .rentError
+                this.rentState.value = .error
                 print(error)
             }
         }

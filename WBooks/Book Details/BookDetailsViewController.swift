@@ -11,6 +11,9 @@ import WolmoCore
 
 class BookDetailsViewController: UIViewController {
 
+    private let processingRentAlert = UIAlertController(title: "THANKS".localized(), message: "PROCESSING_RENT".localized(),
+                                                preferredStyle: .alert)
+    
     private lazy var _view: BookDetailsView = BookDetailsView.loadFromNib()!
     
     private var _viewModel: BookDetailsViewModel
@@ -57,16 +60,16 @@ class BookDetailsViewController: UIViewController {
                 return
             }
             switch state {
-            case .rentError:
-                this._view.processingRentAlert.dismiss(animated: true, completion: nil)
+            case .error:
+                this.processingRentAlert.dismiss(animated: true, completion: nil)
                 let alert = UIAlertController(alertViewModel: ErrorAlertViewModel(title: "ERROR".localized(), message: "RENT_ERROR".localized(), dismissButtonTitle: "ACCEPT".localized()))
                 this.present(alert, animated: true, completion: nil)
-            case .rentSuccess:
-                this._view.processingRentAlert.dismiss(animated: true, completion: nil)
+            case .success:
+                this.processingRentAlert.dismiss(animated: true, completion: nil)
                 let alert = UIAlertController(alertViewModel: ErrorAlertViewModel(title: "THANKS".localized(), message: "RENT_COMPLETED".localized(), dismissButtonTitle: "ACCEPT".localized()))
                 this.present(alert, animated: true, completion: nil)
                 this._view.setAvailability(status: this._viewModel.status.value)
-            case .rentSleep:
+            case .sleep:
                 break
             }
         }
@@ -75,7 +78,7 @@ class BookDetailsViewController: UIViewController {
     func rent() {
         switch _viewModel.status.value {
         case .available:
-            present(_view.processingRentAlert, animated: true, completion: nil)
+            present(processingRentAlert, animated: true, completion: nil)
             _viewModel.rentBook()
         case .notAvailable:
             let alert = UIAlertController(alertViewModel: ErrorAlertViewModel(title: "UPS".localized(), message: "CANNOT_RENT".localized(), dismissButtonTitle: "ACCEPT".localized()))

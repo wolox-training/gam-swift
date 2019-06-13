@@ -11,9 +11,6 @@ import WolmoCore
 
 class BookDetailsView: UIView, NibLoadable {
     
-    let processingRentAlert = UIAlertController(title: "THANKS".localized(), message: "PROCESSING_RENT".localized(),
-                                                preferredStyle: .alert)
-    
     @IBOutlet weak var detailCell: UIView! {
         didSet {
             detailCell.layer.cornerRadius = 10
