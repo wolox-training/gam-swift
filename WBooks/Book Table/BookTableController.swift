@@ -9,13 +9,15 @@
 import UIKit
 import WolmoCore
 
-class MainMenuController: UIViewController {
+class BookTableController: UIViewController {
     
-    private let _viewModel: MainMenuViewModel
+    private weak var _superViewController: UIViewController?
     
-    private lazy var _view: MainMenuView = MainMenuView.loadFromNib()!
+    private let _viewModel: BookTableAbstractViewModel
     
-    init(viewModel: MainMenuViewModel) {
+    private lazy var _view: BookTableView = BookTableView.loadFromNib()!
+    
+    init(viewModel: BookTableAbstractViewModel) {
         _viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }
@@ -34,9 +36,8 @@ class MainMenuController: UIViewController {
         configureTableView()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        configureLibraryNavBar()
+    func setSuperViewController(superViewController: UIViewController) {
+        _superViewController = superViewController
     }
     
     private func configureTableView() {
@@ -51,17 +52,9 @@ class MainMenuController: UIViewController {
         _view.tableView.register(cell: BookCell.self)
         _view.tableView.backgroundColor = UIColor.clear
     }
-    
-    private func configureLibraryNavBar() {
-        tabBarController?.setNavigationBarTitle("NAVIGATION_BAR_TITLE_LIBRARY".localized(), font: UIFont.systemFont(ofSize: 18, weight: UIFont.Weight.medium), color: UIColor.white)
-        //Left notification button
-        tabBarController?.navigationItem.leftBarButtonItem = UIBarButtonItem.notificationButton()
-        //Right search button
-        tabBarController?.navigationItem.rightBarButtonItem = UIBarButtonItem.searchButton()
-    }
 }
 
-extension MainMenuController: UITableViewDataSource, UITableViewDelegate {
+extension BookTableController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let bookViewModel = _viewModel.books[indexPath.row]
         let cell = _view.tableView.dequeue(cell: BookCell.self)!
@@ -71,13 +64,17 @@ extension MainMenuController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("Cell selected")
+        guard let superViewController = _superViewController else {
+            return
+        }
         let bookViewModel = _viewModel.books[indexPath.row]
         let bookInfoViewModel = BookInfoViewModel(bookViewModel: bookViewModel)
         let commentsController = BookCommentsViewController(viewModel: BookCommentsViewModel(bookViewModel: bookViewModel))
         let bookDetailsController = BookDetailsViewController(viewModel: BookDetailsViewModel(bookViewModel: bookViewModel))
         
         let controller = BookInfoViewController(viewModel: bookInfoViewModel, commentsController: commentsController, bookDetailsController: bookDetailsController)
-        navigationController?.pushViewController(controller, animated: true)
+        superViewController.navigationController?.pushViewController(controller, animated: true)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

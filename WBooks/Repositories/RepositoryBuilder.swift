@@ -39,4 +39,10 @@ class RepositoryBuilder {
                               defaultHeaders: ["Content-Type": "application/json",
                                                "Accept": "application/json"])
     }
+    
+    static func getDefaultSuggestionsRepository() -> SuggestionsRepository {
+        return SuggestionsRepository(configuration: RepositoryBuilder.defaultNetworkingConfiguration,
+                                  defaultHeaders: ["Content-Type": "application/json",
+                                                   "Accept": "application/json"])
+    }
 }

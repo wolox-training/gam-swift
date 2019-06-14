@@ -43,8 +43,6 @@ class BookDetailsView: UIView, NibLoadable {
         didSet {
             rent.layer.cornerRadius = 20
             rent.clipsToBounds = true
-            rent.setWBookGradient()
-            
         }
     }
     
@@ -63,5 +61,13 @@ class BookDetailsView: UIView, NibLoadable {
     func setAvailability(status: Availability) {
         availability.text = status.text
         availability.textColor = status.textColor
+        switch status {
+        case .available:
+            rent.setWBookGradient()
+            rent.isEnabled = true
+        case .notLoaded, .inHands, .notAvailable:
+            rent.setWBookDisableGradient()
+            rent.isEnabled = false
+        }
     }
 }

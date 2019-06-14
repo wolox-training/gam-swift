@@ -11,15 +11,11 @@ import UIKit
 import ReactiveCocoa
 import ReactiveSwift
 
-class MainMenuViewModel {
-    
-    var books = [BookViewModel]()
-    
-    let state = MutableProperty(TableState.loading)
+class LibraryViewModel: BookTableAbstractViewModel {
     
     let bookRepository = RepositoryBuilder.getDefaultBookRepository()
     
-    func loadBooks() {
+    override func loadBooks() {
         bookRepository.fetchBooks().startWithResult { [weak self] result in
             switch result {
             case .success(let resultArray):

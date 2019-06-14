@@ -22,7 +22,9 @@ class LibraryTab: UITabBarController {
     
     private func configureTabBar() {
         tabBar.barTintColor = .white
-        let library = MainMenuController(viewModel: MainMenuViewModel())
+        let bookController = BookTableController(viewModel: LibraryViewModel())
+        let library = LibraryViewController(booksController: bookController)
+        bookController.setSuperViewController(superViewController: library)
         library.tabBarItem = UITabBarItem()
         library.tabBarItem.title = "TAB_BAR_LIBRARY".localized()
         library.tabBarItem.image = UIImage.libraryImage
@@ -40,7 +42,10 @@ class LibraryTab: UITabBarController {
         addNew.tabBarItem.image = UIImage.addNewImage
         addNew.tabBarItem.tag = 2
         
-        let rentals = RentalsController()
+        let rentBookController = BookTableController(viewModel: RentalsViewModel())
+        let suggestionsController = SuggestionsViewController(viewModel: SuggestionsViewModel())
+        let rentals = RentalsController(booksController: rentBookController, suggestionsController: suggestionsController)
+        rentBookController.setSuperViewController(superViewController: rentals)
         rentals.tabBarItem = UITabBarItem()
         rentals.tabBarItem.title = "TAB_BAR_RENTALS".localized()
         rentals.tabBarItem.image = UIImage.myRentalsImage

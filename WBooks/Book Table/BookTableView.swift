@@ -10,6 +10,10 @@ import Foundation
 import UIKit
 import WolmoCore
 
-class MainMenuView: UIView, NibLoadable {
+class BookTableView: UIView, NibLoadable {
     @IBOutlet weak var tableView: UITableView!
+    
+    override func awakeFromNib() {
+        translatesAutoresizingMaskIntoConstraints = false
+    }
 }
