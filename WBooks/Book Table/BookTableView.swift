@@ -11,6 +11,9 @@ import UIKit
 import WolmoCore
 
 class BookTableView: UIView, NibLoadable {
+    
+    let commentIndicator = UILabel()
+    
     @IBOutlet weak var tableView: UITableView! {
         didSet {
             self.tableView.layer.cornerRadius = 10
@@ -18,7 +21,36 @@ class BookTableView: UIView, NibLoadable {
         }
     }
     
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    
     override func awakeFromNib() {
         translatesAutoresizingMaskIntoConstraints = false
+    }
+    
+    func startActivityIndicator() {
+        activityIndicator.hidesWhenStopped = true
+        activityIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.gray
+        activityIndicator.startAnimating()
+    }
+    
+    func stopActivityIndicator() {
+        activityIndicator.stopAnimating()
+    }
+    
+    func displayNoBooks(state: TableState) {
+        if state == TableState.empty {
+            commentIndicator.text = "NO_BOOKS".localized()
+        }
+        if state == TableState.error {
+            commentIndicator.text = "BOOK_ERROR".localized()
+        }
+        commentIndicator.textColor = UIColor.gray
+        addSubview(commentIndicator)
+        commentIndicator.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            commentIndicator.centerXAnchor.constraint(equalTo: self.centerXAnchor),
+            commentIndicator.centerYAnchor.constraint(equalTo: self.centerYAnchor)
+            ]
+        )
     }
 }

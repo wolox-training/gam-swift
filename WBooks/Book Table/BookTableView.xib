@@ -22,10 +22,19 @@
                     <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <inset key="separatorInset" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
                 </tableView>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="K7P-bG-1gG">
+                    <rect key="frame" x="170" y="316" width="35" height="35"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="35" id="bho-g0-CjR"/>
+                        <constraint firstAttribute="height" constant="35" id="rxU-Ez-J4M"/>
+                    </constraints>
+                </activityIndicatorView>
             </subviews>
             <color key="backgroundColor" red="0.9247191548" green="0.96637803320000004" blue="0.97605592009999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="UlS-Q4-Wsa" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="1GA-Ai-hUo"/>
+                <constraint firstItem="K7P-bG-1gG" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="O5G-BS-9A5"/>
+                <constraint firstItem="K7P-bG-1gG" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Rue-7b-ZuR"/>
                 <constraint firstAttribute="trailing" secondItem="UlS-Q4-Wsa" secondAttribute="trailing" id="W7d-xz-2Ac"/>
                 <constraint firstItem="UlS-Q4-Wsa" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="gfZ-po-Oom"/>
                 <constraint firstItem="UlS-Q4-Wsa" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="mWt-jj-Xi0"/>
@@ -33,6 +42,7 @@
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
+                <outlet property="activityIndicator" destination="K7P-bG-1gG" id="fJ8-oE-N6a"/>
                 <outlet property="tableView" destination="UlS-Q4-Wsa" id="5jF-n4-E92"/>
             </connections>
             <point key="canvasLocation" x="44" y="126.38680659670166"/>

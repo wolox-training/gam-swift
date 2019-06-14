@@ -37,7 +37,7 @@ class BookViewModel {
     }
     
     var cover: UIImage {
-        var image: UIImage = UIImage(named: "no_image_available")!
+        var image: UIImage = UIImage.noProfilePic
         let url = URL(string: _book.image)
         if let url = url {
             do {

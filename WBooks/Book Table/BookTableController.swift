@@ -42,8 +42,17 @@ class BookTableController: UIViewController {
     
     private func configureTableView() {
         _viewModel.state.producer.startWithValues { [weak self] state in
-            if state == .withValues {
-                self?._view.tableView.reloadData()
+            if let this = self {
+                switch state {
+                case .loading:
+                    this._view.startActivityIndicator()
+                case .error, .empty:
+                    this._view.stopActivityIndicator()
+                    this._view.displayNoBooks(state: this._viewModel.state.value)
+                case .withValues:
+                    this._view.stopActivityIndicator()
+                    this._view.tableView.reloadData()
+                }
             }
         }
         _viewModel.loadBooks()

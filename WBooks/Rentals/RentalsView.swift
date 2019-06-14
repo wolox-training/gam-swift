@@ -33,7 +33,7 @@ class RentalsView: UIView, NibLoadable {
         suggestionsLabel.font = UIFont.systemFont(ofSize: 18, weight: .black)
         suggestionsLabel.textColor = .black
         suggestionsLabel.textAlignment = .left
-        suggestionsLabel.text = "Suggestions"
+        suggestionsLabel.text = "SUGGESTIONS".localized()
         suggestionsLabel.translatesAutoresizingMaskIntoConstraints = false
     }
 }

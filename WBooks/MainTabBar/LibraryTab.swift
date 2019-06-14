@@ -46,6 +46,7 @@ class LibraryTab: UITabBarController {
         let suggestionsController = SuggestionsViewController(viewModel: SuggestionsViewModel())
         let rentals = RentalsController(booksController: rentBookController, suggestionsController: suggestionsController)
         rentBookController.setSuperViewController(superViewController: rentals)
+        suggestionsController.setSuperViewController(superViewController: rentals)
         rentals.tabBarItem = UITabBarItem()
         rentals.tabBarItem.title = "TAB_BAR_RENTALS".localized()
         rentals.tabBarItem.image = UIImage.myRentalsImage

@@ -16,7 +16,7 @@ class SuggestionCell: UICollectionViewCell, NibLoadable {
         super.awakeFromNib()
     }
     
-    func setCover(cover: UIImage) {
-        self.cover.image = cover
+    func setCover(book: BookViewModel) {
+        self.cover.image = book.cover
     }
 }

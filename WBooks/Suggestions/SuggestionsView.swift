@@ -16,8 +16,39 @@ class SuggestionsView: UIView, NibLoadable {
         }
     }
     
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    
+    let commentIndicator = UILabel()
+    
     override func awakeFromNib() {
         translatesAutoresizingMaskIntoConstraints = false
         backgroundColor = UIColor.clear
+    }
+    
+    func startActivityIndicator() {
+        activityIndicator.hidesWhenStopped = true
+        activityIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.gray
+        activityIndicator.startAnimating()
+    }
+    
+    func stopActivityIndicator() {
+        activityIndicator.stopAnimating()
+    }
+    
+    func displayNoSuggestionsIndicator(state: TableState) {
+        if state == TableState.empty {
+            commentIndicator.text = "NO_SUGGESTIONS".localized()
+        }
+        if state == TableState.error {
+            commentIndicator.text = "SUGGESTIONS_ERROR".localized()
+        }
+        commentIndicator.textColor = UIColor.gray
+        addSubview(commentIndicator)
+        commentIndicator.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            commentIndicator.centerXAnchor.constraint(equalTo: self.centerXAnchor),
+            commentIndicator.centerYAnchor.constraint(equalTo: self.centerYAnchor)
+            ]
+        )
     }
 }

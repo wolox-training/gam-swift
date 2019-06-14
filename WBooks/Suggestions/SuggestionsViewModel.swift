@@ -12,26 +12,34 @@ import UIKit
 
 class SuggestionsViewModel {
     
-    let suggestionsRepository = RepositoryBuilder.getDefaultSuggestionsRepository()
+    let booksRepository = RepositoryBuilder.getDefaultBookRepository()
     let state = MutableProperty(TableState.loading)
     
-    var suggestions = [Suggestion]()
-    
-    var covers = [UIImage]()
+    var suggestedBooks = [BookViewModel]()
     
     func loadSuggestions() {
-        loadCovers()
+        booksRepository.fetchBooks().startWithResult { [weak self] result in
+            switch result {
+            case .success(let resultArray):
+                self?.setBooks(books: resultArray)
+                self?.filterMissingCovers()
+                self?.state.value = resultArray.isEmpty ? .empty : .withValues
+            case .failure(let error):
+                self?.state.value = .error
+                print(error)
+            }
+        }
     }
     
-    private func loadCovers() {
-        covers.append(#imageLiteral(resourceName: "img_user2"))
-        covers.append(#imageLiteral(resourceName: "img_book3"))
-        covers.append(#imageLiteral(resourceName: "img_book4"))
-        covers.append(#imageLiteral(resourceName: "img_book5"))
-        covers.append(#imageLiteral(resourceName: "img_user1"))
-        covers.append(#imageLiteral(resourceName: "img_user1"))
-        covers.append(#imageLiteral(resourceName: "img_user1"))
-        covers.append(#imageLiteral(resourceName: "googlelogin"))
-        covers.append(#imageLiteral(resourceName: "img_book6"))
+    private func setBooks(books: [Book]) {
+        suggestedBooks = books.map({ (book) in
+            BookViewModel(book: book)
+        })
+    }
+    
+    private func filterMissingCovers() {
+        suggestedBooks = suggestedBooks.filter { bookViewModel in
+            return bookViewModel.cover != UIImage.noProfilePic
+        }
     }
 }
