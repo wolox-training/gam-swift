@@ -19,6 +19,10 @@ class LibraryViewModel: BookTableAbstractViewModel {
         bookRepository.fetchBooks().startWithResult { [weak self] result in
             switch result {
             case .success(let resultArray):
+                print("====================")
+                print("Library")
+                print(resultArray)
+                print("====================")
                 self?.setBooks(books: resultArray)
                 self?.state.value = resultArray.isEmpty ? .empty : .withValues
             case .failure(let error):

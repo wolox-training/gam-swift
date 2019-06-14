@@ -27,6 +27,7 @@ class SuggestionsViewModel {
             switch result {
             case .success(let resultArray):
                 print("====================")
+                print("Suggestions")
                 print(resultArray)
                 print("====================")
                 this.suggestions = resultArray
