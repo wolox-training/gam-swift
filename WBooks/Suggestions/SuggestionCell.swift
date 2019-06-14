@@ -7,9 +7,9 @@
 //
 
 import UIKit
+import WolmoCore
 
-class SuggestionCell: UICollectionViewCell {
-
+class SuggestionCell: UICollectionViewCell, NibLoadable {
     @IBOutlet weak var cover: UIImageView!
     
     override func awakeFromNib() {

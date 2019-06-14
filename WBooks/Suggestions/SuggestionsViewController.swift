@@ -34,26 +34,18 @@ class SuggestionsViewController: UIViewController {
     }
     
     private func configureCarousel() {
-        _viewModel.state.producer.startWithValues { [weak self] state in
-            if let this = self {
-                switch state {
-                case .loading:
-                    break
-                    //TODO Start Activity Indicator
-                case .error, .empty:
-                    break
-                    //TODO: Display no suggestions available
-                    //TODO Stop Activity Indicator
-                case .withValues:
-                    //TODO Stop Activity Indicator
-                    print("SUCCESS")
-                    this._view.suggestionCollectionView.reloadData()
-                }
-            }
-            
-        }
-        _view.suggestionCollectionView.dataSource = self
         _viewModel.loadSuggestions()
+        _view.suggestionCollectionView.dataSource = self
+        _view.suggestionCollectionView.register(cell: SuggestionCell.self)
+        _view.suggestionCollectionView.showsHorizontalScrollIndicator = false
+        _view.suggestionCollectionView.showsVerticalScrollIndicator = false
+        
+        let cellDimension = CGFloat(60)
+        let layout = _view.suggestionCollectionView.collectionViewLayout as? UICollectionViewFlowLayout
+        if let layout = layout {
+            layout.itemSize = CGSize(width: cellDimension, height: cellDimension)
+            layout.scrollDirection = .horizontal
+        }
     }
 }
 

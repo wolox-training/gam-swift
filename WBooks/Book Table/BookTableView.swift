@@ -11,7 +11,12 @@ import UIKit
 import WolmoCore
 
 class BookTableView: UIView, NibLoadable {
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var tableView: UITableView! {
+        didSet {
+            self.tableView.layer.cornerRadius = 10
+            self.tableView.clipsToBounds = true
+        }
+    }
     
     override func awakeFromNib() {
         translatesAutoresizingMaskIntoConstraints = false

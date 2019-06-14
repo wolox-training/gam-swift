@@ -10,11 +10,11 @@ import UIKit
 
 class RentalsController: UIViewController {
 
-    private let margin: CGFloat = 20
-    
     private var _booksController: BookTableController
     
     private var _suggestionsController: SuggestionsViewController
+    
+    private lazy var _view: RentalsView = RentalsView.loadFromNib()!
     
     init(booksController: BookTableController, suggestionsController: SuggestionsViewController) {
         _suggestionsController = suggestionsController
@@ -30,11 +30,15 @@ class RentalsController: UIViewController {
         return .lightContent
     }
     
+    override func loadView() {
+        view = _view
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setNeedsStatusBarAppearanceUpdate()
-        setupView()
-        setupLayout()
+        _view.setView(suggestionsView: _suggestionsController.view, rentedBooksView: _booksController.view)
+        setAutoLayout()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -42,27 +46,31 @@ class RentalsController: UIViewController {
         configureNavBar(title: "NAVIGATION_BAR_TITLE_RENTALS".localized())
     }
     
-    private func setupView() {
-//        view.addSubview(_booksController.view)
-        view.addSubview(_suggestionsController.view)
-        view.backgroundColor = UIColor.wBooksBackground
-    }
-
-    private func setupLayout() {
+    private func setAutoLayout() {
+        guard let rentedBooks = _view.rentedBooksView else {
+            return
+        }
+        
+        guard let suggestions = _view.suggestionsView else {
+            return
+        }
+        
         NSLayoutConstraint.activate([
             //Rentals
-//            _booksController.view.topAnchor.constraint(equalTo: topLayoutGuide.bottomAnchor, constant: 0),
-//            _booksController.view.leftAnchor.constraint(equalTo: view.leftAnchor, constant: margin),
-//            _booksController.view.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -margin),
-//            _booksController.view.heightAnchor.constraint(equalToConstant: 500),
-//            _booksController.view.bottomAnchor.constraint(equalTo: bottomLayoutGuide.topAnchor, constant: 0)
+            rentedBooks.topAnchor.constraint(equalTo: topLayoutGuide.bottomAnchor, constant: 0),
+            rentedBooks.leftAnchor.constraint(equalTo: _view.leftAnchor, constant: _view.margin),
+            rentedBooks.rightAnchor.constraint(equalTo: _view.rightAnchor, constant: -_view.margin),
+            rentedBooks.heightAnchor.constraint(equalToConstant: 500),
+            //Label
+            _view.suggestionsLabel.topAnchor.constraint(equalTo: rentedBooks.bottomAnchor, constant: 15),
+            _view.suggestionsLabel.leftAnchor.constraint(equalTo: _view.leftAnchor, constant: _view.margin),
+            _view.suggestionsLabel.rightAnchor.constraint(equalTo: _view.rightAnchor, constant: -_view.margin),
             //Suggestions
-            _suggestionsController.view.topAnchor.constraint(equalTo: topLayoutGuide.bottomAnchor, constant: 0),
-            _suggestionsController.view.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 0),
-            _suggestionsController.view.rightAnchor.constraint(equalTo: view.rightAnchor, constant: 0),
-            _suggestionsController.view.bottomAnchor.constraint(equalTo: bottomLayoutGuide.topAnchor, constant: 5)
+            suggestions.topAnchor.constraint(equalTo: _view.suggestionsLabel.bottomAnchor, constant: -5),
+            suggestions.leftAnchor.constraint(equalTo: _view.leftAnchor, constant: 0),
+            suggestions.rightAnchor.constraint(equalTo: _view.rightAnchor, constant: 0),
+            suggestions.heightAnchor.constraint(equalToConstant: 100)
             ]
         )
     }
-    
 }

@@ -20,41 +20,18 @@ class SuggestionsViewModel {
     var covers = [UIImage]()
     
     func loadSuggestions() {
-        suggestionsRepository.fetchSuggestions().startWithResult { [weak self] result in
-            guard let this = self else {
-                return
-            }
-            switch result {
-            case .success(let resultArray):
-                print("====================")
-                print("Suggestions")
-                print(resultArray)
-                print("====================")
-                this.suggestions = resultArray
-                this.loadCovers()
-                this.state.value = resultArray.isEmpty ? .empty : .withValues
-            case .failure(let error):
-                this.state.value = .error
-                print(error)
-            }
-        }
+        loadCovers()
     }
     
     private func loadCovers() {
-        covers = suggestions.filter { suggestion in
-            return URL(string: suggestion.link) != nil
-            }.map { suggestion in
-                var image: UIImage = UIImage(named: "no_image_available")!
-                let url = URL(string: suggestion.link)
-                if let url = url {
-                    do {
-                        let data = try Data(contentsOf: url)
-                        image = UIImage(data: data)!
-                    } catch {
-                        print("No image available for book.")
-                    }
-                }
-                return image
-        }
+        covers.append(#imageLiteral(resourceName: "img_user2"))
+        covers.append(#imageLiteral(resourceName: "img_book3"))
+        covers.append(#imageLiteral(resourceName: "img_book4"))
+        covers.append(#imageLiteral(resourceName: "img_book5"))
+        covers.append(#imageLiteral(resourceName: "img_user1"))
+        covers.append(#imageLiteral(resourceName: "img_user1"))
+        covers.append(#imageLiteral(resourceName: "img_user1"))
+        covers.append(#imageLiteral(resourceName: "googlelogin"))
+        covers.append(#imageLiteral(resourceName: "img_book6"))
     }
 }
