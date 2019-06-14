@@ -73,7 +73,6 @@ extension BookTableController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("Cell selected")
         guard let superViewController = _superViewController else {
             return
         }
