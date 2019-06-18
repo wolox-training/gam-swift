@@ -12,10 +12,6 @@ import WolmoCore
 class SuggestionCell: UICollectionViewCell, NibLoadable {
     @IBOutlet weak var cover: UIImageView!
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
-    
     func setCover(book: BookViewModel) {
         self.cover.image = book.cover
     }

@@ -13,7 +13,7 @@ class RentalsViewModel: BookTableAbstractViewModel {
     
     var books = [BookViewModel]()
     
-    var state = MutableProperty(TableState.loading)
+    let state = MutableProperty(TableState.loading)
     
     let rentRepository = RepositoryBuilder.getDefaultRentsRepository()
     

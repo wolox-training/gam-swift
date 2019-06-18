@@ -12,7 +12,7 @@ import ReactiveSwift
 protocol BookTableAbstractViewModel {
     var books: [BookViewModel] { get set }
     
-    var state: MutableProperty<TableState> { get set }
+    var state: MutableProperty<TableState> { get }
     
     func loadBooks()
 }
