@@ -23,18 +23,30 @@
 		423838A422B0257700800C90 /* UIImagePickerControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423838A322B0257700800C90 /* UIImagePickerControllerExtension.swift */; };
 		423A28FC229C4578008609EE /* UIBarButtonsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423A28FB229C4578008609EE /* UIBarButtonsExtension.swift */; };
 		423E478522A6D67C00318F83 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423E478422A6D67C00318F83 /* User.swift */; };
+		424D766222B43A5D008450D2 /* RentalsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424D766122B43A5D008450D2 /* RentalsView.swift */; };
+		424D766422B43A6D008450D2 /* RentalsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 424D766322B43A6D008450D2 /* RentalsView.xib */; };
 		4258877122AEDB8B00082C1F /* TextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4258877022AEDB8B00082C1F /* TextFieldExtension.swift */; };
 		4258877322AEDC2F00082C1F /* FormField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4258877222AEDC2F00082C1F /* FormField.swift */; };
-		42689E45229DB7B200EA02A7 /* MainMenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42689E44229DB7B200EA02A7 /* MainMenuViewModel.swift */; };
+		426247A722B2EB8400C1FA38 /* LibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426247A622B2EB8400C1FA38 /* LibraryViewController.swift */; };
+		426247AB22B2F3B700C1FA38 /* BookTableAbstractViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426247AA22B2F3B700C1FA38 /* BookTableAbstractViewModel.swift */; };
+		426247AF22B3094100C1FA38 /* SuggestionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426247AD22B3094100C1FA38 /* SuggestionCell.swift */; };
+		426247B022B3094100C1FA38 /* SuggestionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 426247AE22B3094100C1FA38 /* SuggestionCell.xib */; };
+		426247B222B30A5000C1FA38 /* SuggestionsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426247B122B30A5000C1FA38 /* SuggestionsRepository.swift */; };
+		426247B422B30A8D00C1FA38 /* Suggestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426247B322B30A8D00C1FA38 /* Suggestion.swift */; };
+		426247B622B30CDF00C1FA38 /* SuggestionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426247B522B30CDF00C1FA38 /* SuggestionsViewModel.swift */; };
+		426247B822B3120700C1FA38 /* SuggestionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426247B722B3120700C1FA38 /* SuggestionsViewController.swift */; };
+		426247BA22B3130000C1FA38 /* SuggestionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426247B922B3130000C1FA38 /* SuggestionsView.swift */; };
+		426247BC22B3177A00C1FA38 /* SuggestionsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 426247BB22B3177A00C1FA38 /* SuggestionsView.xib */; };
+		42689E45229DB7B200EA02A7 /* LibraryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42689E44229DB7B200EA02A7 /* LibraryViewModel.swift */; };
 		42689E47229DBA4E00EA02A7 /* BookViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42689E46229DBA4E00EA02A7 /* BookViewModel.swift */; };
 		426D667A229C69DC004070A6 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426D6679229C69DC004070A6 /* Images.swift */; };
 		4271CF5622A5A0C6002F0A98 /* RentsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4271CF5522A5A0C6002F0A98 /* RentsRepository.swift */; };
 		4271CF5822A5A0F6002F0A98 /* Rent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4271CF5722A5A0F6002F0A98 /* Rent.swift */; };
-		427BC0E62295873B0033845C /* MainMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427BC0E52295873B0033845C /* MainMenuController.swift */; };
+		427BC0E62295873B0033845C /* BookTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427BC0E52295873B0033845C /* BookTableController.swift */; };
 		427BC0E8229587D20033845C /* BookCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427BC0E7229587D20033845C /* BookCell.swift */; };
 		427BC0EC22958D750033845C /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427BC0EB22958D750033845C /* Book.swift */; };
-		427BC0F1229590840033845C /* MainMenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 427BC0F0229590840033845C /* MainMenuView.xib */; };
-		427BC0F3229590C90033845C /* MainMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427BC0F2229590C90033845C /* MainMenuView.swift */; };
+		427BC0F1229590840033845C /* BookTableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 427BC0F0229590840033845C /* BookTableView.xib */; };
+		427BC0F3229590C90033845C /* BookTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427BC0F2229590C90033845C /* BookTableView.swift */; };
 		427BC0F5229593EB0033845C /* BookCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 427BC0F4229593EB0033845C /* BookCell.xib */; };
 		427BC0F82295A18E0033845C /* StartingScreenZeroController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427BC0F72295A18E0033845C /* StartingScreenZeroController.swift */; };
 		427BC0FA2295A20F0033845C /* StartingScreenZeroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427BC0F92295A20F0033845C /* StartingScreenZeroView.swift */; };
@@ -45,9 +57,7 @@
 		428D2F2222AB0104009934B2 /* WishListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428D2F2122AB0104009934B2 /* WishListView.swift */; };
 		428D2F2422AB0114009934B2 /* WishListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428D2F2322AB0114009934B2 /* WishListViewModel.swift */; };
 		428D2F2622AB0127009934B2 /* WishListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 428D2F2522AB0127009934B2 /* WishListView.xib */; };
-		428D2F2822AB0140009934B2 /* RentalsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428D2F2722AB0140009934B2 /* RentalsView.swift */; };
 		428D2F2A22AB014A009934B2 /* RentalsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428D2F2922AB014A009934B2 /* RentalsViewModel.swift */; };
-		428D2F2C22AB0155009934B2 /* RentalsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 428D2F2B22AB0155009934B2 /* RentalsView.xib */; };
 		428D2F2E22AB0169009934B2 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428D2F2D22AB0169009934B2 /* SettingsView.swift */; };
 		428D2F3022AB0178009934B2 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428D2F2F22AB0178009934B2 /* SettingsViewModel.swift */; };
 		428D2F3222AB0186009934B2 /* SettingsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 428D2F3122AB0186009934B2 /* SettingsView.xib */; };
@@ -141,18 +151,30 @@
 		423838A322B0257700800C90 /* UIImagePickerControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImagePickerControllerExtension.swift; sourceTree = "<group>"; };
 		423A28FB229C4578008609EE /* UIBarButtonsExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIBarButtonsExtension.swift; sourceTree = "<group>"; };
 		423E478422A6D67C00318F83 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		424D766122B43A5D008450D2 /* RentalsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RentalsView.swift; sourceTree = "<group>"; };
+		424D766322B43A6D008450D2 /* RentalsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RentalsView.xib; sourceTree = "<group>"; };
 		4258877022AEDB8B00082C1F /* TextFieldExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldExtension.swift; sourceTree = "<group>"; };
 		4258877222AEDC2F00082C1F /* FormField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormField.swift; sourceTree = "<group>"; };
-		42689E44229DB7B200EA02A7 /* MainMenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuViewModel.swift; sourceTree = "<group>"; };
+		426247A622B2EB8400C1FA38 /* LibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewController.swift; sourceTree = "<group>"; };
+		426247AA22B2F3B700C1FA38 /* BookTableAbstractViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookTableAbstractViewModel.swift; sourceTree = "<group>"; };
+		426247AD22B3094100C1FA38 /* SuggestionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionCell.swift; sourceTree = "<group>"; };
+		426247AE22B3094100C1FA38 /* SuggestionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SuggestionCell.xib; sourceTree = "<group>"; };
+		426247B122B30A5000C1FA38 /* SuggestionsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionsRepository.swift; sourceTree = "<group>"; };
+		426247B322B30A8D00C1FA38 /* Suggestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Suggestion.swift; sourceTree = "<group>"; };
+		426247B522B30CDF00C1FA38 /* SuggestionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionsViewModel.swift; sourceTree = "<group>"; };
+		426247B722B3120700C1FA38 /* SuggestionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionsViewController.swift; sourceTree = "<group>"; };
+		426247B922B3130000C1FA38 /* SuggestionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionsView.swift; sourceTree = "<group>"; };
+		426247BB22B3177A00C1FA38 /* SuggestionsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SuggestionsView.xib; sourceTree = "<group>"; };
+		42689E44229DB7B200EA02A7 /* LibraryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewModel.swift; sourceTree = "<group>"; };
 		42689E46229DBA4E00EA02A7 /* BookViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookViewModel.swift; sourceTree = "<group>"; };
 		426D6679229C69DC004070A6 /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
 		4271CF5522A5A0C6002F0A98 /* RentsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RentsRepository.swift; sourceTree = "<group>"; };
 		4271CF5722A5A0F6002F0A98 /* Rent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rent.swift; sourceTree = "<group>"; };
-		427BC0E52295873B0033845C /* MainMenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuController.swift; sourceTree = "<group>"; };
+		427BC0E52295873B0033845C /* BookTableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookTableController.swift; sourceTree = "<group>"; };
 		427BC0E7229587D20033845C /* BookCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCell.swift; sourceTree = "<group>"; };
 		427BC0EB22958D750033845C /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
-		427BC0F0229590840033845C /* MainMenuView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainMenuView.xib; sourceTree = "<group>"; };
-		427BC0F2229590C90033845C /* MainMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuView.swift; sourceTree = "<group>"; };
+		427BC0F0229590840033845C /* BookTableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookTableView.xib; sourceTree = "<group>"; };
+		427BC0F2229590C90033845C /* BookTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookTableView.swift; sourceTree = "<group>"; };
 		427BC0F4229593EB0033845C /* BookCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookCell.xib; sourceTree = "<group>"; };
 		427BC0F72295A18E0033845C /* StartingScreenZeroController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartingScreenZeroController.swift; sourceTree = "<group>"; };
 		427BC0F92295A20F0033845C /* StartingScreenZeroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartingScreenZeroView.swift; sourceTree = "<group>"; };
@@ -165,9 +187,7 @@
 		428D2F2122AB0104009934B2 /* WishListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishListView.swift; sourceTree = "<group>"; };
 		428D2F2322AB0114009934B2 /* WishListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishListViewModel.swift; sourceTree = "<group>"; };
 		428D2F2522AB0127009934B2 /* WishListView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WishListView.xib; sourceTree = "<group>"; };
-		428D2F2722AB0140009934B2 /* RentalsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RentalsView.swift; sourceTree = "<group>"; };
 		428D2F2922AB014A009934B2 /* RentalsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RentalsViewModel.swift; sourceTree = "<group>"; };
-		428D2F2B22AB0155009934B2 /* RentalsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RentalsView.xib; sourceTree = "<group>"; };
 		428D2F2D22AB0169009934B2 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		428D2F2F22AB0178009934B2 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 		428D2F3122AB0186009934B2 /* SettingsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsView.xib; sourceTree = "<group>"; };
@@ -211,7 +231,6 @@
 		B83388D121E93AAC00085E26 /* Runes.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Runes.framework; path = Carthage/Build/iOS/Runes.framework; sourceTree = "<group>"; };
 		CEB934DC1D21992100DF75C2 /* Environment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		CEB934E11D21A49A00DF75C2 /* Alpha.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Alpha.xcconfig; sourceTree = "<group>"; };
-		CED934861E8466A60017CF96 /* Core.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Core.framework; path = Carthage/Build/iOS/Core.framework; sourceTree = "<group>"; };
 		CED934871E8466A60017CF96 /* ReactiveSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveSwift.framework; path = Carthage/Build/iOS/ReactiveSwift.framework; sourceTree = "<group>"; };
 		CED9348A1E8466CE0017CF96 /* MBProgressHUD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MBProgressHUD.framework; path = Carthage/Build/iOS/MBProgressHUD.framework; sourceTree = "<group>"; };
 		E12DE1621F772A370072C2FF /* Production.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Production.xcconfig; sourceTree = "<group>"; };
@@ -272,6 +291,7 @@
 				42D5AAF122A0114A00084F74 /* BookRepository.swift */,
 				4271CF5522A5A0C6002F0A98 /* RentsRepository.swift */,
 				42A91C8522A728A0004B49EB /* CommentsRepository.swift */,
+				426247B122B30A5000C1FA38 /* SuggestionsRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -341,6 +361,27 @@
 			path = "Text Field";
 			sourceTree = "<group>";
 		};
+		426247A522B2EB0600C1FA38 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				426247A622B2EB8400C1FA38 /* LibraryViewController.swift */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		426247AC22B308BD00C1FA38 /* Suggestions */ = {
+			isa = PBXGroup;
+			children = (
+				426247B722B3120700C1FA38 /* SuggestionsViewController.swift */,
+				426247B522B30CDF00C1FA38 /* SuggestionsViewModel.swift */,
+				426247B922B3130000C1FA38 /* SuggestionsView.swift */,
+				426247BB22B3177A00C1FA38 /* SuggestionsView.xib */,
+				426247AD22B3094100C1FA38 /* SuggestionCell.swift */,
+				426247AE22B3094100C1FA38 /* SuggestionCell.xib */,
+			);
+			path = Suggestions;
+			sourceTree = "<group>";
+		};
 		42689E48229DC09D00EA02A7 /* Navigation Bar */ = {
 			isa = PBXGroup;
 			children = (
@@ -357,17 +398,19 @@
 			path = Images;
 			sourceTree = "<group>";
 		};
-		427BC0EE22958FE20033845C /* Library */ = {
+		427BC0EE22958FE20033845C /* Book Table */ = {
 			isa = PBXGroup;
 			children = (
-				427BC0E52295873B0033845C /* MainMenuController.swift */,
-				42689E44229DB7B200EA02A7 /* MainMenuViewModel.swift */,
-				427BC0F2229590C90033845C /* MainMenuView.swift */,
-				427BC0F0229590840033845C /* MainMenuView.xib */,
+				427BC0E52295873B0033845C /* BookTableController.swift */,
+				426247AA22B2F3B700C1FA38 /* BookTableAbstractViewModel.swift */,
+				42689E44229DB7B200EA02A7 /* LibraryViewModel.swift */,
+				428D2F2922AB014A009934B2 /* RentalsViewModel.swift */,
+				427BC0F2229590C90033845C /* BookTableView.swift */,
+				427BC0F0229590840033845C /* BookTableView.xib */,
 				427BC0E7229587D20033845C /* BookCell.swift */,
 				427BC0F4229593EB0033845C /* BookCell.xib */,
 			);
-			path = Library;
+			path = "Book Table";
 			sourceTree = "<group>";
 		};
 		427BC0EF2295902A0033845C /* Models */ = {
@@ -375,6 +418,7 @@
 			children = (
 				423E478422A6D67C00318F83 /* User.swift */,
 				4271CF5722A5A0F6002F0A98 /* Rent.swift */,
+				426247B322B30A8D00C1FA38 /* Suggestion.swift */,
 				42A91C8322A72749004B49EB /* Comment.swift */,
 				427BC0EB22958D750033845C /* Book.swift */,
 				42689E46229DBA4E00EA02A7 /* BookViewModel.swift */,
@@ -436,9 +480,8 @@
 			isa = PBXGroup;
 			children = (
 				42F782AA22988414000F9907 /* RentalsController.swift */,
-				428D2F2922AB014A009934B2 /* RentalsViewModel.swift */,
-				428D2F2722AB0140009934B2 /* RentalsView.swift */,
-				428D2F2B22AB0155009934B2 /* RentalsView.xib */,
+				424D766122B43A5D008450D2 /* RentalsView.swift */,
+				424D766322B43A6D008450D2 /* RentalsView.xib */,
 			);
 			path = Rentals;
 			sourceTree = "<group>";
@@ -487,16 +530,18 @@
 				4225959422B15F040025080E /* Repositories */,
 				427BC0F62295A14E0033845C /* StartingScreen */,
 				423A28FD229C56E6008609EE /* MainTabBar */,
-				427BC0EE22958FE20033845C /* Library */,
+				426247A522B2EB0600C1FA38 /* Library */,
+				427BC0EE22958FE20033845C /* Book Table */,
 				42D5AAF322A075B300084F74 /* Book Info */,
 				422A889722A9B077002CF9B8 /* Book Comments */,
 				422A889622A9AFDD002CF9B8 /* Book Details */,
 				42F782A3229883A5000F9907 /* WishList */,
 				42F782A4229883BC000F9907 /* AddNew */,
 				42F782A6229883D1000F9907 /* Rentals */,
+				426247AC22B308BD00C1FA38 /* Suggestions */,
 				42F782A7229883DA000F9907 /* Settings */,
-				4225959522B15FE20025080E /* UIViewController */,
 				42689E48229DC09D00EA02A7 /* Navigation Bar */,
+				4225959522B15FE20025080E /* UIViewController */,
 				423838A222B01C8100800C90 /* Image Picker */,
 				426D667B229C6B70004070A6 /* Images */,
 				42AA5AE222AEEF26000D1CE4 /* Buttons */,
@@ -543,7 +588,6 @@
 				E1530D9D1ED382EA002A9002 /* SystemConfiguration.framework */,
 				E1530D981ED378F2002A9002 /* Rollbar.framework */,
 				CED9348A1E8466CE0017CF96 /* MBProgressHUD.framework */,
-				CED934861E8466A60017CF96 /* Core.framework */,
 				CED934871E8466A60017CF96 /* ReactiveSwift.framework */,
 				9D1F7A6F1CBED81900E20BE5 /* Nimble.framework */,
 				9D1F7A701CBED81900E20BE5 /* Quick.framework */,
@@ -643,8 +687,9 @@
 				TargetAttributes = {
 					9D1575001CB1B27500EA395E = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = KTXN9SX9MX;
 						LastSwiftMigration = 0820;
-						ProvisioningStyle = Manual;
+						ProvisioningStyle = Automatic;
 					};
 					9D1575141CB1B27500EA395E = {
 						CreatedOnToolsVersion = 7.3;
@@ -688,14 +733,16 @@
 				422A889F22A9B188002CF9B8 /* BookDetailsView.xib in Resources */,
 				42AA5AE622AEFACB000D1CE4 /* AddNewView.xib in Resources */,
 				427D7AC62297488000B5B29E /* Localizable.strings in Resources */,
-				427BC0F1229590840033845C /* MainMenuView.xib in Resources */,
+				427BC0F1229590840033845C /* BookTableView.xib in Resources */,
 				427BC0FC2295A2270033845C /* StartingScreenZeroView.xib in Resources */,
 				42A91C8022A7239F004B49EB /* BookCommentCell.xib in Resources */,
+				424D766422B43A6D008450D2 /* RentalsView.xib in Resources */,
 				422A88A122A9B198002CF9B8 /* BookCommentsView.xib in Resources */,
+				426247BC22B3177A00C1FA38 /* SuggestionsView.xib in Resources */,
+				426247B022B3094100C1FA38 /* SuggestionCell.xib in Resources */,
 				428D2F2622AB0127009934B2 /* WishListView.xib in Resources */,
 				427BC0F5229593EB0033845C /* BookCell.xib in Resources */,
 				428D2F3222AB0186009934B2 /* SettingsView.xib in Resources */,
-				428D2F2C22AB0155009934B2 /* RentalsView.xib in Resources */,
 				9D15750C1CB1B27500EA395E /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -767,15 +814,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				426247B622B30CDF00C1FA38 /* SuggestionsViewModel.swift in Sources */,
 				42AA5AE422AEEF38000D1CE4 /* Buttons.swift in Sources */,
-				42689E45229DB7B200EA02A7 /* MainMenuViewModel.swift in Sources */,
+				42689E45229DB7B200EA02A7 /* LibraryViewModel.swift in Sources */,
 				42F782AD22988423000F9907 /* AddNewController.swift in Sources */,
 				42D5AAF222A0114A00084F74 /* BookRepository.swift in Sources */,
 				42A91C8422A72749004B49EB /* Comment.swift in Sources */,
 				42A91C8622A728A0004B49EB /* CommentsRepository.swift in Sources */,
+				426247A722B2EB8400C1FA38 /* LibraryViewController.swift in Sources */,
 				428D2F2E22AB0169009934B2 /* SettingsView.swift in Sources */,
 				423E478522A6D67C00318F83 /* User.swift in Sources */,
-				427BC0E62295873B0033845C /* MainMenuController.swift in Sources */,
+				427BC0E62295873B0033845C /* BookTableController.swift in Sources */,
 				423A28FC229C4578008609EE /* UIBarButtonsExtension.swift in Sources */,
 				42F782AF22988434000F9907 /* WishListController.swift in Sources */,
 				4258877322AEDC2F00082C1F /* FormField.swift in Sources */,
@@ -786,25 +835,31 @@
 				422A88A322A9B1A8002CF9B8 /* BookCommentsViewModel.swift in Sources */,
 				422A889B22A9B16A002CF9B8 /* BookDetailsView.swift in Sources */,
 				427BC0F82295A18E0033845C /* StartingScreenZeroController.swift in Sources */,
+				426247AB22B2F3B700C1FA38 /* BookTableAbstractViewModel.swift in Sources */,
+				426247AF22B3094100C1FA38 /* SuggestionCell.swift in Sources */,
 				42D5AAFB22A0764D00084F74 /* BookInfoViewModel.swift in Sources */,
 				422A88A722A9B1D8002CF9B8 /* BookCommentsViewController.swift in Sources */,
 				428D2F1C22AAF7DF009934B2 /* AddNewView.swift in Sources */,
 				428D2F2222AB0104009934B2 /* WishListView.swift in Sources */,
-				427BC0F3229590C90033845C /* MainMenuView.swift in Sources */,
+				427BC0F3229590C90033845C /* BookTableView.swift in Sources */,
 				427BC0EC22958D750033845C /* Book.swift in Sources */,
 				42A91C7E22A7234A004B49EB /* BookCommentCell.swift in Sources */,
+				426247BA22B3130000C1FA38 /* SuggestionsView.swift in Sources */,
+				426247B222B30A5000C1FA38 /* SuggestionsRepository.swift in Sources */,
 				422A889D22A9B17B002CF9B8 /* BookDetailsViewModel.swift in Sources */,
 				428D2F2A22AB014A009934B2 /* RentalsViewModel.swift in Sources */,
 				CEB934DD1D21992100DF75C2 /* Environment.swift in Sources */,
 				42F782A922988405000F9907 /* SettingsController.swift in Sources */,
-				428D2F2822AB0140009934B2 /* RentalsView.swift in Sources */,
 				4271CF5622A5A0C6002F0A98 /* RentsRepository.swift in Sources */,
+				426247B422B30A8D00C1FA38 /* Suggestion.swift in Sources */,
 				422A889522A9A151002CF9B8 /* Colors.swift in Sources */,
 				E1530D9C1ED37905002A9002 /* RollbarService.swift in Sources */,
 				422A88A522A9B1C4002CF9B8 /* BookCommentsView.swift in Sources */,
 				422A889922A9B154002CF9B8 /* BookDetailsViewController.swift in Sources */,
+				424D766222B43A5D008450D2 /* RentalsView.swift in Sources */,
 				42B7105122B1BB160009A4F7 /* RepositoryBuilder.swift in Sources */,
 				42B7104F22B1BAE60009A4F7 /* TableState.swift in Sources */,
+				426247B822B3120700C1FA38 /* SuggestionsViewController.swift in Sources */,
 				42F782AB22988414000F9907 /* RentalsController.swift in Sources */,
 				427BC0E8229587D20033845C /* BookCell.swift in Sources */,
 				428D2F2422AB0114009934B2 /* WishListViewModel.swift in Sources */,
@@ -923,8 +978,10 @@
 			baseConfigurationReference = E17065121F75B6A10042755C /* Debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-debug";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = KTXN9SX9MX;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -933,7 +990,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_SWIFT_FLAGS = "-D DEBUG";
-				PRODUCT_BUNDLE_IDENTIFIER = com.Wolox.WBooks.debug;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Wolox.WBooks.debug4872;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -1032,8 +1089,10 @@
 			baseConfigurationReference = CEB934E11D21A49A00DF75C2 /* Alpha.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-alpha";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = KTXN9SX9MX;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -1042,7 +1101,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_SWIFT_FLAGS = "-D ALPHA";
-				PRODUCT_BUNDLE_IDENTIFIER = com.Wolox.WBooks.alpha;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Wolox.WBooks.debug4872;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -1141,8 +1200,10 @@
 			baseConfigurationReference = E17065131F75B6A10042755C /* Release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-release";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = KTXN9SX9MX;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -1150,7 +1211,7 @@
 				INFOPLIST_FILE = WBooks/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_SWIFT_FLAGS = "-D RELEASE";
-				PRODUCT_BUNDLE_IDENTIFIER = com.Wolox.WBooks;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Wolox.WBooks.debug4872;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -1248,8 +1309,10 @@
 			baseConfigurationReference = E12DE1621F772A370072C2FF /* Production.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-production";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = KTXN9SX9MX;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -1257,7 +1320,7 @@
 				INFOPLIST_FILE = WBooks/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_SWIFT_FLAGS = "-D PRODUCTION";
-				PRODUCT_BUNDLE_IDENTIFIER = com.WBooks.WBooks;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Wolox.WBooks.debug4872;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";

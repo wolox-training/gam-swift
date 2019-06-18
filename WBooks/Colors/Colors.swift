@@ -26,6 +26,14 @@ extension UIColor {
         return UIColor(red: 48/255, green: 196/255, blue: 198/255, alpha: 1)
     }
     
+    static var wBooksLeftGrayGradientColor: UIColor {
+        return UIColor(red: 231/255, green: 231/255, blue: 231/255, alpha: 1)
+    }
+    
+    static var wBooksRightGrayGradientColor: UIColor {
+        return UIColor(red: 220/255, green: 231/255, blue: 234/255, alpha: 1)
+    }
+    
     static var wBooksPlaceholderGray: UIColor {
         return UIColor(red: 204/255, green: 204/255, blue: 209/255, alpha: 1)
     }

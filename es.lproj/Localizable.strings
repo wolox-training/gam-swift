@@ -41,3 +41,8 @@
 "BOOK_ADDED" = "Libro agregado exitosamente!";
 "GALLERY" = "Galería";
 "CAMERA" = "Cámara";
+"SUGGESTIONS" = "Sugerencias";
+"NO_SUGGESTIONS" = "No hay sugerencias disponibles.";
+"SUGGESTIONS_ERROR" = "No pudimos cargar sugerencias.";
+"NO_BOOKS" = "No hay libros disponibles.";
+"BOOK_ERROR" = "No pudimos cargar los libros.";

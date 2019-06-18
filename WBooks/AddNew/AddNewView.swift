@@ -72,12 +72,12 @@ class AddNewView: UIView, NibLoadable {
     }
     
     func enableSubmit() {
-        submitButton.alpha = 1
+        submitButton.setWBookGradient()
         submitButton.isEnabled = true
     }
     
     func disableSubmit() {
-        submitButton.alpha = 0.5
+        submitButton.setWBookDisableGradient()
         submitButton.isEnabled = false
     }
     

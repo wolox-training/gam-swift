@@ -41,3 +41,10 @@
 "BOOK_ADDED" = "Le livre a été ajouté avec succès!";
 "GALLERY" = "Galerie";
 "CAMERA" = "Caméra";
+"SUGGESTIONS" = "Suggestions";
+"NO_SUGGESTIONS" = "No Suggestions available.";
+"SUGGESTIONS_ERROR" = "Could not load suggestions.";
+"NO_SUGGESTIONS" = "Aucune suggestion disponible.";
+"SUGGESTIONS_ERROR" = "Nous n'avons pas pu télécharger de suggestions.";
+"NO_BOOKS" = "Il n'y a pas de livres disponibles.";
+"BOOK_ERROR" = "Nous ne pouvions pas charger les livres.";

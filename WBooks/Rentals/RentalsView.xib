@@ -12,12 +12,12 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="V1D-JS-Zax" customClass="RentalsView" customModule="WBooks" customModuleProvider="target">
+        <view contentMode="scaleToFill" id="hKc-XA-oeC" customClass="RentalsView" customModule="WBooks" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-            <viewLayoutGuide key="safeArea" id="H4U-3L-6a5"/>
-            <point key="canvasLocation" x="430" y="-175"/>
+            <viewLayoutGuide key="safeArea" id="l58-1K-ECt"/>
+            <point key="canvasLocation" x="542" y="-450"/>
         </view>
     </objects>
 </document>

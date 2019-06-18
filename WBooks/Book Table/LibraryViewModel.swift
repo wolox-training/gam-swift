@@ -11,7 +11,7 @@ import UIKit
 import ReactiveCocoa
 import ReactiveSwift
 
-class MainMenuViewModel {
+class LibraryViewModel: BookTableAbstractViewModel {
     
     var books = [BookViewModel]()
     
