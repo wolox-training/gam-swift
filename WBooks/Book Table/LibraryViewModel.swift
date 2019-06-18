@@ -13,9 +13,13 @@ import ReactiveSwift
 
 class LibraryViewModel: BookTableAbstractViewModel {
     
+    var books = [BookViewModel]()
+    
+    var state = MutableProperty(TableState.loading)
+    
     let bookRepository = RepositoryBuilder.getDefaultBookRepository()
     
-    override func loadBooks() {
+    func loadBooks() {
         bookRepository.fetchBooks().startWithResult { [weak self] result in
             switch result {
             case .success(let resultArray):

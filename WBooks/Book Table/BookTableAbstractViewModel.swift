@@ -9,14 +9,10 @@
 import Foundation
 import ReactiveSwift
 
-class BookTableAbstractViewModel {
-    var books = [BookViewModel]()
+protocol BookTableAbstractViewModel {
+    var books: [BookViewModel] { get set }
     
-    let state = MutableProperty(TableState.loading)
+    var state: MutableProperty<TableState> { get set }
     
-    func loadBooks() {
-        func abstractFunction() {
-            preconditionFailure("This method must be overridden")
-        } 
-    }
+    func loadBooks()
 }

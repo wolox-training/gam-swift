@@ -11,19 +11,20 @@ import ReactiveSwift
 
 class RentalsViewModel: BookTableAbstractViewModel {
     
-    private var rents = [Rent]()
+    var books = [BookViewModel]()
+    
+    var state = MutableProperty(TableState.loading)
     
     let rentRepository = RepositoryBuilder.getDefaultRentsRepository()
     
-    override func loadBooks() {
+    func loadBooks() {
         rentRepository.fetchRents().startWithResult { [weak self] result in
             guard let this = self else {
                 return
             }
             switch result {
             case .success(let resultArray):
-                this.rents = resultArray
-                this.books = this.rents.map { (rent) in
+                this.books = resultArray.map { (rent) in
                     BookViewModel(book: rent.book)
                 }
                 this.state.value = resultArray.isEmpty ? .empty : .withValues
